@@ -223,7 +223,7 @@ export default function Lab1() {
             id="wd-textarea"
             cols={30}
             rows={10}
-            defaultValue="Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           ></textarea>
           <h5 id="wd-buttons">Buttons</h5>
           <button
@@ -265,30 +265,25 @@ export default function Lab1() {
           <h5>Select one</h5>
           <label htmlFor="wd-select-one-genre"> Favorite movie genre: </label>
           <br />
-
           <select id="wd-select-one-genre" defaultValue="SCIFI">
             <option value="COMEDY">Comedy</option>
             <option value="DRAMA">Drama</option>
-            <option value="SCIFI">
-              Science Fiction
-            </option>
+            <option value="SCIFI">Science Fiction</option>
             <option value="FANTASY">Fantasy</option>
           </select>
           <h5>Select many</h5>
           <label htmlFor="wd-select-many-genre"> Favorite movie genres: </label>
           <br />
-
-          <select multiple id="wd-select-many-genre" defaultValue={["COMEDY","SCIFI"]}>
-            <option value="COMEDY">
-              Comedy
-            </option>
+          <select
+            multiple
+            id="wd-select-many-genre"
+            defaultValue={["COMEDY", "SCIFI"]}
+          >
+            <option value="COMEDY">Comedy</option>
             <option value="DRAMA"> Drama </option>
-            <option value="SCIFI">
-              Science Fiction
-            </option>
+            <option value="SCIFI">Science Fiction</option>
             <option value="FANTASY"> Fantasy </option>
           </select>
-
           <h4>Other HTML field types</h4>
           <label htmlFor="wd-text-fields-email"> Email: </label>
           <input
@@ -330,8 +325,14 @@ export default function Lab1() {
       to get dummy text
       <br />
       Please
-<a href="https://github.com/Rajiv308/kambaz-next-js-fa25-mon.git" id="wd-github">click here</a>
-to be taken to the this code&apos;s repository on Github<br/>
+      <a
+        href="https://github.com/Rajiv308/kambaz-next-js-fa25-mon.git"
+        id="wd-github"
+      >
+        click here
+      </a>
+      to be taken to the this code&apos;s repository on Github
+      <br />
     </div>
   );
 }
