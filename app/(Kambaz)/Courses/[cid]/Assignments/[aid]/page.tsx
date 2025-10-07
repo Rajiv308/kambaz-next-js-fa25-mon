@@ -1,3 +1,4 @@
+"use client";
 import { Row, Col, Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 
@@ -100,7 +101,9 @@ export default function AssignmentEditor() {
           </Col>
           <Col sm={9}>
             <Form className="border border-1 border-gray rounded p-3 mb-3">
-              <Form.Label htmlFor="wd-assign-to">Assign To</Form.Label>
+              <Form.Label htmlFor="wd-assign-to">
+                <b>Assign To</b>
+              </Form.Label>
               <Form.Control
                 id="wd-assign-to"
                 defaultValue="Everyone"
@@ -108,7 +111,7 @@ export default function AssignmentEditor() {
               />
 
               <Form.Label htmlFor="wd-due-date" className="d-block mb-1">
-                Due
+                <b>Due</b>
               </Form.Label>
               <Form.Control
                 type="date"
@@ -120,7 +123,7 @@ export default function AssignmentEditor() {
               <Row>
                 <Col>
                   <Form.Label htmlFor="wd-available-from">
-                    Available From
+                    <b>Available From</b>
                   </Form.Label>
                   <Form.Control
                     type="date"
@@ -129,7 +132,9 @@ export default function AssignmentEditor() {
                   />
                 </Col>
                 <Col>
-                  <Form.Label htmlFor="wd-available-until">Until</Form.Label>
+                  <Form.Label htmlFor="wd-available-until">
+                    <b>Until</b>
+                  </Form.Label>
                   <Form.Control
                     type="date"
                     defaultValue="2025-10-21"
