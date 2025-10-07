@@ -36,16 +36,10 @@ export default function ModulesControls() {
         </DropdownToggle>
         <DropdownMenu>
           <DropdownItem
-            id="wd-publish-all"
-            className="d-flex align-items-center"
-          >
-            <GreenCheckmark /> Publish All
-          </DropdownItem>
-          <DropdownItem
             id="wd-publish-all-modules-and-items"
             className="d-flex align-items-center"
           >
-            <GreenCheckmark /> Publish all modules and items
+            <GreenCheckmark /> Publish All modules and items
           </DropdownItem>
           <DropdownItem
             id="wd-publish-modules-only"

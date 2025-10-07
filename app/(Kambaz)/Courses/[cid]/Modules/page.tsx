@@ -15,11 +15,11 @@ export default function Modules() {
         <ListGroupItem className="wd-module p-0 mb-5 fs-5 border-gray ">
           <div className="wd-title p-3 ps-2 bg-secondary d-flex justify-content-between align-items-center flex-no-wrap">
             <div
-              className="d-flex align-items-center text-truncate"
+              className="d-flex align-items-center"
               style={{ maxWidth: "80%" }}
             >
               <BsGripVertical className="me-2 fs-3" />
-              <span>
+              <span className="text-truncate">
                 Week 1, Lecture 1 - Course Introduction, Syllabus, Agenda
               </span>
             </div>
@@ -133,11 +133,11 @@ export default function Modules() {
         <ListGroupItem className="wd-module p-0 mb-5 fs-5 border-gray">
           <div className="wd-title p-3 ps-2 bg-secondary d-flex justify-content-between align-items-center flex-no-wrap">
             <div
-              className="d-flex align-items-center text-truncate"
+              className="d-flex align-items-center"
               style={{ maxWidth: "80%" }}
             >
               <BsGripVertical className="me-2 fs-3" />
-              <span>
+              <span className="text-truncate">
                 Week 1, Lecture 2 - Formatting User Interfaces with HTML
               </span>
             </div>
@@ -229,11 +229,11 @@ export default function Modules() {
         <ListGroupItem className="wd-module p-0 mb-5 fs-5 border-gray">
           <div className="wd-title p-3 ps-2 bg-secondary d-flex justify-content-between align-items-center flex-no-wrap">
             <div
-              className="d-flex align-items-center text-truncate"
+              className="d-flex align-items-center"
               style={{ maxWidth: "80%" }}
             >
               <BsGripVertical className="me-2 fs-3" />
-              <span>Week 2</span>
+              <span className="text-truncate">Week 2</span>
             </div>
             <ModuleControlButtons />
           </div>
@@ -241,11 +241,11 @@ export default function Modules() {
         <ListGroupItem className="wd-module p-0 mb-5 fs-5 border-gray">
           <div className="wd-title p-3 ps-2 bg-secondary d-flex justify-content-between align-items-center flex-no-wrap">
             <div
-              className="d-flex align-items-center text-truncate"
+              className="d-flex align-items-center"
               style={{ maxWidth: "80%" }}
             >
               <BsGripVertical className="me-2 fs-3" />
-              <span>Week 3</span>
+              <span className="text-truncate">Week 3</span>
             </div>
             <ModuleControlButtons />
           </div>
