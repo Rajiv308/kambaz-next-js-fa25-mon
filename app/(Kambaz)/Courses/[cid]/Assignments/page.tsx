@@ -5,6 +5,7 @@ import { ListGroup, ListGroupItem } from "react-bootstrap";
 import { BsGripVertical } from "react-icons/bs";
 import AssignmentControlButtons from "./AssignmentControlButtons";
 import { GiStabbedNote } from "react-icons/gi";
+import { MdArrowDropDown } from "react-icons/md";
 export default async function Assignments({
   params,
 }: Readonly<{ params: Promise<{ cid: string }> }>) {
@@ -16,8 +17,9 @@ export default async function Assignments({
       <br />
       <ListGroup className="rounded-0" id="wd-assignments">
         <ListGroupItem className="wd-assignments p-0 mb-5 fs-5 border-gray">
-          <div className="wd-title p-3 ps-2 bg-secondary">
+          <div className="wd-title p-3 ps-2 bg-secondary allign-items-center">
             <BsGripVertical className="me-2 fs-3" />
+            <MdArrowDropDown className="me-2 fs-3" />
             Assignments
             <TypeControlButtons value={40} />
           </div>
@@ -99,6 +101,7 @@ export default async function Assignments({
         <ListGroupItem className="wd-assignments p-0 mb-5 fs-5 border-gray">
           <div className="wd-title p-3 ps-2 bg-secondary">
             <BsGripVertical className="me-2 fs-3" />
+            <MdArrowDropDown className="me-2 fs-3" />
             QUIZZES
             <TypeControlButtons value={10} />
           </div>
@@ -109,6 +112,7 @@ export default async function Assignments({
         <ListGroupItem className="wd-assignments p-0 mb-5 fs-5 border-gray">
           <div className="wd-title p-3 ps-2 bg-secondary">
             <BsGripVertical className="me-2 fs-3" />
+            <MdArrowDropDown className="me-2 fs-3" />
             EXAMS
             <TypeControlButtons value={20} />
           </div>
@@ -119,6 +123,7 @@ export default async function Assignments({
         <ListGroupItem className="wd-assignments p-0 mb-5 fs-5 border-gray">
           <div className="wd-title p-3 ps-2 bg-secondary">
             <BsGripVertical className="me-2 fs-3" />
+            <MdArrowDropDown className="me-2 fs-3" />
             PROJECTS
             <TypeControlButtons value={30} />
           </div>
