@@ -1,0 +1,273 @@
+[
+  {
+    "_id": "M101",
+    "name": "Introduction to React",
+    "description": "Understand the fundamentals of React and component-based architecture.",
+    "course": "CS1234",
+    "lessons": [
+      {"_id": "L101", "name": "React Overview", "description": "Learn what React is and why it’s popular for modern web apps.", "module": "M101"},
+      {"_id": "L102", "name": "JSX and Components", "description": "Understand JSX syntax and how to create functional components.", "module": "M101"},
+      {"_id": "L103", "name": "Props and State", "description": "Learn to manage data flow and interactivity in React.", "module": "M101"}
+    ]
+  },
+  {
+    "_id": "M102",
+    "name": "React Hooks and Lifecycle",
+    "description": "Explore React hooks and component lifecycle management.",
+    "course": "CS1234",
+    "lessons": [
+      {"_id": "L201", "name": "useState and useEffect", "description": "Learn how to handle side effects and local state.", "module": "M102"},
+      {"_id": "L202", "name": "Custom Hooks", "description": "Build your own hooks for reusable logic.", "module": "M102"},
+      {"_id": "L203", "name": "Component Lifecycle", "description": "Understand React’s rendering and cleanup behavior.", "module": "M102"}
+    ]
+  },
+  {
+    "_id": "M103",
+    "name": "Advanced React Patterns",
+    "description": "Study design patterns and optimization techniques in React.",
+    "course": "CS1234",
+    "lessons": [
+      {"_id": "L301", "name": "Context API", "description": "Use Context to manage global state efficiently.", "module": "M103"},
+      {"_id": "L302", "name": "Performance Optimization", "description": "Use memoization and lazy loading for better performance.", "module": "M103"},
+      {"_id": "L303", "name": "Error Boundaries", "description": "Learn how to handle errors in React components.", "module": "M103"}
+    ]
+  },
+
+  {
+    "_id": "M201",
+    "name": "Introduction to AI and ML",
+    "description": "Explore the history and scope of Artificial Intelligence.",
+    "course": "CS5501",
+    "lessons": [
+      {"_id": "L401", "name": "AI Foundations", "description": "Understand key concepts and goals of AI.", "module": "M201"},
+      {"_id": "L402", "name": "Types of Machine Learning", "description": "Learn about supervised, unsupervised, and reinforcement learning.", "module": "M201"},
+      {"_id": "L403", "name": "Applications of AI", "description": "Discover how AI is used in real-world scenarios.", "module": "M201"}
+    ]
+  },
+  {
+    "_id": "M202",
+    "name": "Machine Learning Algorithms",
+    "description": "Dive into core ML algorithms and their use cases.",
+    "course": "CS5501",
+    "lessons": [
+      {"_id": "L501", "name": "Regression and Classification", "description": "Implement linear and logistic regression models.", "module": "M202"},
+      {"_id": "L502", "name": "Decision Trees and Random Forests", "description": "Learn ensemble methods for better prediction.", "module": "M202"},
+      {"_id": "L503", "name": "Clustering and Dimensionality Reduction", "description": "Explore K-means, PCA, and t-SNE.", "module": "M202"}
+    ]
+  },
+  {
+    "_id": "M203",
+    "name": "Neural Networks and Deep Learning",
+    "description": "Understand neural architectures and training techniques.",
+    "course": "CS5501",
+    "lessons": [
+      {"_id": "L601", "name": "Perceptrons and MLPs", "description": "Study multi-layer perceptrons and backpropagation.", "module": "M203"},
+      {"_id": "L602", "name": "CNNs and RNNs", "description": "Explore deep learning for images and sequences.", "module": "M203"},
+      {"_id": "L603", "name": "Regularization and Optimization", "description": "Learn dropout, batch normalization, and gradient descent.", "module": "M203"}
+    ]
+  },
+
+  {
+    "_id": "M301",
+    "name": "Algorithm Analysis",
+    "description": "Learn how to analyze and compare algorithm efficiency.",
+    "course": "CS5502",
+    "lessons": [
+      {"_id": "L701", "name": "Big-O and Complexity", "description": "Understand time and space complexity.", "module": "M301"},
+      {"_id": "L702", "name": "Recursion and Divide & Conquer", "description": "Solve problems using recursive strategies.", "module": "M301"},
+      {"_id": "L703", "name": "Dynamic Programming Basics", "description": "Learn memoization and tabulation for optimization.", "module": "M301"}
+    ]
+  },
+  {
+    "_id": "M302",
+    "name": "Data Structures in Depth",
+    "description": "Explore essential data structures and their real-world applications.",
+    "course": "CS5502",
+    "lessons": [
+      {"_id": "L801", "name": "Stacks and Queues", "description": "Learn linear data structures and operations.", "module": "M302"},
+      {"_id": "L802", "name": "Trees and Graphs", "description": "Study hierarchical and networked data models.", "module": "M302"},
+      {"_id": "L803", "name": "Hash Tables and Heaps", "description": "Implement efficient lookups and priority queues.", "module": "M302"}
+    ]
+  },
+  {
+    "_id": "M303",
+    "name": "Algorithmic Problem Solving",
+    "description": "Apply data structures and algorithms to real problems.",
+    "course": "CS5502",
+    "lessons": [
+      {"_id": "L901", "name": "Sorting and Searching", "description": "Implement efficient algorithms for sorting data.", "module": "M303"},
+      {"_id": "L902", "name": "Graph Traversals", "description": "Use BFS and DFS for exploring graphs.", "module": "M303"},
+      {"_id": "L903", "name": "Greedy and Backtracking", "description": "Solve optimization and constraint problems.", "module": "M303"}
+    ]
+  },
+
+  {
+    "_id": "M401",
+    "name": "Operating System Basics",
+    "description": "Understand OS architecture and kernel functions.",
+    "course": "CS5503",
+    "lessons": [
+      {"_id": "L1001", "name": "Processes and Threads", "description": "Learn process management and concurrency.", "module": "M401"},
+      {"_id": "L1002", "name": "Memory Management", "description": "Explore paging, segmentation, and virtual memory.", "module": "M401"},
+      {"_id": "L1003", "name": "Scheduling Algorithms", "description": "Understand CPU scheduling and multitasking.", "module": "M401"}
+    ]
+  },
+  {
+    "_id": "M402",
+    "name": "File Systems and I/O",
+    "description": "Study data storage and retrieval in operating systems.",
+    "course": "CS5503",
+    "lessons": [
+      {"_id": "L1101", "name": "File Allocation", "description": "Understand how files are stored and indexed.", "module": "M402"},
+      {"_id": "L1102", "name": "File Permissions", "description": "Learn about access rights and security.", "module": "M402"},
+      {"_id": "L1103", "name": "I/O Scheduling", "description": "Explore disk and device management.", "module": "M402"}
+    ]
+  },
+  {
+    "_id": "M403",
+    "name": "Virtualization and Containers",
+    "description": "Explore modern approaches to system virtualization.",
+    "course": "CS5503",
+    "lessons": [
+      {"_id": "L1201", "name": "Virtual Machines vs Containers", "description": "Compare VMs and Docker-based containers.", "module": "M403"},
+      {"_id": "L1202", "name": "Resource Allocation", "description": "Learn how hypervisors manage system resources.", "module": "M403"},
+      {"_id": "L1203", "name": "Container Orchestration", "description": "Introduction to Kubernetes and Docker Swarm.", "module": "M403"}
+    ]
+  },
+
+  {
+    "_id": "M501",
+    "name": "Database Fundamentals",
+    "description": "Introduction to relational models and data organization.",
+    "course": "CS5504",
+    "lessons": [
+      {"_id": "L1301", "name": "Entity-Relationship Models", "description": "Model data using ER diagrams.", "module": "M501"},
+      {"_id": "L1302", "name": "Normalization", "description": "Avoid redundancy using normalization rules.", "module": "M501"},
+      {"_id": "L1303", "name": "Relational Algebra", "description": "Learn operations on relational data.", "module": "M501"}
+    ]
+  },
+  {
+    "_id": "M502",
+    "name": "SQL and Query Optimization",
+    "description": "Master SQL syntax and efficient querying.",
+    "course": "CS5504",
+    "lessons": [
+      {"_id": "L1401", "name": "Writing Queries", "description": "Use SELECT, JOIN, and aggregation.", "module": "M502"},
+      {"_id": "L1402", "name": "Indexes and Views", "description": "Optimize queries using indexes and materialized views.", "module": "M502"},
+      {"_id": "L1403", "name": "Query Execution Plans", "description": "Understand how SQL queries are executed.", "module": "M502"}
+    ]
+  },
+  {
+    "_id": "M503",
+    "name": "Transactions and Concurrency",
+    "description": "Learn ACID properties and transaction management.",
+    "course": "CS5504",
+    "lessons": [
+      {"_id": "L1501", "name": "Concurrency Control", "description": "Understand locks and isolation levels.", "module": "M503"},
+      {"_id": "L1502", "name": "Transaction Logging", "description": "Learn how DBs maintain durability.", "module": "M503"},
+      {"_id": "L1503", "name": "Deadlock Handling", "description": "Detect and resolve deadlocks.", "module": "M503"}
+    ]
+  },
+
+  {
+    "_id": "M601",
+    "name": "Network Fundamentals",
+    "description": "Understand network topologies and protocols.",
+    "course": "CS5505",
+    "lessons": [
+      {"_id": "L1601", "name": "OSI and TCP/IP Models", "description": "Study layers and their functions.", "module": "M601"},
+      {"_id": "L1602", "name": "Network Topologies", "description": "Understand bus, star, mesh, and hybrid topologies.", "module": "M601"},
+      {"_id": "L1603", "name": "Ethernet and LANs", "description": "Learn physical network structures and standards.", "module": "M601"}
+    ]
+  },
+  {
+    "_id": "M602",
+    "name": "Routing and Switching",
+    "description": "Explore routing protocols and switching techniques.",
+    "course": "CS5505",
+    "lessons": [
+      {"_id": "L1701", "name": "Static and Dynamic Routing", "description": "Learn RIP, OSPF, and BGP basics.", "module": "M602"},
+      {"_id": "L1702", "name": "Switching Techniques", "description": "Learn about VLANs, STP, and layer 2 switching.", "module": "M602"},
+      {"_id": "L1703", "name": "Network Troubleshooting", "description": "Tools and techniques for diagnosing network issues.", "module": "M602"}
+    ]
+  },
+  {
+    "_id": "M603",
+    "name": "Network Security",
+    "description": "Learn principles of secure communication and encryption.",
+    "course": "CS5505",
+    "lessons": [
+      {"_id": "L1801", "name": "Firewalls and VPNs", "description": "Implement network-level protection systems.", "module": "M603"},
+      {"_id": "L1802", "name": "Intrusion Detection Systems", "description": "Learn to detect unauthorized access.", "module": "M603"},
+      {"_id": "L1803", "name": "Encryption Protocols", "description": "Understand SSL/TLS, IPSec, and VPN encryption.", "module": "M603"}
+    ]
+  },
+
+  {
+    "_id": "M701",
+    "name": "Human-Centered Design",
+    "description": "Introduction to designing with users in mind.",
+    "course": "CS5506",
+    "lessons": [
+      {"_id": "L1901", "name": "User Research Methods", "description": "Conduct interviews and usability studies.", "module": "M701"},
+      {"_id": "L1902", "name": "Personas and Scenarios", "description": "Create user personas and journey scenarios.", "module": "M701"},
+      {"_id": "L1903", "name": "Design Principles", "description": "Learn heuristics for intuitive interfaces.", "module": "M701"}
+    ]
+  },
+  {
+    "_id": "M702",
+    "name": "Interaction Design",
+    "description": "Learn to structure intuitive user interfaces.",
+    "course": "CS5506",
+    "lessons": [
+      {"_id": "L2001", "name": "Wireframes and Prototypes", "description": "Build low-fidelity prototypes for early feedback.", "module": "M702"},
+      {"_id": "L2002", "name": "Interaction Patterns", "description": "Learn common UI patterns for usability.", "module": "M702"},
+      {"_id": "L2003", "name": "Accessibility Principles", "description": "Design inclusive interfaces for all users.", "module": "M702"}
+    ]
+  },
+  {
+    "_id": "M703",
+    "name": "Usability Evaluation",
+    "description": "Test and refine designs based on feedback.",
+    "course": "CS5506",
+    "lessons": [
+      {"_id": "L2101", "name": "Heuristic Evaluation", "description": "Apply usability heuristics for quick assessments.", "module": "M703"},
+      {"_id": "L2102", "name": "User Testing", "description": "Conduct structured user testing sessions.", "module": "M703"},
+      {"_id": "L2103", "name": "A/B Testing", "description": "Compare design variants to improve usability.", "module": "M703"}
+    ]
+  },
+
+  {
+    "_id": "M801",
+    "name": "Cloud Fundamentals",
+    "description": "Learn about cloud infrastructure and service models.",
+    "course": "CS5507",
+    "lessons": [
+      {"_id": "L2201", "name": "IaaS, PaaS, SaaS", "description": "Understand different levels of cloud service delivery.", "module": "M801"},
+      {"_id": "L2202", "name": "Virtualization in Cloud", "description": "Learn how virtualization underpins cloud services.", "module": "M801"},
+      {"_id": "L2203", "name": "Cloud Use Cases", "description": "Explore how organizations leverage cloud platforms.", "module": "M801"}
+    ]
+  },
+  {
+    "_id": "M802",
+    "name": "Cloud Deployment and Scalability",
+    "description": "Learn to deploy scalable systems on cloud platforms.",
+    "course": "CS5507",
+    "lessons": [
+      {"_id": "L2301", "name": "AWS, Azure, GCP", "description": "Overview of major cloud providers.", "module": "M802"},
+      {"_id": "L2302", "name": "Auto-scaling and Load Balancing", "description": "Ensure applications scale efficiently.", "module": "M802"},
+      {"_id": "L2303", "name": "Deployment Strategies", "description": "Learn blue/green and rolling deployments.", "module": "M802"}
+    ]
+  },
+  {
+    "_id": "M803",
+    "name": "Cloud Security and DevOps",
+    "description": "Understand cloud security principles and DevOps practices.",
+    "course": "CS5507",
+    "lessons": [
+      {"_id": "L2401", "name": "CI/CD Pipelines", "description": "Automate deployment with continuous integration.", "module": "M803"},
+      {"_id": "L2402", "name": "Identity and Access Management", "description": "Secure cloud systems with role-based access control.", "module": "M803"},
+      {"_id": "L2403", "name": "Cloud Security Best Practices", "description": "Implement firewalls, monitoring, and encryption.", "module": "M803"}
+    ]
+  }
+]

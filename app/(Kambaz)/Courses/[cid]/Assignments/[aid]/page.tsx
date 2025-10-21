@@ -1,8 +1,32 @@
 "use client";
+import { useParams } from "next/navigation";
 import { Row, Col, Button } from "react-bootstrap";
+import * as db from "../../../../Database";
 import Form from "react-bootstrap/Form";
+import Link from "next/link";
 
 export default function AssignmentEditor() {
+  const onlineOptions = [
+    "Text Entry",
+    "Website URL",
+    "Media Recordings",
+    "Student Annotations",
+    "File Upload",
+  ];
+  const params = useParams();
+  const { cid, aid } = params as { cid: string; aid: string };
+  const assignment = db.assignments.find(
+    (a) => a.course === cid && a._id === aid
+  );
+  if (!assignment) {
+    return <div>Assignment not found</div>;
+  }
+
+  const isOptionSelected = (option: string) =>
+    assignment.onlineOptions?.includes(option);
+
+  const formatDateTimeLocal = (iso: string) => iso.slice(0, 16);
+
   return (
     <div id="wd-assignments-editor">
       <br />
@@ -10,7 +34,7 @@ export default function AssignmentEditor() {
         <Form.Label>
           <b>Assignment Name</b>
         </Form.Label>
-        <Form.Control type="text" defaultValue="A1 - ENV + HTML" />
+        <Form.Control type="text" defaultValue={assignment.title} />
         <br />
 
         <Form.Label>
@@ -19,8 +43,7 @@ export default function AssignmentEditor() {
         <Form.Control
           as="textarea"
           rows={10}
-          defaultValue={`The assignment is available online. Submit a link to the landing page of your Web application running on Vercel. The landing page should be the Kambaz application with a link to the Lab exercises. Lab 1 should be the landing page of the Lab exercises and should include the following: Your full name and section Links to each of the lab assignments Link to the Kambaz application Links to all relevant source code repositories The Kambaz application should include a link to navigate back to the landing page.`}
-          className="mb-4"
+          defaultValue={assignment.description}
         />
         <br />
         <Row className="mb-3 align-items-center">
@@ -30,7 +53,11 @@ export default function AssignmentEditor() {
             </Form.Label>
           </Col>
           <Col sm={9}>
-            <Form.Control id="wd-points" type="number" defaultValue={100} />
+            <Form.Control
+              id="wd-points"
+              type="number"
+              defaultValue={assignment.points}
+            />
           </Col>
         </Row>
         <Row className="mb-3 align-items-center">
@@ -40,7 +67,7 @@ export default function AssignmentEditor() {
             </Form.Label>
           </Col>
           <Col sm={9}>
-            <Form.Select id="wd-group" defaultValue="ASSIGNMENTS">
+            <Form.Select id="wd-group" defaultValue={assignment.group}>
               <option value="ASSIGNMENTS">Assignments</option>
               <option value="QUIZZES">Quizzes</option>
               <option value="EXAMS">Exams</option>
@@ -55,7 +82,10 @@ export default function AssignmentEditor() {
             </Form.Label>
           </Col>
           <Col sm={9}>
-            <Form.Select id="wd-display-grade-as" defaultValue="PERCENTAGE">
+            <Form.Select
+              id="wd-display-grade-as"
+              defaultValue={assignment.displayAs}
+            >
               <option value="PERCENTAGE">Percentage</option>
               <option value="CGPA">CGPA</option>
               <option value="ABSOLUTE">Absolute</option>
@@ -72,7 +102,7 @@ export default function AssignmentEditor() {
             <Form className="border border-1 border-gray rounded p-3 mb-3">
               <Form.Select
                 id="wd-submission-type"
-                defaultValue="ONLINE"
+                defaultValue={assignment.submissionType}
                 className="mb-2"
               >
                 <option value="ONLINE">Online</option>
@@ -84,11 +114,14 @@ export default function AssignmentEditor() {
                 <b>Online Entry Options:</b>
               </Form.Label>
               <div className="ms-2 d-flex flex-column gap-3 mb-2">
-                <Form.Check type="checkbox" label="Text Entry" />
-                <Form.Check type="checkbox" label="Website URL" />
-                <Form.Check type="checkbox" label="Media Recordings" />
-                <Form.Check type="checkbox" label="Student Annotations" />
-                <Form.Check type="checkbox" label="File Upload" />
+                {onlineOptions.map((option) => (
+                  <Form.Check
+                    key={option}
+                    type="checkbox"
+                    label={option}
+                    defaultChecked={isOptionSelected(option)}
+                  />
+                ))}
               </div>
             </Form>
           </Col>
@@ -106,7 +139,7 @@ export default function AssignmentEditor() {
               </Form.Label>
               <Form.Control
                 id="wd-assign-to"
-                defaultValue="Everyone"
+                defaultValue={assignment.assignTo}
                 className="mb-3"
               />
 
@@ -114,9 +147,9 @@ export default function AssignmentEditor() {
                 <b>Due</b>
               </Form.Label>
               <Form.Control
-                type="date"
+                type="datetime-local"
                 id="wd-due-date"
-                defaultValue="2025-10-21"
+                defaultValue={formatDateTimeLocal(assignment.dueDate)}
                 className="mb-3"
               />
 
@@ -126,8 +159,8 @@ export default function AssignmentEditor() {
                     <b>Available From</b>
                   </Form.Label>
                   <Form.Control
-                    type="date"
-                    defaultValue="2025-10-21"
+                    type="datetime-local"
+                    defaultValue={formatDateTimeLocal(assignment.availableFrom)}
                     id="wd-available-from"
                   />
                 </Col>
@@ -136,8 +169,8 @@ export default function AssignmentEditor() {
                     <b>Until</b>
                   </Form.Label>
                   <Form.Control
-                    type="date"
-                    defaultValue="2025-10-21"
+                    type="datetime-local"
+                    defaultValue={formatDateTimeLocal(assignment.dueDate)}
                     id="wd-available-until"
                   />
                 </Col>
@@ -147,12 +180,17 @@ export default function AssignmentEditor() {
         </Row>
         <hr />
         <div className="text-end">
-          <Button variant="secondary" id="wd-cancel">
-            Cancel
-          </Button>
-          <Button variant="danger" id="wd-save" className="ms-2">
-            Save
-          </Button>
+          <Link href={`/Courses/${cid}/Assignments`} passHref>
+            <Button variant="secondary" id="wd-cancel">
+              Cancel
+            </Button>
+          </Link>
+
+          <Link href={`/Courses/${cid}/Assignments`} passHref>
+            <Button variant="danger" id="wd-save" className="ms-2">
+              Save
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

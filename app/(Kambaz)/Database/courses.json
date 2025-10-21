@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "CS1234",
+    "name": "React JS",
+    "number": "CS1234",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "description": "Full Stack software developer using ReactJS for front-end development.",
+    "imgLocation": "reactjs.jpg"
+  },
+  {
+    "_id": "CS5501",
+    "name": "Artificial Intelligence & Machine Learning",
+    "number": "CS5501",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "description": "Learn the foundations of AI, ML algorithms, and applications.",
+    "imgLocation": "ai.jpg"
+  },
+  {
+    "_id": "CS5502",
+    "name": "Data Structures & Algorithms",
+    "number": "CS5502",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "description": "Master problem-solving with efficient algorithms and data models.",
+    "imgLocation": "dsa.jpg"
+  },
+  {
+    "_id": "CS5503",
+    "name": "Operating Systems & Virtualization",
+    "number": "CS5503",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 3,
+    "description": "Explore processes, memory, and virtualization technologies.",
+    "imgLocation": "os.jpg"
+  },
+  {
+    "_id": "CS5504",
+    "name": "Database Management Systems",
+    "number": "CS5504",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 3,
+    "description": "Understand relational models, SQL, and transaction systems.",
+    "imgLocation": "dbms.jpg"
+  },
+  {
+    "_id": "CS5505",
+    "name": "Computer Networks & Security",
+    "number": "CS5505",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 3,
+    "description": "Dive into TCP/IP, routing, and cybersecurity principles.",
+    "imgLocation": "networks.jpg"
+  },
+  {
+    "_id": "CS5506",
+    "name": "Human-Computer Interaction",
+    "number": "CS5506",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 3,
+    "description": "Learn about user-centered design and usability principles.",
+    "author": "654f9ec2ea7ead465908d1e3",
+    "imgLocation": "hci.jpg"
+  },
+  {
+    "_id": "CS5507",
+    "name": "Cloud Systems & Architecture",
+    "number": "CS5507",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 4,
+    "description": "Learn about cloud infrastructure, deployment models, and scalable system design principles.",
+    "author": "654f9ec2ea7ead465908d1e3",
+    "imgLocation": "cloud.jpg"
+  }
+]

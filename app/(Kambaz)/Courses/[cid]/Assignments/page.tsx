@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from "next/link";
 import AssignmentControls from "./AssignmentControls";
 import TypeControlButtons from "./TypeControlButtons";
@@ -6,10 +7,12 @@ import { BsGripVertical } from "react-icons/bs";
 import AssignmentControlButtons from "./AssignmentControlButtons";
 import { GiStabbedNote } from "react-icons/gi";
 import { MdArrowDropDown } from "react-icons/md";
+import * as db from "../../../Database";
 export default async function Assignments({
   params,
 }: Readonly<{ params: Promise<{ cid: string }> }>) {
   const { cid } = await params;
+  const assignments = db.assignments;
   return (
     <div id="wd-assignments">
       <AssignmentControls />
@@ -24,75 +27,42 @@ export default async function Assignments({
             <TypeControlButtons value={40} />
           </div>
           <ListGroup className="wd-assignments rounded-0">
-            <ListGroupItem className="wd-assignment p-3 ps-1">
-              <div className="d-flex align-items-center">
-                <BsGripVertical className="me-3 fs-3 text-secondary" />
-                <GiStabbedNote className="me-4 fs-3 text-success" />
-
-                <div className="me-3">
+            {assignments
+              .filter((assignment: any) => assignment.course === cid)
+              .map((assignment: any) => (
+                <ListGroupItem
+                  key={assignment._id}
+                  className="wd-assignment p-3 ps-1"
+                  as="div"
+                >
                   <Link
-                    href={`/Courses/${cid}/Assignments/123`}
+                    href={`/Courses/${cid}/Assignments/${assignment._id}`}
                     className="wd-assignment-link text-decoration-none text-dark fw-bold"
                   >
-                    A1 - ENV + HTML
+                    <div className="d-flex align-items-center">
+                      <BsGripVertical className="me-3 fs-3 text-secondary" />
+                      <GiStabbedNote className="me-4 fs-3 text-success" />
+
+                      <div className="me-3">
+                        {assignment.title}
+                        <div
+                          className="text-muted"
+                          style={{ fontSize: "0.9rem" }}
+                        >
+                          <span className="text-danger">Multiple Modules</span>|
+                          <b> Not Available until </b>
+                          {formatISODate(assignment.availableFrom)} |
+                          <br />
+                          <b>Due </b> {formatISODate(assignment.dueDate)} |
+                          {assignment.points} pts
+                        </div>
+                      </div>
+
+                      <AssignmentControlButtons />
+                    </div>
                   </Link>
-                  <div className="text-muted" style={{ fontSize: "0.9rem" }}>
-                    <span className="text-danger">Multiple Modules</span> |
-                    <b>Not Available until</b> May 6 at 12:00 am |
-                    <br />
-                    <b>Due</b> May 13 at 11:59pm | 100pts
-                  </div>
-                </div>
-
-                <AssignmentControlButtons />
-              </div>
-            </ListGroupItem>
-            <ListGroupItem className="wd-assignment p-3 ps-1">
-              <div className="d-flex align-items-center">
-                <BsGripVertical className="me-3 fs-3 text-secondary" />
-                <GiStabbedNote className="me-4 fs-3 text-success" />
-
-                <div className="me-3">
-                  <Link
-                    href={`/Courses/${cid}/Assignments/234`}
-                    className="wd-assignment-link text-decoration-none text-dark fw-bold"
-                  >
-                    A2 - CSS + BOOTSTRAP
-                  </Link>
-                  <div className="text-muted" style={{ fontSize: "0.9rem" }}>
-                    <span className="text-danger">Multiple Modules</span> |{" "}
-                    <b>Not Available until</b> May 13 at 12:00 am |
-                    <br />
-                    <b>Due</b> May 20 at 11:59pm | 100pts
-                  </div>
-                </div>
-
-                <AssignmentControlButtons />
-              </div>
-            </ListGroupItem>
-            <ListGroupItem className="wd-assignment p-3 ps-1">
-              <div className="d-flex align-items-center">
-                <BsGripVertical className="me-3 fs-3 text-secondary" />
-                <GiStabbedNote className="me-4 fs-3 text-success" />
-
-                <div className="me-3">
-                  <Link
-                    href={`/Courses/${cid}/Assignments/345`}
-                    className="wd-assignment-link text-decoration-none text-dark fw-bold"
-                  >
-                    A3 - CSS + BOOTSTRAP
-                  </Link>
-                  <div className="text-muted" style={{ fontSize: "0.9rem" }}>
-                    <span className="text-danger">Multiple Modules</span> |{" "}
-                    <b>Not Available until</b> May 20 at 12:00 am |
-                    <br />
-                    <b>Due</b> May 27 at 11:59pm | 100pts
-                  </div>
-                </div>
-
-                <AssignmentControlButtons />
-              </div>
-            </ListGroupItem>
+                </ListGroupItem>
+              ))}
           </ListGroup>
         </ListGroupItem>
       </ListGroup>
@@ -131,4 +101,34 @@ export default async function Assignments({
       </ListGroup>
     </div>
   );
+}
+
+function formatISODate(isoDate: string) {
+  const date = new Date(isoDate);
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const month = monthNames[date.getMonth()];
+  const day = date.getDate();
+  const year = date.getFullYear();
+
+  let hours = date.getHours();
+  const minutes = date.getMinutes().toString().padStart(2, "0");
+  const ampm = hours >= 12 ? "PM" : "AM";
+
+  hours = hours % 12;
+  hours = hours ? hours : 12; // convert 0 to 12
+
+  return `${month} ${day} ${year} at ${hours}:${minutes}${ampm}`;
 }
