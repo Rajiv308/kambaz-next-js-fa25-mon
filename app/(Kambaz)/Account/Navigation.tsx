@@ -1,11 +1,16 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 export default function AccountNavigation() {
+  const pathname = usePathname();
   return (
     <div id="wd-account-navigation" className="wd list-group fs-5 rounded-0">
       <Link
         href="Signin"
         id="wd-signin-link"
-        className="list-group-item active border-0"
+        className={`list-group-item ${
+          pathname.includes("Signin") ? "active" : "text-danger"
+        } border-0`}
       >
         Signin
       </Link>
@@ -13,7 +18,9 @@ export default function AccountNavigation() {
       <Link
         href="Signup"
         id="wd-signup-link"
-        className="list-group-item text-danger border-0"
+        className={`list-group-item ${
+          pathname.includes("Signup") ? "active" : "text-danger"
+        } border-0`}
       >
         Signup
       </Link>
@@ -21,7 +28,9 @@ export default function AccountNavigation() {
       <Link
         href="Profile"
         id="wd-profile-link"
-        className="list-group-item text-danger border-0"
+        className={`list-group-item ${
+          pathname.includes("Profile") ? "active" : "text-danger"
+        } border-0`}
       >
         Profile
       </Link>
