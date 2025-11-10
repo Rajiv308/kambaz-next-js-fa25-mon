@@ -1,21 +1,28 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 import Link from "next/link";
 import AssignmentControls from "./AssignmentControls";
 import TypeControlButtons from "./TypeControlButtons";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 import { BsGripVertical } from "react-icons/bs";
 import AssignmentControlButtons from "./AssignmentControlButtons";
+import { addAssignment, deleteAssignment } from "./reducer";
 import { GiStabbedNote } from "react-icons/gi";
 import { MdArrowDropDown } from "react-icons/md";
-import * as db from "../../../Database";
-export default async function Assignments({
-  params,
-}: Readonly<{ params: Promise<{ cid: string }> }>) {
-  const { cid } = await params;
-  const assignments = db.assignments;
+import { RootState } from "../../../store";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "next/navigation";
+export default function Assignments() {
+  const { cid } = useParams();
+  const dispatch = useDispatch();
+  const { assignments } = useSelector(
+    (state: RootState) => state.assignmentsReducer
+  );
   return (
     <div id="wd-assignments">
-      <AssignmentControls />
+      <AssignmentControls
+        addAssignment={(assignment) => dispatch(addAssignment(assignment))}
+      />
       <br />
       <br />
       <ListGroup className="rounded-0" id="wd-assignments">
@@ -58,7 +65,12 @@ export default async function Assignments({
                         </div>
                       </div>
 
-                      <AssignmentControlButtons />
+                      <AssignmentControlButtons
+                        aid={assignment._id}
+                        deleteAssignment={(id) =>
+                          dispatch(deleteAssignment(id))
+                        }
+                      />
                     </div>
                   </Link>
                 </ListGroupItem>

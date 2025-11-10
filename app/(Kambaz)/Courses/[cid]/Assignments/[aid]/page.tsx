@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { useParams } from "next/navigation";
 import { Row, Col, Button } from "react-bootstrap";
-import * as db from "../../../../Database";
 import Form from "react-bootstrap/Form";
-import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../../store";
+import { useParams, useRouter } from "next/navigation";
+import { deleteAssignment, updateAssignment } from "../reducer";
+import { useState } from "react";
 
 export default function AssignmentEditor() {
   const onlineOptions = [
@@ -15,12 +18,38 @@ export default function AssignmentEditor() {
   ];
   const params = useParams();
   const { cid, aid } = params as { cid: string; aid: string };
-  const assignment = db.assignments.find(
+  const router = useRouter();
+  const dispatch = useDispatch();
+  const { currentUser } = useSelector(
+    (state: RootState) => state.accountReducer
+  );
+  const isFaculty = (currentUser as any)?.role === "FACULTY";
+  const { assignments } = useSelector(
+    (state: RootState) => state.assignmentsReducer
+  );
+  const existingAssignment = assignments.find(
     (a) => a.course === cid && a._id === aid
   );
-  if (!assignment) {
+
+  const [assignment, setAssignment] = useState<any>(existingAssignment);
+
+  if (!existingAssignment) {
     return <div>Assignment not found</div>;
   }
+
+  const handleSave = () => {
+    const cleanedAssignment = { ...assignment };
+    delete cleanedAssignment.isNew;
+    dispatch(updateAssignment(cleanedAssignment));
+    router.push(`/Courses/${cid}/Assignments`);
+  };
+
+  const handleCancel = () => {
+    if (assignment.isNew) {
+      dispatch(deleteAssignment(assignment._id));
+    }
+    router.push(`/Courses/${cid}/Assignments`);
+  };
 
   const isOptionSelected = (option: string) =>
     assignment.onlineOptions?.includes(option);
@@ -34,17 +63,34 @@ export default function AssignmentEditor() {
         <Form.Label>
           <b>Assignment Name</b>
         </Form.Label>
-        <Form.Control type="text" defaultValue={assignment.title} />
+        {isFaculty ? (
+          <Form.Control
+            type="text"
+            defaultValue={assignment.title}
+            onChange={(e) =>
+              setAssignment({ ...assignment, title: e.target.value })
+            }
+          />
+        ) : (
+          <div className="form-control-plaintext">{assignment.title}</div>
+        )}
         <br />
 
         <Form.Label>
           <b>Description</b>
         </Form.Label>
-        <Form.Control
-          as="textarea"
-          rows={10}
-          defaultValue={assignment.description}
-        />
+        {isFaculty ? (
+          <Form.Control
+            as="textarea"
+            rows={10}
+            defaultValue={assignment.description}
+            onChange={(e) =>
+              setAssignment({ ...assignment, description: e.target.value })
+            }
+          />
+        ) : (
+          <div className="form-control-plaintext">{assignment.description}</div>
+        )}
         <br />
         <Row className="mb-3 align-items-center">
           <Col sm={3} className="text-end mt-2">
@@ -53,11 +99,20 @@ export default function AssignmentEditor() {
             </Form.Label>
           </Col>
           <Col sm={9}>
-            <Form.Control
-              id="wd-points"
-              type="number"
-              defaultValue={assignment.points}
-            />
+            {isFaculty ? (
+              <Form.Control
+                type="number"
+                value={assignment.points}
+                onChange={(e) =>
+                  setAssignment({
+                    ...assignment,
+                    points: parseInt(e.target.value),
+                  })
+                }
+              />
+            ) : (
+              <div className="form-control-plaintext">{assignment.points}</div>
+            )}
           </Col>
         </Row>
         <Row className="mb-3 align-items-center">
@@ -67,12 +122,22 @@ export default function AssignmentEditor() {
             </Form.Label>
           </Col>
           <Col sm={9}>
-            <Form.Select id="wd-group" defaultValue={assignment.group}>
-              <option value="ASSIGNMENTS">Assignments</option>
-              <option value="QUIZZES">Quizzes</option>
-              <option value="EXAMS">Exams</option>
-              <option value="PROJECT">Project</option>
-            </Form.Select>
+            {isFaculty ? (
+              <Form.Select
+                id="wd-group"
+                defaultValue={assignment.group}
+                onChange={(e) =>
+                  setAssignment({ ...assignment, group: e.target.value })
+                }
+              >
+                <option value="ASSIGNMENTS">Assignments</option>
+                <option value="QUIZZES">Quizzes</option>
+                <option value="EXAMS">Exams</option>
+                <option value="PROJECT">Project</option>
+              </Form.Select>
+            ) : (
+              <div className="form-control-plaintext">{assignment.group}</div>
+            )}
           </Col>
         </Row>
         <Row className="mb-3 align-items-center">
@@ -82,14 +147,23 @@ export default function AssignmentEditor() {
             </Form.Label>
           </Col>
           <Col sm={9}>
-            <Form.Select
-              id="wd-display-grade-as"
-              defaultValue={assignment.displayAs}
-            >
-              <option value="PERCENTAGE">Percentage</option>
-              <option value="CGPA">CGPA</option>
-              <option value="ABSOLUTE">Absolute</option>
-            </Form.Select>
+            {isFaculty ? (
+              <Form.Select
+                id="wd-display-grade-as"
+                defaultValue={assignment.displayAs}
+                onChange={(e) =>
+                  setAssignment({ ...assignment, displayAs: e.target.value })
+                }
+              >
+                <option value="PERCENTAGE">Percentage</option>
+                <option value="CGPA">CGPA</option>
+                <option value="ABSOLUTE">Absolute</option>
+              </Form.Select>
+            ) : (
+              <div className="form-control-plaintext">
+                {assignment.displayAs}
+              </div>
+            )}
           </Col>
         </Row>
         <Row className="mb-4 align-items-start">
@@ -100,15 +174,27 @@ export default function AssignmentEditor() {
           </Col>
           <Col sm={9}>
             <Form className="border border-1 border-gray rounded p-3 mb-3">
-              <Form.Select
-                id="wd-submission-type"
-                defaultValue={assignment.submissionType}
-                className="mb-2"
-              >
-                <option value="ONLINE">Online</option>
-                <option value="WRITTEN">Written</option>
-                <option value="PRESENTATION">Presentation</option>
-              </Form.Select>
+              {isFaculty ? (
+                <Form.Select
+                  id="wd-submission-type"
+                  defaultValue={assignment.submissionType}
+                  onChange={(e) =>
+                    setAssignment({
+                      ...assignment,
+                      submissionType: e.target.value,
+                    })
+                  }
+                  className="mb-2"
+                >
+                  <option value="ONLINE">Online</option>
+                  <option value="WRITTEN">Written</option>
+                  <option value="PRESENTATION">Presentation</option>
+                </Form.Select>
+              ) : (
+                <div className="form-control-plaintext">
+                  {assignment.submissionType}
+                </div>
+              )}
 
               <Form.Label className="my-3">
                 <b>Online Entry Options:</b>
@@ -119,7 +205,22 @@ export default function AssignmentEditor() {
                     key={option}
                     type="checkbox"
                     label={option}
-                    defaultChecked={isOptionSelected(option)}
+                    value={option}
+                    checked={assignment.onlineOptions.includes(option)}
+                    disabled={!isFaculty}
+                    onChange={(e) => {
+                      const checked = e.target.checked;
+                      const value = e.target.value;
+
+                      setAssignment((prev: any) => ({
+                        ...prev,
+                        onlineOptions: checked
+                          ? [...prev.onlineOptions, value]
+                          : prev.onlineOptions.filter(
+                              (opt: any) => opt !== value
+                            ),
+                      }));
+                    }}
                   />
                 ))}
               </div>
@@ -137,61 +238,113 @@ export default function AssignmentEditor() {
               <Form.Label htmlFor="wd-assign-to">
                 <b>Assign To</b>
               </Form.Label>
-              <Form.Control
-                id="wd-assign-to"
-                defaultValue={assignment.assignTo}
-                className="mb-3"
-              />
-
+              {isFaculty ? (
+                <Form.Control
+                  type="text"
+                  value={assignment.assignTo}
+                  onChange={(e) =>
+                    setAssignment({ ...assignment, assignTo: e.target.value })
+                  }
+                />
+              ) : (
+                <div className="form-control-plaintext">
+                  {assignment.assignTo}
+                </div>
+              )}
               <Form.Label htmlFor="wd-due-date" className="d-block mb-1">
                 <b>Due</b>
               </Form.Label>
-              <Form.Control
-                type="datetime-local"
-                id="wd-due-date"
-                defaultValue={formatDateTimeLocal(assignment.dueDate)}
-                className="mb-3"
-              />
+              {isFaculty ? (
+                <Form.Control
+                  type="date"
+                  value={assignment.dueDate}
+                  onChange={(e) =>
+                    setAssignment({ ...assignment, dueDate: e.target.value })
+                  }
+                />
+              ) : (
+                <div className="form-control-plaintext">
+                  {formatDateTimeLocal(assignment.dueDate)}
+                </div>
+              )}
 
               <Row>
                 <Col>
                   <Form.Label htmlFor="wd-available-from">
                     <b>Available From</b>
                   </Form.Label>
-                  <Form.Control
-                    type="datetime-local"
-                    defaultValue={formatDateTimeLocal(assignment.availableFrom)}
-                    id="wd-available-from"
-                  />
+                  {isFaculty ? (
+                    <Form.Control
+                      type="date"
+                      value={assignment.availableFrom}
+                      onChange={(e) =>
+                        setAssignment({
+                          ...assignment,
+                          availableFrom: e.target.value,
+                        })
+                      }
+                    />
+                  ) : (
+                    <div className="form-control-plaintext">
+                      {formatDateTimeLocal(assignment.availableFrom)}
+                    </div>
+                  )}
                 </Col>
                 <Col>
                   <Form.Label htmlFor="wd-available-until">
                     <b>Until</b>
                   </Form.Label>
-                  <Form.Control
-                    type="datetime-local"
-                    defaultValue={formatDateTimeLocal(assignment.dueDate)}
-                    id="wd-available-until"
-                  />
+                  {isFaculty ? (
+                    <Form.Control
+                      type="datetime-local"
+                      defaultValue={formatDateTimeLocal(
+                        assignment.availableUntil
+                      )}
+                      onChange={(e) =>
+                        setAssignment({
+                          ...assignment,
+                          availableUntil: e.target.value,
+                        })
+                      }
+                      id="wd-available-until"
+                    />
+                  ) : (
+                    <div className="form-control-plaintext">
+                      {formatDateTimeLocal(assignment.availableUntil)}
+                    </div>
+                  )}
                 </Col>
               </Row>
             </Form>
           </Col>
         </Row>
         <hr />
-        <div className="text-end">
-          <Link href={`/Courses/${cid}/Assignments`} passHref>
-            <Button variant="secondary" id="wd-cancel">
+        {isFaculty ? (
+          <div className="text-end">
+            <Button variant="secondary" id="wd-cancel" onClick={handleCancel}>
               Cancel
             </Button>
-          </Link>
 
-          <Link href={`/Courses/${cid}/Assignments`} passHref>
-            <Button variant="danger" id="wd-save" className="ms-2">
+            <Button
+              variant="danger"
+              id="wd-save"
+              className="ms-2"
+              onClick={handleSave}
+            >
               Save
             </Button>
-          </Link>
-        </div>
+          </div>
+        ) : (
+          <div className="text-end">
+            <Button
+              variant="danger"
+              id="wd-close"
+              onClick={() => router.push(`/Courses/${cid}/Assignments`)}
+            >
+              Close
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );

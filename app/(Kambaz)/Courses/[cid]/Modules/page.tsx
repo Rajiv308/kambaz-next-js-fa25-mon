@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
+import { useState } from "react";
 import { useParams } from "next/navigation";
 import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
@@ -9,14 +10,27 @@ import ModuleControlButtons from "./ModuleControlButtons";
 import LessonControlButtons from "./LessonControlButtons";
 import * as db from "../../../Database";
 import ModulesControls from "./ModulesControls";
-
+import { v4 as uuidv4 } from "uuid";
+import { FormControl } from "react-bootstrap";
+import { addModule, editModule, updateModule, deleteModule } from "./reducer";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../../../store";
 export default function Modules() {
   const { cid } = useParams();
-  const modules = db.modules;
+  const [moduleName, setModuleName] = useState("");
+  const { modules } = useSelector((state: RootState) => state.modulesReducer);
+  const dispatch = useDispatch();
 
   return (
     <div>
-      <ModulesControls />
+      <ModulesControls
+        setModuleName={setModuleName}
+        moduleName={moduleName}
+        addModule={() => {
+          dispatch(addModule({ name: moduleName, course: cid }));
+          setModuleName("");
+        }}
+      />
       <br />
       <br />
       <ListGroup id="wd-modules" className="rounded-0">
@@ -29,13 +43,36 @@ export default function Modules() {
             >
               <div className="wd-title p-3 ps-2 bg-secondary d-flex justify-content-between align-items-center flex-no-wrap">
                 <div
-                  className="d-flex align-items-center"
+                  className="d-flex flex-fill align-items-center"
                   style={{ maxWidth: "80%" }}
                 >
                   <BsGripVertical className="me-2 fs-3" />
-                  <span className="text-truncate">{module.name}</span>
+                  {!module.editing && module.name}
+                  {module.editing && (
+                    <FormControl
+                      className="d-inline-block"
+                      style={{ width: "100%", maxWidth: "100%" }}
+                      onChange={(e) =>
+                        dispatch(
+                          updateModule({ ...module, name: e.target.value })
+                        )
+                      }
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === "Escape") {
+                          dispatch(updateModule({ ...module, editing: false }));
+                        }
+                      }}
+                      defaultValue={module.name}
+                    />
+                  )}
                 </div>
-                <ModuleControlButtons />
+                <ModuleControlButtons
+                  moduleId={module._id}
+                  deleteModule={(moduleId) => {
+                    dispatch(deleteModule(moduleId));
+                  }}
+                  editModule={(moduleId) => dispatch(editModule(moduleId))}
+                />
               </div>
 
               {module.lessons && (
