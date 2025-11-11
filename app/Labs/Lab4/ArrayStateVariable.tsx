@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "./store";
-import { ListGroup, ListGroupItem } from "react-bootstrap";
+import { Button, ListGroup, ListGroupItem } from "react-bootstrap";
 export default function ArrayStateVariable() {
   const { todos } = useSelector((state: RootState) => state.todosReducer);
 
@@ -16,52 +16,23 @@ export default function ArrayStateVariable() {
   return (
     <div id="wd-array-state-variables">
       <h2>Array State Variable</h2>
-      <button
-        onClick={addElement}
-        style={{
-          backgroundColor: "#4caf50",
-          color: "white",
-          padding: "8px 14px",
-          border: "none",
-          borderRadius: "8px",
-          cursor: "pointer",
-          marginBottom: "14px",
-          fontWeight: 500,
-        }}
-      >
+      <Button variant="success" onClick={addElement}>
         Add Element
-      </button>
-      <ul>
+      </Button>
+      <ListGroup className="mt-2 mb-2">
         {array.map((item, index) => (
-          <li
+          <ListGroupItem
             key={index}
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              width: "200px",
-              padding: "8px 4px",
-              borderBottom: "1px solid #ddd",
-              fontSize: "16px",
-            }}
+            className="d-flex justify-content-between align-items-center"
+            style={{ borderColor: "#555" }}
           >
             {item}
-            <button
-              onClick={() => deleteElement(index)}
-              style={{
-                backgroundColor: "#ff4d4f",
-                color: "white",
-                border: "none",
-                borderRadius: "6px",
-                padding: "4px 10px",
-                cursor: "pointer",
-              }}
-            >
+            <Button variant="danger" onClick={() => deleteElement(index)}>
               Delete
-            </button>
-          </li>
+            </Button>
+          </ListGroupItem>
         ))}
-      </ul>
+      </ListGroup>
       <hr />
       <ListGroup>
         {todos.map((todo: any) => (

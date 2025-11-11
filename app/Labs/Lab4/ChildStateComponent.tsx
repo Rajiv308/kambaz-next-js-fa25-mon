@@ -1,3 +1,5 @@
+import { Button } from "react-bootstrap";
+
 export default function ChildStateComponent({
   counter,
   setCounter,
@@ -8,18 +10,21 @@ export default function ChildStateComponent({
   return (
     <div id="wd-child-state">
       <h3>Counter {counter}</h3>
-      <button
+      <Button
+        variant="success"
+        className="me-2"
         onClick={() => setCounter(counter + 1)}
         id="wd-increment-child-state-click"
       >
         Increment
-      </button>
-      <button
+      </Button>
+      <Button
+        variant="danger"
         onClick={() => setCounter(counter - 1)}
         id="wd-decrement-child-state-click"
       >
         Decrement
-      </button>
+      </Button>
     </div>
   );
 }

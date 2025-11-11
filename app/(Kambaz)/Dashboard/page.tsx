@@ -40,7 +40,7 @@ export default function Dashboard() {
     endDate: "2023-12-15",
     department: "New Department",
     credits: 4,
-    imgLocation: "/images/reactjs.jpg",
+    imgLocation: "reactjs.jpg",
     description: "New Description",
   });
 
@@ -127,19 +127,52 @@ export default function Dashboard() {
             </div>
           </h5>
           <br />
-          <FormControl
-            value={course.name}
-            className="mb-2"
-            onChange={(e) => setCourse({ ...course, name: e.target.value })}
-          />
-          <FormControl
-            as="textarea"
-            value={course.description}
-            rows={3}
-            onChange={(e) =>
-              setCourse({ ...course, description: e.target.value })
-            }
-          />
+          <Row className="mb-3">
+            <Col md={8}>
+              <label htmlFor="courseName" className="form-label fw-semibold">
+                Course Name
+              </label>
+              <FormControl
+                id="courseName"
+                value={course.name}
+                placeholder="Enter course name"
+                onChange={(e) => setCourse({ ...course, name: e.target.value })}
+              />
+            </Col>
+
+            <Col md={4}>
+              <label htmlFor="courseNumber" className="form-label fw-semibold">
+                Course Number
+              </label>
+              <FormControl
+                id="courseNumber"
+                value={course.number}
+                placeholder="e.g. CS5001"
+                onChange={(e) =>
+                  setCourse({ ...course, number: e.target.value })
+                }
+              />
+            </Col>
+          </Row>
+
+          <div className="mb-3">
+            <label
+              htmlFor="courseDescription"
+              className="form-label fw-semibold"
+            >
+              Course Description
+            </label>
+            <FormControl
+              as="textarea"
+              id="courseDescription"
+              value={course.description}
+              rows={3}
+              placeholder="Enter a short course description"
+              onChange={(e) =>
+                setCourse({ ...course, description: e.target.value })
+              }
+            />
+          </div>
           <hr />
         </>
       )}
@@ -188,7 +221,7 @@ export default function Dashboard() {
                         />
                         <CardBody className="card-body">
                           <CardTitle className="wd-dashboard-course-title text-nowrap overflow-hidden">
-                            {course._id} {course.name}
+                            {course.number} {course.name}
                           </CardTitle>
                           <CardText
                             className="wd-dashboard-course-description overflow-hidden"
