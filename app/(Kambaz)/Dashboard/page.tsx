@@ -229,47 +229,48 @@ export default function Dashboard() {
                           >
                             {course.description}
                           </CardText>
-                          {showAllCourses ? (
-                            <>
-                              <Button
-                                variant={enrolled ? "danger" : "success"}
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  handleEnrollToggle(course._id);
-                                }}
-                              >
-                                {enrolled ? "Unenroll" : "Enroll"}
-                              </Button>
-                            </>
-                          ) : (
-                            <>
-                              <Button variant="primary"> Go </Button>
-                              {isFaculty && (
-                                <>
-                                  <Button
-                                    onClick={(event) => {
-                                      event.preventDefault();
-                                      dispatch(deleteCourse(course._id));
-                                    }}
-                                    className="btn btn-danger float-end"
-                                    id="wd-delete-course-click"
-                                  >
-                                    Delete
-                                  </Button>
-                                  <Button
-                                    id="wd-edit-course-click"
-                                    onClick={(event) => {
-                                      event.preventDefault();
-                                      setCourse(course);
-                                    }}
-                                    className="btn btn-warning me-2 float-end"
-                                  >
-                                    Edit
-                                  </Button>
-                                </>
+                          <div className="d-flex justify-content-between align-items-center">
+                            <div>
+                              {showAllCourses ? (
+                                <Button
+                                  variant={enrolled ? "danger" : "success"}
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    handleEnrollToggle(course._id);
+                                  }}
+                                >
+                                  {enrolled ? "Unenroll" : "Enroll"}
+                                </Button>
+                              ) : (
+                                <Button variant="primary">Go</Button>
                               )}
-                            </>
-                          )}
+                            </div>
+                            {isFaculty && (
+                              <div>
+                                <Button
+                                  variant="warning"
+                                  className="me-2"
+                                  onClick={(event) => {
+                                    event.preventDefault();
+                                    setCourse(course);
+                                  }}
+                                  id="wd-edit-course-click"
+                                >
+                                  Edit
+                                </Button>
+                                <Button
+                                  variant="danger"
+                                  onClick={(event) => {
+                                    event.preventDefault();
+                                    dispatch(deleteCourse(course._id));
+                                  }}
+                                  id="wd-delete-course-click"
+                                >
+                                  Delete
+                                </Button>
+                              </div>
+                            )}
+                          </div>
                         </CardBody>
                       </Link>
                     </div>
