@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
+import { useEffect, useState } from "react";
+import * as client from "../../../client";
 import { Row, Col, Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../../../store";
 import { useParams, useRouter } from "next/navigation";
-import { deleteAssignment, updateAssignment } from "../reducer";
-import { useState } from "react";
 
 export default function AssignmentEditor() {
   const onlineOptions = [
@@ -19,40 +19,50 @@ export default function AssignmentEditor() {
   const params = useParams();
   const { cid, aid } = params as { cid: string; aid: string };
   const router = useRouter();
-  const dispatch = useDispatch();
   const { currentUser } = useSelector(
     (state: RootState) => state.accountReducer
   );
   const isFaculty = (currentUser as any)?.role === "FACULTY";
-  const { assignments } = useSelector(
-    (state: RootState) => state.assignmentsReducer
-  );
-  const existingAssignment = assignments.find(
-    (a) => a.course === cid && a._id === aid
-  );
 
-  const [assignment, setAssignment] = useState<any>(existingAssignment);
+  const [assignment, setAssignment] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
-  if (!existingAssignment) {
-    return <div>Assignment not found</div>;
-  }
-
-  const handleSave = () => {
-    const cleanedAssignment = { ...assignment };
-    delete cleanedAssignment.isNew;
-    dispatch(updateAssignment(cleanedAssignment));
-    router.push(`/Courses/${cid}/Assignments`);
-  };
-
-  const handleCancel = () => {
-    if (assignment.isNew) {
-      dispatch(deleteAssignment(assignment._id));
+  const fetchAssignment = async () => {
+    try {
+      const data = await client.getAssignment(aid);
+      setAssignment(data);
+      console.log("Now Here :" + JSON.stringify(data, null, 2));
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setLoading(false);
     }
+  };
+
+  useEffect(() => {
+    fetchAssignment();
+  }, [aid]);
+
+  if (loading) return <div>Loading assignment...</div>;
+  if (!assignment) return <div>Assignment not found</div>;
+
+  const handleSave = async () => {
+    const cleaned = { ...assignment };
+    delete cleaned.isNew;
+    console.log("Assignment to save :" + JSON.stringify(cleaned, null, 2));
+
+    await client.updateAssignment(cleaned);
     router.push(`/Courses/${cid}/Assignments`);
   };
 
-  const isOptionSelected = (option: string) =>
-    assignment.onlineOptions?.includes(option);
+  const handleCancel = async () => {
+    console.log("Assignment to cancel :" + JSON.stringify(assignment, null, 2));
+    if (assignment.isNew) {
+      await client.deleteAssignment(assignment._id);
+    }
+
+    router.push(`/Courses/${cid}/Assignments`);
+  };
 
   const formatDateTimeLocal = (iso: string) => iso.slice(0, 16);
 
@@ -203,6 +213,7 @@ export default function AssignmentEditor() {
                 {onlineOptions.map((option) => (
                   <Form.Check
                     key={option}
+                    id={`online-option-${option.replace(/\s+/g, "-")}`}
                     type="checkbox"
                     label={option}
                     value={option}
@@ -256,8 +267,8 @@ export default function AssignmentEditor() {
               </Form.Label>
               {isFaculty ? (
                 <Form.Control
-                  type="date"
-                  value={assignment.dueDate}
+                  type="datetime-local"
+                  value={formatDateTimeLocal(assignment.dueDate)}
                   onChange={(e) =>
                     setAssignment({ ...assignment, dueDate: e.target.value })
                   }
@@ -275,8 +286,8 @@ export default function AssignmentEditor() {
                   </Form.Label>
                   {isFaculty ? (
                     <Form.Control
-                      type="date"
-                      value={assignment.availableFrom}
+                      type="datetime-local"
+                      value={formatDateTimeLocal(assignment.availableFrom)}
                       onChange={(e) =>
                         setAssignment({
                           ...assignment,

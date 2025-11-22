@@ -14,21 +14,21 @@ export default function CourseStatus() {
       <div className="d-flex">
         <div className="w-50 pe-1">
           <Button variant="secondary" size="lg" className="w-100 text-nowrap ">
-            <MdDoNotDisturbAlt className="me-2 fs-5" /> Unpublish{" "}
-          </Button>{" "}
+            <MdDoNotDisturbAlt className="me-2 fs-5" /> Unpublish
+          </Button>
         </div>
         <div className="w-50">
           <Button variant="success" size="lg" className="w-100">
-            <FaCheckCircle className="me-2 fs-5" /> Publish{" "}
-          </Button>{" "}
+            <FaCheckCircle className="me-2 fs-5" /> Publish
+          </Button>
         </div>
       </div>
       <br />
       <Button variant="secondary" size="lg" className="w-100 mt-1 text-start">
-        <BiImport className="me-2 fs-5" /> Import Existing Content{" "}
+        <BiImport className="me-2 fs-5" /> Import Existing Content
       </Button>
       <Button variant="secondary" size="lg" className="w-100 mt-1 text-start">
-        <LiaFileImportSolid className="me-2 fs-5" /> Import from Commons{" "}
+        <LiaFileImportSolid className="me-2 fs-5" /> Import from Commons
       </Button>
       <Button variant="secondary" size="lg" className="w-100 mt-1 text-start">
         <FaHome className="me-2 fs-5" /> Choose Home Page

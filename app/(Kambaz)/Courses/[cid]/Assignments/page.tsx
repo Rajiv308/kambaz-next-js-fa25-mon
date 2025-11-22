@@ -1,27 +1,46 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
+import { useEffect, useState } from "react";
+import * as client from "../../client";
 import Link from "next/link";
 import AssignmentControls from "./AssignmentControls";
 import TypeControlButtons from "./TypeControlButtons";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 import { BsGripVertical } from "react-icons/bs";
 import AssignmentControlButtons from "./AssignmentControlButtons";
-import { addAssignment, deleteAssignment } from "./reducer";
 import { GiStabbedNote } from "react-icons/gi";
 import { MdArrowDropDown } from "react-icons/md";
-import { RootState } from "../../../store";
-import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "next/navigation";
 export default function Assignments() {
   const { cid } = useParams();
-  const dispatch = useDispatch();
-  const { assignments } = useSelector(
-    (state: RootState) => state.assignmentsReducer
-  );
+  const [assignments, setAssignments] = useState<any[]>([]);
+
+  const fetchAssignments = async () => {
+    const data = await client.findAssignmentsForCourse(cid as string);
+    setAssignments(data);
+  };
+
+  useEffect(() => {
+    fetchAssignments();
+  }, [cid]);
+
+  const onAddAssignment = async (assignment: any) => {
+    const newAssignment = await client.createAssignment(
+      cid as string,
+      assignment
+    );
+    setAssignments((prev) => [...prev, newAssignment]);
+  };
+
+  const onDeleteAssignment = async (id: string) => {
+    await client.deleteAssignment(id);
+    setAssignments((prev) => prev.filter((a) => a._id !== id));
+  };
+
   return (
     <div id="wd-assignments">
       <AssignmentControls
-        addAssignment={(assignment) => dispatch(addAssignment(assignment))}
+        addAssignment={(assignment) => onAddAssignment(assignment)}
       />
       <br />
       <br />
@@ -67,9 +86,7 @@ export default function Assignments() {
 
                       <AssignmentControlButtons
                         aid={assignment._id}
-                        deleteAssignment={(id) =>
-                          dispatch(deleteAssignment(id))
-                        }
+                        deleteAssignment={(id) => onDeleteAssignment(id)}
                       />
                     </div>
                   </Link>
