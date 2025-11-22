@@ -76,7 +76,23 @@ export default function TOC() {
           href="https://github.com/Rajiv308/kambaz-next-js-fa25-mon"
           style={{ width: "100px" }}
         >
-          My GitHub
+          Frontend GitHub
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink
+          href="https://github.com/Rajiv308/kambaz-node-server-app"
+          style={{ width: "100px" }}
+        >
+          Backend GitHub
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink
+          href="https://kambaz-node-server-app-6lfs.onrender.com"
+          style={{ width: "100px" }}
+        >
+          Render
         </NavLink>
       </NavItem>
     </Nav>

@@ -12,13 +12,25 @@ export default function Labs() {
               <strong>Section:</strong> CS5010 - Web Development
             </td>
             <td>
-              <strong>GitHub Repo: </strong>
+              <strong>Frontend GitHub Repo: </strong>
               <a
                 href="https://github.com/Rajiv308/kambaz-next-js-fa25-mon.git"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="btn btn-primary btn-sm"
               >
-                github.com/Rajiv308/kambaz-next-js-fa25-mon.git
+                View Repository
+              </a>
+            </td>
+            <td>
+              <strong>Backend GitHub Repo: </strong>
+              <a
+                href="https://github.com/Rajiv308/kambaz-node-server-app.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary btn-sm"
+              >
+                View Repository
               </a>
             </td>
           </tr>
