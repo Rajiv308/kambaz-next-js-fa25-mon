@@ -118,3 +118,4 @@ export const updateUser = async (userId: string, updates: any) => {
 export const deleteUser = async (userId: string) => {
   await axiosWithCredentials.delete(`${USERS_API}/${userId}`);
 };
+
