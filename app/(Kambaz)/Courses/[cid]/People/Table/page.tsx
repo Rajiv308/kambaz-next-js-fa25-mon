@@ -8,6 +8,8 @@ import * as client from "../../../client";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/(Kambaz)/store";
+import PeopleDetails from "../Details";
+import Link from "next/link";
 
 function DeleteConfirmationModal({
   isOpen,
@@ -267,10 +269,18 @@ function UserDrawer({
   );
 }
 
-export default function PeopleTable() {
-  const { cid } = useParams();
-  const [users, setUsers] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+export default function PeopleTable({
+  users = [],
+  fetchUsers,
+}: {
+  users?: any[];
+  fetchUsers: () => void;
+}) {
+  // const { cid } = useParams();
+  const [detailsMode, setDetailsMode] = useState<"view" | "create">("view");
+  const [showDetails, setShowDetails] = useState(false);
+  const [showUserId, setShowUserId] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerMode, setDrawerMode] = useState<"create" | "edit">("create");
   const [selectedUser, setSelectedUser] = useState<any>(null);
@@ -284,19 +294,25 @@ export default function PeopleTable() {
 
   useEffect(() => {
     fetchUsers();
-  }, [cid]);
+  }, [showDetails]);
 
-  const fetchUsers = async () => {
-    if (!cid) return;
-    const courseId = Array.isArray(cid) ? cid[0] : cid;
-    try {
-      const courseUsers = await client.fetchUsersForCourse(courseId);
-      setUsers(courseUsers);
-    } catch (err) {
-      console.error("Failed to fetch users for course:", err);
-    } finally {
-      setLoading(false);
-    }
+  // const fetchUsers = async () => {
+  //   if (!cid) return;
+  //   const courseId = Array.isArray(cid) ? cid[0] : cid;
+  //   try {
+  //     const courseUsers = await client.fetchUsersForCourse(courseId);
+  //     setUsers(courseUsers);
+  //   } catch (err) {
+  //     console.error("Failed to fetch users for course:", err);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+  const handleViewUser = (userId: string) => {
+    setDetailsMode("view");
+    setShowUserId(userId);
+    setShowDetails(true);
   };
 
   const handleAddUser = () => {
@@ -322,8 +338,8 @@ export default function PeopleTable() {
     if (!userToDelete) return;
     try {
       await client.deleteUser(userToDelete._id);
-      await client.unenrollFromCourse(userToDelete._id, cid as string);
-      setUsers(users.filter((u) => u._id !== userToDelete._id));
+      // await client.unenrollFromCourse(userToDelete._id, cid as string);
+      // setUsers(users.filter((u) => u._id !== userToDelete._id));
       setDeleteModalOpen(false);
       setUserToDelete(null);
     } catch (err) {
@@ -334,18 +350,18 @@ export default function PeopleTable() {
   const handleSaveUser = async (userData: any) => {
     try {
       if (drawerMode === "create") {
-        const newUser = await client.createUser(userData);
-        await client.enrollInCourse(newUser._id, cid as string);
-        setUsers([...users, newUser]);
+        // const newUser = await client.createUser(userData);
+        // await client.enrollInCourse(newUser._id, cid as string);
+        // setUsers([...users, newUser]);
       } else {
         const updates = { ...userData };
         if (!updates.password) {
           delete updates.password;
         }
-        const updatedUser = await client.updateUser(selectedUser._id, updates);
-        setUsers(
-          users.map((u) => (u._id === selectedUser._id ? updatedUser : u))
-        );
+        // const updatedUser = await client.updateUser(selectedUser._id, updates);
+        // setUsers(
+        //   users.map((u) => (u._id === selectedUser._id ? updatedUser : u))
+        // );
         if (currentUser && selectedUser._id === (currentUser as any)._id) {
           window.location.reload();
         }
@@ -363,14 +379,27 @@ export default function PeopleTable() {
 
   return (
     <div id="wd-people-table">
-      {isFaculty && (
+      {showDetails && (
+        <PeopleDetails
+          uid={showUserId}
+          onClose={() => {
+            setShowDetails(false);
+            fetchUsers();
+          }}
+          onUserCreated={(newUser) => {
+            // Optionally handle the new user immediately
+            fetchUsers();
+          }}
+        />
+      )}
+      {/* {isFaculty && (
         <div className="mb-3 d-flex justify-content-end">
           <Button variant="danger" onClick={handleAddUser}>
             <FaPlus className="me-2" />
             Add User
           </Button>
         </div>
-      )}
+      )} */}
 
       <Table striped hover>
         <thead>
@@ -388,9 +417,17 @@ export default function PeopleTable() {
           {users.map((user: any) => (
             <tr key={user._id}>
               <td className="wd-full-name text-nowrap">
-                <FaUserCircle className="me-2 fs-1 text-secondary" />
-                <span className="wd-first-name">{user.firstName}</span>{" "}
-                <span className="wd-last-name">{user.lastName}</span>
+                <span
+                  className="text-decoration-none"
+                  onClick={() => {
+                    setShowDetails(true);
+                    setShowUserId(user._id);
+                  }}
+                >
+                  <FaUserCircle className="me-2 fs-1 text-secondary" />
+                  <span className="wd-first-name">{user.firstName}</span>{" "}
+                  <span className="wd-last-name">{user.lastName}</span>
+                </span>
               </td>
               <td className="wd-login-id">{user.username}</td>
               <td className="wd-section">{user.section}</td>

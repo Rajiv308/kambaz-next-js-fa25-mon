@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -15,15 +16,21 @@ export default function AccountNavigation() {
       <Nav variant="pills">
         {links.map((link) => (
           <NavItem key={link}>
-            <NavLink
-              as={Link}
-              href={link}
-              active={pathname.endsWith(link.toLowerCase())}
-            >
+            <NavLink as={Link} href={link} active={pathname.endsWith(link)}>
               {link}
             </NavLink>
           </NavItem>
         ))}
+        {(currentUser && (currentUser as any)?.role === "ADMIN") ||
+          ((currentUser as any)?.role === "FACULTY" && (
+            <NavLink
+              as={Link}
+              href={`/Account/Users`}
+              active={pathname.endsWith("Users")}
+            >
+              Users
+            </NavLink>
+          ))}
       </Nav>
     </div>
   );
