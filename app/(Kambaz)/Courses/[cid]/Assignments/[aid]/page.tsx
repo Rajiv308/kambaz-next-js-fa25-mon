@@ -16,9 +16,27 @@ export default function AssignmentEditor() {
     "Student Annotations",
     "File Upload",
   ];
+
+  const defaultAssignmentValues = {
+    title: "",
+    description: "",
+    points: 0,
+    group: "ASSIGNMENTS",
+    displayAs: "PERCENTAGE",
+    submissionType: "ONLINE",
+    onlineOptions: [] as string[],
+    assignTo: "",
+    dueDate: new Date().toISOString(),
+    availableFrom: new Date().toISOString(),
+    availableUntil: new Date(
+      new Date().getTime() + 7 * 24 * 60 * 60 * 1000
+    ).toISOString(),
+  };
+
   const params = useParams();
   const { cid, aid } = params as { cid: string; aid: string };
   const router = useRouter();
+
   const { currentUser } = useSelector(
     (state: RootState) => state.accountReducer
   );
@@ -26,14 +44,15 @@ export default function AssignmentEditor() {
     (currentUser as any)?.role
   );
 
-  const [assignment, setAssignment] = useState<any>(null);
+  const [assignment, setAssignment] = useState<any>({
+    ...defaultAssignmentValues,
+  });
   const [loading, setLoading] = useState(true);
 
   const fetchAssignment = async () => {
     try {
       const data = await client.getAssignment(aid);
-      setAssignment(data);
-      console.log("Now Here :" + JSON.stringify(data, null, 2));
+      setAssignment({ ...defaultAssignmentValues, ...data });
     } catch (e) {
       console.error(e);
     } finally {
@@ -49,24 +68,20 @@ export default function AssignmentEditor() {
   if (!assignment) return <div>Assignment not found</div>;
 
   const handleSave = async () => {
-    const cleaned = { ...assignment };
+    const cleaned = { ...defaultAssignmentValues, ...assignment };
     delete cleaned.isNew;
-    console.log("Assignment to save :" + JSON.stringify(cleaned, null, 2));
-
     await client.updateAssignment(cleaned);
     router.push(`/Courses/${cid}/Assignments`);
   };
 
   const handleCancel = async () => {
-    console.log("Assignment to cancel :" + JSON.stringify(assignment, null, 2));
     if (assignment.isNew) {
       await client.deleteAssignment(assignment._id);
     }
-
     router.push(`/Courses/${cid}/Assignments`);
   };
 
-  const formatDateTimeLocal = (iso: string) => iso.slice(0, 16);
+  const formatDateTimeLocal = (iso: string) => iso?.slice(0, 16) || "";
 
   return (
     <div id="wd-assignments-editor">
@@ -78,13 +93,15 @@ export default function AssignmentEditor() {
         {canManageUsers ? (
           <Form.Control
             type="text"
-            defaultValue={assignment.title}
+            value={assignment.title}
             onChange={(e) =>
               setAssignment({ ...assignment, title: e.target.value })
             }
           />
         ) : (
-          <div className="form-control-plaintext">{assignment.title}</div>
+          <div className="form-control-plaintext">
+            {assignment.title || defaultAssignmentValues.title}
+          </div>
         )}
         <br />
 
@@ -95,15 +112,18 @@ export default function AssignmentEditor() {
           <Form.Control
             as="textarea"
             rows={10}
-            defaultValue={assignment.description}
+            value={assignment.description}
             onChange={(e) =>
               setAssignment({ ...assignment, description: e.target.value })
             }
           />
         ) : (
-          <div className="form-control-plaintext">{assignment.description}</div>
+          <div className="form-control-plaintext">
+            {assignment.description || defaultAssignmentValues.description}
+          </div>
         )}
         <br />
+
         <Row className="mb-3 align-items-center">
           <Col sm={3} className="text-end mt-2">
             <Form.Label htmlFor="wd-points">
@@ -118,15 +138,18 @@ export default function AssignmentEditor() {
                 onChange={(e) =>
                   setAssignment({
                     ...assignment,
-                    points: parseInt(e.target.value),
+                    points: parseInt(e.target.value) || 0,
                   })
                 }
               />
             ) : (
-              <div className="form-control-plaintext">{assignment.points}</div>
+              <div className="form-control-plaintext">
+                {assignment.points ?? defaultAssignmentValues.points}
+              </div>
             )}
           </Col>
         </Row>
+
         <Row className="mb-3 align-items-center">
           <Col sm={3} className="text-end mt-2">
             <Form.Label htmlFor="wd-group">
@@ -137,7 +160,7 @@ export default function AssignmentEditor() {
             {canManageUsers ? (
               <Form.Select
                 id="wd-group"
-                defaultValue={assignment.group}
+                value={assignment.group}
                 onChange={(e) =>
                   setAssignment({ ...assignment, group: e.target.value })
                 }
@@ -148,10 +171,13 @@ export default function AssignmentEditor() {
                 <option value="PROJECT">Project</option>
               </Form.Select>
             ) : (
-              <div className="form-control-plaintext">{assignment.group}</div>
+              <div className="form-control-plaintext">
+                {assignment.group || defaultAssignmentValues.group}
+              </div>
             )}
           </Col>
         </Row>
+
         <Row className="mb-3 align-items-center">
           <Col sm={3} className="text-end mt-2">
             <Form.Label htmlFor="wd-display-grade-as">
@@ -162,7 +188,7 @@ export default function AssignmentEditor() {
             {canManageUsers ? (
               <Form.Select
                 id="wd-display-grade-as"
-                defaultValue={assignment.displayAs}
+                value={assignment.displayAs}
                 onChange={(e) =>
                   setAssignment({ ...assignment, displayAs: e.target.value })
                 }
@@ -173,11 +199,12 @@ export default function AssignmentEditor() {
               </Form.Select>
             ) : (
               <div className="form-control-plaintext">
-                {assignment.displayAs}
+                {assignment.displayAs || defaultAssignmentValues.displayAs}
               </div>
             )}
           </Col>
         </Row>
+
         <Row className="mb-4 align-items-start">
           <Col sm={3} className="text-end mt-2">
             <Form.Label htmlFor="wd-submission-type">
@@ -189,7 +216,7 @@ export default function AssignmentEditor() {
               {canManageUsers ? (
                 <Form.Select
                   id="wd-submission-type"
-                  defaultValue={assignment.submissionType}
+                  value={assignment.submissionType}
                   onChange={(e) =>
                     setAssignment({
                       ...assignment,
@@ -204,7 +231,8 @@ export default function AssignmentEditor() {
                 </Form.Select>
               ) : (
                 <div className="form-control-plaintext">
-                  {assignment.submissionType}
+                  {assignment.submissionType ||
+                    defaultAssignmentValues.submissionType}
                 </div>
               )}
 
@@ -224,7 +252,6 @@ export default function AssignmentEditor() {
                     onChange={(e) => {
                       const checked = e.target.checked;
                       const value = e.target.value;
-
                       setAssignment((prev: any) => ({
                         ...prev,
                         onlineOptions: checked
@@ -240,6 +267,7 @@ export default function AssignmentEditor() {
             </Form>
           </Col>
         </Row>
+
         <Row className="mb-3 align-items-start">
           <Col sm={3} className="text-end mt-2">
             <Form.Label htmlFor="wd-assign-to">
@@ -261,9 +289,10 @@ export default function AssignmentEditor() {
                 />
               ) : (
                 <div className="form-control-plaintext">
-                  {assignment.assignTo}
+                  {assignment.assignTo || defaultAssignmentValues.assignTo}
                 </div>
               )}
+
               <Form.Label htmlFor="wd-due-date" className="d-block mb-1">
                 <b>Due</b>
               </Form.Label>
@@ -310,9 +339,7 @@ export default function AssignmentEditor() {
                   {canManageUsers ? (
                     <Form.Control
                       type="datetime-local"
-                      defaultValue={formatDateTimeLocal(
-                        assignment.availableUntil
-                      )}
+                      value={formatDateTimeLocal(assignment.availableUntil)}
                       onChange={(e) =>
                         setAssignment({
                           ...assignment,
@@ -331,13 +358,13 @@ export default function AssignmentEditor() {
             </Form>
           </Col>
         </Row>
+
         <hr />
         {canManageUsers ? (
           <div className="text-end">
             <Button variant="secondary" id="wd-cancel" onClick={handleCancel}>
               Cancel
             </Button>
-
             <Button
               variant="danger"
               id="wd-save"
