@@ -28,7 +28,10 @@ export default function ModulesControls({
   const { currentUser } = useSelector(
     (state: RootState) => state.accountReducer
   );
-  const isFaculty = (currentUser as any)?.role === "FACULTY";
+
+  const canManageUsers = ["FACULTY", "ADMIN"].includes(
+    (currentUser as any)?.role
+  );
   return (
     <div
       id="wd-modules-controls"
@@ -51,7 +54,7 @@ export default function ModulesControls({
         View Progress
       </Button>
 
-      {isFaculty && (
+      {canManageUsers && (
         <>
           <Dropdown className="me-2">
             <DropdownToggle

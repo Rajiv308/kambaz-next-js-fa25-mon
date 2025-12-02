@@ -17,7 +17,10 @@ export default function AssignmentControls({
   const { currentUser } = useSelector(
     (state: RootState) => state.accountReducer
   );
-  const isFaculty = (currentUser as any)?.role === "FACULTY";
+
+  const canManageUsers = ["FACULTY", "ADMIN"].includes(
+    (currentUser as any)?.role
+  );
   const handleAddAssignment = () => {
     const newId = uuidv4();
     addAssignment({
@@ -55,7 +58,7 @@ export default function AssignmentControls({
           id="wd-search-bar"
         />
       </InputGroup>
-      {isFaculty && (
+      {canManageUsers && (
         <div className="d-flex align-items-center mb-3">
           <Button
             variant="secondary"

@@ -11,7 +11,6 @@ import * as client from "../client";
 export default function CoursesLayout({ children }: { children: ReactNode }) {
   const { cid } = useParams();
   const router = useRouter();
-  const { courses } = useSelector((state: RootState) => state.coursesReducer);
   const { currentUser } = useSelector(
     (state: RootState) => state.accountReducer
   );
@@ -19,7 +18,7 @@ export default function CoursesLayout({ children }: { children: ReactNode }) {
     (state: RootState) => state.enrollmentReducer
   );
 
-  const course = courses.find((course: any) => course._id === cid);
+  const course = client.fetchCourseById(cid as any);
   const [showSidebar, setShowSidebar] = useState(true);
   const toggleSidebar = () => setShowSidebar(!showSidebar);
 
@@ -28,12 +27,7 @@ export default function CoursesLayout({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const checkAuthorization = async () => {
-      if (!currentUser || !cid) return;
-
-      const course = await client.fetchAllCourses();
-      const exists = course.some((c: any) => c._id === cid);
-
-      if (!exists) {
+      if (!course) {
         router.push("/Dashboard");
         return;
       }
@@ -44,20 +38,21 @@ export default function CoursesLayout({ children }: { children: ReactNode }) {
         return;
       }
 
-      const isFaculty = (currentUser as any)?.role === "FACULTY";
-      if (isFaculty) {
+      const isAuthorized = ["FACULTY", "ADMIN"].includes(
+        (currentUser as any)?.role
+      );
+      if (isAuthorized) {
         setAuthorized(true);
         setLoading(false);
         return;
       }
 
       try {
-        const enrollments = await client.fetchEnrollmentsForUser(
-          (currentUser as any)._id
-        );
-
+        const enrollments = await client.fetchEnrollmentsForUser(currentUserId);
+        console.log("Enrollments:", enrollments);
+        console.log("Current CID:", cid);
         const isEnrolled = enrollments.some(
-          (enrollment: any) => enrollment.course === cid
+          (enrollment: any) => enrollment._id === cid
         );
 
         if (isEnrolled) {
@@ -86,7 +81,7 @@ export default function CoursesLayout({ children }: { children: ReactNode }) {
           style={{ cursor: "pointer" }}
           onClick={toggleSidebar}
         />
-        <Breadcrumb course={course} />
+        <Breadcrumb />
       </h2>
       <hr />
       <div className="d-flex">

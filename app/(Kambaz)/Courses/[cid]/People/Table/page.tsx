@@ -63,212 +63,6 @@ function DeleteConfirmationModal({
   );
 }
 
-function UserDrawer({
-  isOpen,
-  onClose,
-  user,
-  onSave,
-  mode,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-  user: any;
-  onSave: (userData: any) => void;
-  mode: "create" | "edit";
-}) {
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-    firstName: "",
-    lastName: "",
-    role: "STUDENT",
-    section: "",
-  });
-
-  useEffect(() => {
-    if (mode === "edit" && user) {
-      setFormData({
-        username: user.username || "",
-        password: "",
-        firstName: user.firstName || "",
-        lastName: user.lastName || "",
-        role: user.role || "STUDENT",
-        section: user.section || "",
-      });
-    } else if (mode === "create") {
-      setFormData({
-        username: "",
-        password: "",
-        firstName: "",
-        lastName: "",
-        role: "STUDENT",
-        section: "",
-      });
-    }
-  }, [user, mode, isOpen]);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSave(formData);
-  };
-
-  const handleDrawerClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-  };
-
-  if (!isOpen) return null;
-
-  return (
-    <>
-      <div
-        className="position-fixed top-0 start-0 w-100 h-100"
-        style={{ backgroundColor: "rgba(0,0,0,0.5)", zIndex: 1040 }}
-        onClick={onClose}
-      />
-
-      <div
-        className="position-fixed top-0 end-0 h-100 bg-white shadow-lg"
-        style={{
-          width: "400px",
-          zIndex: 1050,
-          overflowY: "auto",
-          animation: "slideIn 0.3s ease-out",
-        }}
-        onClick={handleDrawerClick}
-      >
-        <style>
-          {`
-            @keyframes slideIn {
-              from {
-                transform: translateX(100%);
-              }
-              to {
-                transform: translateX(0);
-              }
-            }
-          `}
-        </style>
-
-        <div className="p-4">
-          <div className="d-flex justify-content-between align-items-center mb-4">
-            <h4 className="mb-0">
-              {mode === "create" ? "Add New User" : "Edit User"}
-            </h4>
-            <button
-              type="button"
-              className="btn-close"
-              onClick={onClose}
-              aria-label="Close"
-            />
-          </div>
-
-          <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3">
-              <Form.Label>Username</Form.Label>
-              <Form.Control
-                type="text"
-                name="username"
-                value={formData.username}
-                onChange={handleChange as any}
-                required
-                disabled={mode === "edit"}
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange as any}
-                required={mode === "create"}
-                placeholder={
-                  mode === "edit" ? "Leave blank to keep current password" : ""
-                }
-              />
-              {mode === "edit" && (
-                <Form.Text className="text-muted">
-                  Leave blank to keep current password
-                </Form.Text>
-              )}
-            </Form.Group>
-
-            <Form.Group className="mb-3">
-              <Form.Label>First Name</Form.Label>
-              <Form.Control
-                type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange as any}
-                required
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3">
-              <Form.Label>Last Name</Form.Label>
-              <Form.Control
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange as any}
-                required
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3">
-              <Form.Label>Role</Form.Label>
-              <Form.Select
-                name="role"
-                value={formData.role}
-                onChange={handleChange}
-                required
-              >
-                <option value="STUDENT">Student</option>
-                <option value="FACULTY">Faculty</option>
-                <option value="TA">Teaching Assistant</option>
-              </Form.Select>
-            </Form.Group>
-
-            <Form.Group className="mb-4">
-              <Form.Label>Section</Form.Label>
-              <Form.Control
-                type="text"
-                name="section"
-                value={formData.section}
-                onChange={handleChange as any}
-                required
-              />
-            </Form.Group>
-
-            <div className="d-flex gap-2">
-              <Button
-                variant="secondary"
-                onClick={onClose}
-                className="flex-fill"
-              >
-                Cancel
-              </Button>
-              <Button variant="primary" type="submit" className="flex-fill">
-                {mode === "create" ? "Create User" : "Save Changes"}
-              </Button>
-            </div>
-          </Form>
-        </div>
-      </div>
-    </>
-  );
-}
-
 export default function PeopleTable({
   users = [],
   fetchUsers,
@@ -276,57 +70,31 @@ export default function PeopleTable({
   users?: any[];
   fetchUsers: () => void;
 }) {
-  // const { cid } = useParams();
-  const [detailsMode, setDetailsMode] = useState<"view" | "create">("view");
+  const params = useParams();
+  const getCourseId = () => {
+    if (!params.cid) return null;
+    return Array.isArray(params.cid) ? params.cid[0] : params.cid;
+  };
+
   const [showDetails, setShowDetails] = useState(false);
   const [showUserId, setShowUserId] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const [drawerMode, setDrawerMode] = useState<"create" | "edit">("create");
-  const [selectedUser, setSelectedUser] = useState<any>(null);
+  const [drawerMode, setDrawerMode] = useState<"create" | "edit" | "view">(
+    "view"
+  );
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [userToDelete, setUserToDelete] = useState<any>(null);
 
   const { currentUser } = useSelector(
     (state: RootState) => state.accountReducer
   );
-  const isFaculty = (currentUser as any)?.role === "FACULTY";
+  const canManageUsers = ["FACULTY", "ADMIN"].includes(
+    (currentUser as any)?.role
+  );
 
   useEffect(() => {
     fetchUsers();
-  }, [showDetails]);
-
-  // const fetchUsers = async () => {
-  //   if (!cid) return;
-  //   const courseId = Array.isArray(cid) ? cid[0] : cid;
-  //   try {
-  //     const courseUsers = await client.fetchUsersForCourse(courseId);
-  //     setUsers(courseUsers);
-  //   } catch (err) {
-  //     console.error("Failed to fetch users for course:", err);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-
-  const handleViewUser = (userId: string) => {
-    setDetailsMode("view");
-    setShowUserId(userId);
-    setShowDetails(true);
-  };
-
-  const handleAddUser = () => {
-    setDrawerMode("create");
-    setSelectedUser(null);
-    setDrawerOpen(true);
-  };
-
-  const handleEditUser = (user: any, e: React.MouseEvent) => {
-    e.stopPropagation();
-    setDrawerMode("edit");
-    setSelectedUser(user);
-    setDrawerOpen(true);
-  };
+  }, [showDetails, userToDelete]);
 
   const handleDeleteClick = (user: any, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -337,39 +105,19 @@ export default function PeopleTable({
   const handleConfirmDelete = async () => {
     if (!userToDelete) return;
     try {
-      await client.deleteUser(userToDelete._id);
-      // await client.unenrollFromCourse(userToDelete._id, cid as string);
-      // setUsers(users.filter((u) => u._id !== userToDelete._id));
+      if (!getCourseId()) {
+        await client.unenrollUserFromAllCourses(userToDelete._id);
+        await client.deleteUser(userToDelete._id);
+      } else {
+        await client.unenrollFromCourse(
+          userToDelete._id,
+          getCourseId() as string
+        );
+      }
       setDeleteModalOpen(false);
       setUserToDelete(null);
     } catch (err) {
       console.error("Failed to delete user:", err);
-    }
-  };
-
-  const handleSaveUser = async (userData: any) => {
-    try {
-      if (drawerMode === "create") {
-        // const newUser = await client.createUser(userData);
-        // await client.enrollInCourse(newUser._id, cid as string);
-        // setUsers([...users, newUser]);
-      } else {
-        const updates = { ...userData };
-        if (!updates.password) {
-          delete updates.password;
-        }
-        // const updatedUser = await client.updateUser(selectedUser._id, updates);
-        // setUsers(
-        //   users.map((u) => (u._id === selectedUser._id ? updatedUser : u))
-        // );
-        if (currentUser && selectedUser._id === (currentUser as any)._id) {
-          window.location.reload();
-        }
-      }
-      setDrawerOpen(false);
-      setSelectedUser(null);
-    } catch (err) {
-      console.error("Failed to save user:", err);
     }
   };
 
@@ -381,25 +129,18 @@ export default function PeopleTable({
     <div id="wd-people-table">
       {showDetails && (
         <PeopleDetails
+          mode={drawerMode}
           uid={showUserId}
           onClose={() => {
             setShowDetails(false);
             fetchUsers();
+            setDrawerMode("view");
           }}
           onUserCreated={(newUser) => {
-            // Optionally handle the new user immediately
             fetchUsers();
           }}
         />
       )}
-      {/* {isFaculty && (
-        <div className="mb-3 d-flex justify-content-end">
-          <Button variant="danger" onClick={handleAddUser}>
-            <FaPlus className="me-2" />
-            Add User
-          </Button>
-        </div>
-      )} */}
 
       <Table striped hover>
         <thead>
@@ -410,7 +151,7 @@ export default function PeopleTable({
             <th>Role</th>
             <th>Last Activity</th>
             <th>Total Activity</th>
-            {isFaculty && <th className="text-center">Actions</th>}
+            {canManageUsers && <th className="text-center">Actions</th>}
           </tr>
         </thead>
         <tbody>
@@ -434,13 +175,17 @@ export default function PeopleTable({
               <td className="wd-role">{user.role}</td>
               <td className="wd-last-activity">{user.lastActivity || "N/A"}</td>
               <td className="wd-total-activity">{user.totalActivity || "0"}</td>
-              {isFaculty && (
+              {canManageUsers && (
                 <td className="text-center">
                   <div className="d-flex gap-2 justify-content-center">
                     <FaEdit
                       className="text-primary"
                       style={{ cursor: "pointer", fontSize: "1.2rem" }}
-                      onClick={(e) => handleEditUser(user, e)}
+                      onClick={() => {
+                        setShowDetails(true);
+                        setDrawerMode("edit");
+                        setShowUserId(user._id);
+                      }}
                       title="Edit user"
                     />
                     <FaTrash
@@ -456,14 +201,6 @@ export default function PeopleTable({
           ))}
         </tbody>
       </Table>
-
-      <UserDrawer
-        isOpen={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
-        user={selectedUser}
-        onSave={handleSaveUser}
-        mode={drawerMode}
-      />
 
       <DeleteConfirmationModal
         isOpen={deleteModalOpen}

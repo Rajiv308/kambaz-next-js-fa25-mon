@@ -21,16 +21,15 @@ export default function AccountNavigation() {
             </NavLink>
           </NavItem>
         ))}
-        {(currentUser && (currentUser as any)?.role === "ADMIN") ||
-          ((currentUser as any)?.role === "FACULTY" && (
-            <NavLink
-              as={Link}
-              href={`/Account/Users`}
-              active={pathname.endsWith("Users")}
-            >
-              Users
-            </NavLink>
-          ))}
+        {currentUser && ["ADMIN"].includes((currentUser as any)?.role) && (
+          <NavLink
+            as={Link}
+            href={`/Account/Users`}
+            active={pathname.endsWith("Users")}
+          >
+            Users
+          </NavLink>
+        )}
       </Nav>
     </div>
   );

@@ -14,6 +14,9 @@ import { useParams } from "next/navigation";
 export default function Assignments() {
   const { cid } = useParams();
   const [assignments, setAssignments] = useState<any[]>([]);
+  const [assignmentToDelete, setAssignmentToDelete] = useState<string | null>(
+    null
+  );
 
   const fetchAssignments = async () => {
     const data = await client.findAssignmentsForCourse(cid as string);
@@ -32,9 +35,15 @@ export default function Assignments() {
     setAssignments((prev) => [...prev, newAssignment]);
   };
 
-  const onDeleteAssignment = async (id: string) => {
-    await client.deleteAssignment(id);
-    setAssignments((prev) => prev.filter((a) => a._id !== id));
+  const handleDeleteClick = (id: string) => setAssignmentToDelete(id);
+
+  const handleCloseModal = () => setAssignmentToDelete(null);
+
+  const handleConfirmDelete = async () => {
+    if (!assignmentToDelete) return;
+    await client.deleteAssignment(assignmentToDelete);
+    setAssignments((prev) => prev.filter((a) => a._id !== assignmentToDelete));
+    setAssignmentToDelete(null);
   };
 
   return (
@@ -86,7 +95,7 @@ export default function Assignments() {
 
                       <AssignmentControlButtons
                         aid={assignment._id}
-                        deleteAssignment={(id) => onDeleteAssignment(id)}
+                        onDeleteClick={handleDeleteClick}
                       />
                     </div>
                   </Link>
@@ -128,6 +137,57 @@ export default function Assignments() {
           </div>
         </ListGroupItem>
       </ListGroup>
+      {assignmentToDelete && (
+        <div
+          className="modal fade show d-block"
+          style={{
+            backgroundColor: "rgba(0,0,0,0.5)",
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: 1050,
+          }}
+          onClick={handleCloseModal}
+        >
+          <div
+            className="modal-dialog modal-dialog-centered"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="modal-content">
+              <div className="modal-header border-0">
+                <h5 className="modal-title">Delete Assignment</h5>
+                <button
+                  type="button"
+                  className="btn-close"
+                  onClick={handleCloseModal}
+                />
+              </div>
+              <div className="modal-body">
+                <p className="text-muted mb-0">
+                  Are you sure you want to remove this assignment? This action
+                  cannot be undone.
+                </p>
+              </div>
+              <div className="modal-footer border-0">
+                <button
+                  className="btn btn-secondary"
+                  onClick={handleCloseModal}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="btn btn-danger"
+                  onClick={handleConfirmDelete}
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

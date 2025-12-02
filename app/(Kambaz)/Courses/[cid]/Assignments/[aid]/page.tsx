@@ -22,7 +22,9 @@ export default function AssignmentEditor() {
   const { currentUser } = useSelector(
     (state: RootState) => state.accountReducer
   );
-  const isFaculty = (currentUser as any)?.role === "FACULTY";
+  const canManageUsers = ["FACULTY", "ADMIN"].includes(
+    (currentUser as any)?.role
+  );
 
   const [assignment, setAssignment] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -73,7 +75,7 @@ export default function AssignmentEditor() {
         <Form.Label>
           <b>Assignment Name</b>
         </Form.Label>
-        {isFaculty ? (
+        {canManageUsers ? (
           <Form.Control
             type="text"
             defaultValue={assignment.title}
@@ -89,7 +91,7 @@ export default function AssignmentEditor() {
         <Form.Label>
           <b>Description</b>
         </Form.Label>
-        {isFaculty ? (
+        {canManageUsers ? (
           <Form.Control
             as="textarea"
             rows={10}
@@ -109,7 +111,7 @@ export default function AssignmentEditor() {
             </Form.Label>
           </Col>
           <Col sm={9}>
-            {isFaculty ? (
+            {canManageUsers ? (
               <Form.Control
                 type="number"
                 value={assignment.points}
@@ -132,7 +134,7 @@ export default function AssignmentEditor() {
             </Form.Label>
           </Col>
           <Col sm={9}>
-            {isFaculty ? (
+            {canManageUsers ? (
               <Form.Select
                 id="wd-group"
                 defaultValue={assignment.group}
@@ -157,7 +159,7 @@ export default function AssignmentEditor() {
             </Form.Label>
           </Col>
           <Col sm={9}>
-            {isFaculty ? (
+            {canManageUsers ? (
               <Form.Select
                 id="wd-display-grade-as"
                 defaultValue={assignment.displayAs}
@@ -184,7 +186,7 @@ export default function AssignmentEditor() {
           </Col>
           <Col sm={9}>
             <Form className="border border-1 border-gray rounded p-3 mb-3">
-              {isFaculty ? (
+              {canManageUsers ? (
                 <Form.Select
                   id="wd-submission-type"
                   defaultValue={assignment.submissionType}
@@ -218,7 +220,7 @@ export default function AssignmentEditor() {
                     label={option}
                     value={option}
                     checked={assignment.onlineOptions.includes(option)}
-                    disabled={!isFaculty}
+                    disabled={!canManageUsers}
                     onChange={(e) => {
                       const checked = e.target.checked;
                       const value = e.target.value;
@@ -249,7 +251,7 @@ export default function AssignmentEditor() {
               <Form.Label htmlFor="wd-assign-to">
                 <b>Assign To</b>
               </Form.Label>
-              {isFaculty ? (
+              {canManageUsers ? (
                 <Form.Control
                   type="text"
                   value={assignment.assignTo}
@@ -265,7 +267,7 @@ export default function AssignmentEditor() {
               <Form.Label htmlFor="wd-due-date" className="d-block mb-1">
                 <b>Due</b>
               </Form.Label>
-              {isFaculty ? (
+              {canManageUsers ? (
                 <Form.Control
                   type="datetime-local"
                   value={formatDateTimeLocal(assignment.dueDate)}
@@ -284,7 +286,7 @@ export default function AssignmentEditor() {
                   <Form.Label htmlFor="wd-available-from">
                     <b>Available From</b>
                   </Form.Label>
-                  {isFaculty ? (
+                  {canManageUsers ? (
                     <Form.Control
                       type="datetime-local"
                       value={formatDateTimeLocal(assignment.availableFrom)}
@@ -305,7 +307,7 @@ export default function AssignmentEditor() {
                   <Form.Label htmlFor="wd-available-until">
                     <b>Until</b>
                   </Form.Label>
-                  {isFaculty ? (
+                  {canManageUsers ? (
                     <Form.Control
                       type="datetime-local"
                       defaultValue={formatDateTimeLocal(
@@ -330,7 +332,7 @@ export default function AssignmentEditor() {
           </Col>
         </Row>
         <hr />
-        {isFaculty ? (
+        {canManageUsers ? (
           <div className="text-end">
             <Button variant="secondary" id="wd-cancel" onClick={handleCancel}>
               Cancel

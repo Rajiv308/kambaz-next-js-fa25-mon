@@ -33,7 +33,10 @@ export default function Dashboard() {
   const { currentUser } = useSelector(
     (state: RootState) => state.accountReducer
   );
-  const isFaculty = (currentUser as any)?.role === "FACULTY";
+
+  const canManageCourses = ["FACULTY", "ADMIN"].includes(
+    (currentUser as any)?.role
+  );
   const [enrollments, setEnrollments] = useState<any[]>([]);
   const [showAllCourses, setShowAllCourses] = useState(false);
   const [displayedCourses, setDisplayedCourses] = useState<any[]>([]);
@@ -49,20 +52,93 @@ export default function Dashboard() {
     description: "New Description",
   });
 
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [courseToDelete, setCourseToDelete] = useState<string | null>(null);
+
+  function DeleteConfirmationModal({
+    isOpen,
+    onClose,
+    onConfirm,
+    title = "Delete Course",
+    message = "Are you sure you want to remove this course? This action cannot be undone.",
+  }: {
+    isOpen: boolean;
+    onClose: (e: React.MouseEvent) => void;
+    onConfirm: (e: React.MouseEvent) => void;
+    title?: string;
+    message?: string;
+  }) {
+    if (!isOpen) return null;
+
+    const handleModalClick = (e: React.MouseEvent) => e.stopPropagation();
+
+    return (
+      <div
+        className="modal fade show d-block"
+        style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+        onClick={onClose}
+      >
+        <div
+          className="modal-dialog modal-dialog-centered"
+          onClick={handleModalClick}
+        >
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <h5 className="modal-title">{title}</h5>
+              <button type="button" className="btn-close" onClick={onClose} />
+            </div>
+            <div className="modal-body">
+              <p className="text-muted mb-0">{message}</p>
+            </div>
+            <div className="modal-footer border-0">
+              <button className="btn btn-secondary" onClick={onClose}>
+                Cancel
+              </button>
+              <button className="btn btn-danger" onClick={onConfirm}>
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  const handleDeleteClick = (courseId: string) => {
+    setCourseToDelete(courseId);
+    setShowDeleteModal(true);
+  };
+
+  const handleConfirmDelete = async (event: React.MouseEvent) => {
+    event.preventDefault();
+    if (!courseToDelete) return;
+
+    await client.deleteCourse(courseToDelete);
+    dispatch(deleteCourse(courseToDelete));
+    setShowDeleteModal(false);
+    setCourseToDelete(null);
+    refreshCourses();
+  };
+
+  const handleCloseModal = (event: React.MouseEvent) => {
+    event.preventDefault();
+    setShowDeleteModal(false);
+    setCourseToDelete(null);
+  };
+
   const refreshCourses = useCallback(async () => {
     try {
-      const myCourses = await client.findMyCourses();
       const userId = (currentUser as any)?._id;
       if (!userId) return;
       const userEnrollments = await client.fetchEnrollmentsForUser(userId);
       setEnrollments(userEnrollments);
-      dispatch(setCourses(myCourses));
+      dispatch(setCourses(userEnrollments));
 
       if (showAllCourses) {
         const allCourses = await client.fetchAllCourses();
         setDisplayedCourses(allCourses);
       } else {
-        setDisplayedCourses(myCourses);
+        setDisplayedCourses(userEnrollments);
       }
     } catch (error) {
       console.error(error);
@@ -75,15 +151,6 @@ export default function Dashboard() {
     refreshCourses();
   }, [course, refreshCourses]);
 
-  const onDeleteCourse = useCallback(
-    async (courseId: string) => {
-      const status = await client.deleteCourse(courseId);
-      dispatch(deleteCourse(courseId));
-      refreshCourses();
-    },
-    [course, refreshCourses]
-  );
-
   const onUpdateCourse = useCallback(async () => {
     const updated = await client.updateCourse(course);
     dispatch(updateCourse(updated));
@@ -93,16 +160,14 @@ export default function Dashboard() {
   const isUserEnrolled = (courseId: string) => {
     const userId = (currentUser as any)?._id;
     if (!userId) return false;
-    return enrollments.some((e) => e.user === userId && e.course === courseId);
+    return enrollments.some((e) => e._id === courseId);
   };
 
   const handleEnrollToggle = async (courseId: string) => {
     if (!(currentUser as any)?._id) return;
     const userId = (currentUser as any)._id;
 
-    const existing = enrollments.find(
-      (e) => e.user === userId && e.course === courseId
-    );
+    const existing = enrollments.find((e) => e._id === courseId);
 
     if (existing) {
       await client.unenrollFromCourse(userId, courseId);
@@ -115,7 +180,7 @@ export default function Dashboard() {
   };
 
   const handleCourseClick = (courseId: string, event: any) => {
-    if (!isFaculty && !isUserEnrolled(courseId)) {
+    if (!canManageCourses && !isUserEnrolled(courseId)) {
       event.preventDefault();
       alert("You must enroll to access this course!");
     }
@@ -132,7 +197,7 @@ export default function Dashboard() {
   return (
     <div id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
-      {isFaculty && (
+      {canManageCourses && (
         <>
           <h5 className="d-flex align-items-center justify-content-between">
             New Course
@@ -276,7 +341,7 @@ export default function Dashboard() {
                                 <Button variant="primary">Go</Button>
                               )}
                             </div>
-                            {isFaculty && (
+                            {canManageCourses && (
                               <div>
                                 <Button
                                   variant="warning"
@@ -293,7 +358,7 @@ export default function Dashboard() {
                                   variant="danger"
                                   onClick={(event) => {
                                     event.preventDefault();
-                                    onDeleteCourse(course._id);
+                                    handleDeleteClick(course._id);
                                   }}
                                   id="wd-delete-course-click"
                                 >
@@ -312,6 +377,11 @@ export default function Dashboard() {
           })}
         </Row>
       </div>
+      <DeleteConfirmationModal
+        isOpen={showDeleteModal}
+        onClose={handleCloseModal}
+        onConfirm={handleConfirmDelete}
+      />
     </div>
   );
 }

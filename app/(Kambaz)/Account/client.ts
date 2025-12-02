@@ -3,6 +3,7 @@ import axios from "axios";
 const axiosWithCredentials = axios.create({ withCredentials: true });
 export const HTTP_SERVER = process.env.NEXT_PUBLIC_HTTP_SERVER;
 export const USERS_API = `${HTTP_SERVER}/api/users`;
+const ENROLLMENTS_API = `${HTTP_SERVER}/api/enrollments`;
 
 export const signin = async (credentials: any) => {
   const response = await axiosWithCredentials.post( `${USERS_API}/signin`, credentials );
@@ -49,7 +50,12 @@ export const createUser = async (user: any) => {
   const response = await axios.post(`${USERS_API}`, user);
   return response.data;
 };
-
+export const unenrollUserFromAllCourses = async (userId: string) => {
+  const response = await axiosWithCredentials.delete(
+    `${ENROLLMENTS_API}/users/${userId}`
+  );
+  return response.data;
+}
 
 
 
