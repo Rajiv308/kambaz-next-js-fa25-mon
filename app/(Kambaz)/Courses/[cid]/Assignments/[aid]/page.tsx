@@ -28,6 +28,7 @@ export default function AssignmentEditor() {
   const [loading, setLoading] = useState(true);
 
   const fetchAssignment = async () => {
+    await new Promise((resolve) => setTimeout(resolve, 100));
     try {
       const data = await client.getAssignment(aid);
       setAssignment(data);
