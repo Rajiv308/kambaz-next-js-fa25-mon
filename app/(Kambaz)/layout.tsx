@@ -12,12 +12,15 @@ export default function KambazLayout({
   return (
     <Provider store={store}>
       <Session>
-        <div id="wd-kambaz">
-          <div className="d-flex">
-            <div>
+        <div id="wd-kambaz" style={{ height: "100vh", overflow: "hidden" }}>
+          <div className="d-flex" style={{ height: "100%" }}>
+            <div className="flex-shrink-0">
               <KambazNavigation />
             </div>
-            <div className="wd-main-content-offset p-3 flex-fill">
+            <div
+              className="wd-main-content-offset p-3 flex-fill d-flex flex-column"
+              style={{ minHeight: 0, overflowY: "auto" }}
+            >
               {children}
             </div>
           </div>

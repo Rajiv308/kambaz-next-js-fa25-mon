@@ -73,6 +73,11 @@
           "description": "Learn how to handle errors in React components."
         }
       ]
+    },
+    {
+      "_id": "495d822e-1ada-491b-b59c-6bac04d2b8d9",
+      "name": "TEST123",
+      "lessons": []
     }
   ],
   "imgLocation": "reactjs.jpg"
@@ -468,6 +473,11 @@
           "description": "Understand SSL/TLS, IPSec, and VPN encryption."
         }
       ]
+    },
+    {
+      "_id": "ff987b59-cea9-4098-99e6-3fb61f4b03f6",
+      "name": "lmao bubub",
+      "lessons": []
     }
   ],
   "imgLocation": "networks.jpg"

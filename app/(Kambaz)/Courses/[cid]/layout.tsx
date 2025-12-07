@@ -74,8 +74,12 @@ export default function CoursesLayout({ children }: { children: ReactNode }) {
   if (loading || !authorized) return null;
 
   return (
-    <div id="wd-courses">
-      <h2 className="text-danger">
+    <div
+      id="wd-courses"
+      className="d-flex flex-column flex-fill"
+      style={{ minHeight: 0 }}
+    >
+      <h2 className="text-danger flex-shrink-0 mb-0">
         <FaAlignJustify
           className="me-4 fs-4 mb-1"
           style={{ cursor: "pointer" }}
@@ -83,14 +87,16 @@ export default function CoursesLayout({ children }: { children: ReactNode }) {
         />
         <Breadcrumb />
       </h2>
-      <hr />
-      <div className="d-flex">
+      <hr className="flex-shrink-0 mt-2 mb-2" />
+      <div className="d-flex flex-fill" style={{ minHeight: 0 }}>
         {showSidebar && (
-          <div className="d-none d-md-block">
+          <div className="d-none d-md-block flex-shrink-0 wd-course-navigation-wrapper">
             <CourseNavigation />
           </div>
         )}
-        <div className="flex-fill">{children}</div>
+        <div className="flex-fill d-flex flex-column" style={{ minHeight: 0 }}>
+          {children}
+        </div>
       </div>
     </div>
   );

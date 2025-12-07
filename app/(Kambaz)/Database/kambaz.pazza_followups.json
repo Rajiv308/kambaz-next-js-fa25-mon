@@ -1,0 +1,225 @@
+[{
+  "_id": "followup-001",
+  "post": "post-cs1234-002",
+  "author": "567",
+  "authorName": "Bruce Banner",
+  "authorRole": "STUDENT",
+  "content": "Thanks for the explanation! One follow-up: does useReducer work well with TypeScript? I heard type inference is better.",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-001-1",
+      "author": "678",
+      "authorName": "Frodo Baggins",
+      "authorRole": "FACULTY",
+      "content": "Yes! useReducer with TypeScript is excellent. You can define action types as discriminated unions for perfect type safety.",
+      "createdAt": {
+        "$date": "2025-12-04T17:00:00.000Z"
+      },
+      "updatedAt": {
+        "$date": "2025-12-04T17:00:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-04T16:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T17:00:00.000Z"
+  }
+},
+{
+  "_id": "followup-002",
+  "post": "post-cs1234-003",
+  "author": "909",
+  "authorName": "R2-D2 Droid",
+  "authorRole": "STUDENT",
+  "content": "Thank you for the extension! Will the late penalty still apply if we submit after the original deadline?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-002-1",
+      "author": "678",
+      "authorName": "Frodo Baggins",
+      "authorRole": "FACULTY",
+      "content": "No late penalty for submissions before the new deadline (Dec 10). The extension applies to everyone equally.",
+      "createdAt": {
+        "$date": "2025-12-05T12:00:00.000Z"
+      },
+      "updatedAt": {
+        "$date": "2025-12-05T12:00:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-05T11:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T12:00:00.000Z"
+  }
+},
+{
+  "_id": "followup-003",
+  "post": "post-cs5501-002",
+  "author": "123",
+  "authorName": "Tony Stark",
+  "authorRole": "STUDENT",
+  "content": "Gradient clipping worked! But now my model is underfitting. Should I increase the learning rate again?",
+  "resolved": false,
+  "replies": [
+    {
+      "_id": "reply-003-1",
+      "author": "908",
+      "authorName": "C-3PO Droid",
+      "authorRole": "STUDENT",
+      "content": "I had the same issue. Try using a learning rate scheduler - start high and decay over time.",
+      "createdAt": {
+        "$date": "2025-12-05T08:00:00.000Z"
+      },
+      "updatedAt": {
+        "$date": "2025-12-05T08:00:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-05T07:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T08:00:00.000Z"
+  }
+},
+{
+  "_id": "followup-004",
+  "post": "post-cs5502-002",
+  "author": "913",
+  "authorName": "Obi-Wan Kenobi",
+  "authorRole": "STUDENT",
+  "content": "Is there a visualization tool that shows the recursion tree? Would help me understand this better.",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-004-1",
+      "author": "234",
+      "authorName": "Bruce Wayne",
+      "authorRole": "STUDENT",
+      "content": "Python Tutor has a great visualizer! Also check out Recursion Tree Visualizer on GitHub.",
+      "createdAt": {
+        "$date": "2025-12-04T15:00:00.000Z"
+      },
+      "updatedAt": {
+        "$date": "2025-12-04T15:00:00.000Z"
+      }
+    },
+    {
+      "_id": "reply-004-2",
+      "author": "678",
+      "authorName": "Frodo Baggins",
+      "authorRole": "FACULTY",
+      "content": "I'll include a link to these tools in the next lecture notes. Great suggestion!",
+      "createdAt": {
+        "$date": "2025-12-04T16:00:00.000Z"
+      },
+      "updatedAt": {
+        "$date": "2025-12-04T16:00:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-04T14:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T16:00:00.000Z"
+  }
+},
+{
+  "_id": "followup-005",
+  "post": "post-cs5503-002",
+  "author": "909",
+  "authorName": "R2-D2 Droid",
+  "authorRole": "STUDENT",
+  "content": "Can we have a worked example in class? The textbook explanation is hard to follow.",
+  "resolved": false,
+  "replies": [],
+  "createdAt": {
+    "$date": "2025-12-05T16:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T16:00:00.000Z"
+  }
+},
+{
+  "_id": "followup-006",
+  "post": "post-cs5505-002",
+  "author": "890",
+  "authorName": "Legolas Greenleaf",
+  "authorRole": "STUDENT",
+  "content": "What about IPv6 subnetting? Will that be on the exam?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-006-1",
+      "author": "904",
+      "authorName": "Michael Jackson",
+      "authorRole": "FACULTY",
+      "content": "IPv6 will only be covered conceptually. The exam focuses on IPv4 subnetting calculations.",
+      "createdAt": {
+        "$date": "2025-12-05T13:00:00.000Z"
+      },
+      "updatedAt": {
+        "$date": "2025-12-05T13:00:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-05T12:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T06:48:32.531Z"
+  }
+},
+{
+  "_id": "followup-007",
+  "post": "post-cs5507-002",
+  "author": "911",
+  "authorName": "Michelangelo TMNT",
+  "authorRole": "STUDENT",
+  "content": "Found it! Node.js was running in the background. Thanks!",
+  "resolved": true,
+  "replies": [],
+  "createdAt": {
+    "$date": "2025-12-05T18:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T18:30:00.000Z"
+  }
+},
+{
+  "_id": "followup-008",
+  "post": "post-cs1234-005",
+  "author": "789",
+  "authorName": "Aragorn Elessar",
+  "authorRole": "STUDENT",
+  "content": "What about using Zustand instead of Context? Is it overkill for medium-sized apps?",
+  "resolved": false,
+  "replies": [
+    {
+      "_id": "reply-008-1",
+      "author": "567",
+      "authorName": "Bruce Banner",
+      "authorRole": "STUDENT",
+      "content": "I've used Zustand in my project - it's simpler than Redux but more powerful than Context. Worth trying!",
+      "createdAt": {
+        "$date": "2025-12-03T19:30:00.000Z"
+      },
+      "updatedAt": {
+        "$date": "2025-12-03T19:30:00.000Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-03T19:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-07T01:24:34.266Z"
+  }
+}]

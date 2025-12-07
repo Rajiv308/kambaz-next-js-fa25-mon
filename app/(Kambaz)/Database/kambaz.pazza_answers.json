@@ -1,0 +1,195 @@
+[{
+  "_id": "answer-001",
+  "post": "post-cs1234-002",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Great question! Here's a simple rule of thumb:</p><p><strong>Use useState when:</strong></p><ul><li>You have simple, independent state values</li><li>State updates are straightforward</li></ul><p><strong>Use useReducer when:</strong></p><ul><li>You have multiple related state values</li><li>Next state depends on previous state</li><li>You have complex update logic</li></ul><p>Think of useReducer as useState's bigger sibling for complex scenarios.</p>",
+  "createdAt": {
+    "$date": "2025-12-04T15:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T15:30:00.000Z"
+  }
+},
+{
+  "_id": "answer-002",
+  "post": "post-cs1234-002",
+  "author": "912",
+  "authorName": "Yoda",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>A shopping cart, good example it is!</p><p>With useState, track items, quantities, totals separately you must. Messy it becomes.</p><p>With useReducer, actions like ADD_ITEM, REMOVE_ITEM, UPDATE_QUANTITY you dispatch. Cleaner the code stays.</p>",
+  "createdAt": {
+    "$date": "2025-12-04T16:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T16:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-003",
+  "post": "post-cs1234-003",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Given the circumstances, I've decided to extend the deadline by 3 days.</p><p><strong>New deadline:</strong> December 10th, 11:59 PM</p><p>Please don't wait until the last minute!</p>",
+  "createdAt": {
+    "$date": "2025-12-05T11:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T11:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-004",
+  "post": "post-cs1234-005",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Good question! Here's my recommendation:</p><p><strong>Props drilling is fine for:</strong> 2-3 levels deep</p><p><strong>Consider Context when:</strong></p><ul><li>Data needed by many components at different nesting levels</li><li>Global state like theme, user auth, language</li></ul><p>Don't use Context for everything - it can cause unnecessary re-renders. For complex state, consider Redux or Zustand.</p>",
+  "createdAt": {
+    "$date": "2025-12-03T18:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T18:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-005",
+  "post": "post-cs5501-002",
+  "author": "902",
+  "authorName": "Leia Organa",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>This is a classic problem! The increasing loss after epoch 50 suggests you're experiencing <strong>exploding gradients</strong>.</p><p>Try these solutions:</p><ol><li>Add gradient clipping: <code>torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)</code></li><li>Use a learning rate scheduler</li><li>Check your weight initialization</li><li>Try batch normalization</li></ol><p>Let me know if this helps!</p>",
+  "createdAt": {
+    "$date": "2025-12-04T21:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T21:30:00.000Z"
+  }
+},
+{
+  "_id": "answer-006",
+  "post": "post-cs5501-003",
+  "author": "902",
+  "authorName": "Leia Organa",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>You can design your own architecture! Just make sure it includes:</p><ul><li>At least 2 convolutional layers</li><li>Pooling layers</li><li>Fully connected layers at the end</li></ul><p>Transfer learning is <strong>not allowed</strong> for this assignment - we want you to understand the fundamentals first.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T10:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T10:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-007",
+  "post": "post-cs5502-002",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Let me walk through it:</p><p>The recurrence relation is: <code>T(n) = T(n-1) + T(n-2) + O(1)</code></p><p>This forms a binary tree where each node spawns 2 children. The height is n, so roughly 2^n nodes.</p><p>More precisely, T(n) ≈ φ^n where φ (golden ratio) ≈ 1.618</p><p>So O(2^n) is a simplification, but captures the exponential nature.</p>",
+  "createdAt": {
+    "$date": "2025-12-04T13:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T13:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-008",
+  "post": "post-cs5502-002",
+  "author": "908",
+  "authorName": "C-3PO Droid",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>I found drawing the recursion tree helpful!</p><p>For fib(5), you calculate fib(4) and fib(3). But then fib(4) also calculates fib(3)... so you're repeating work!</p><p>That's why memoization or bottom-up DP makes it O(n) instead.</p>",
+  "createdAt": {
+    "$date": "2025-12-04T14:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T14:30:00.000Z"
+  }
+},
+{
+  "_id": "answer-009",
+  "post": "post-cs5502-003",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p><strong>BFS:</strong></p><ul><li>Shortest path in unweighted graphs</li><li>Level-order traversal</li><li>Finding nodes within k distance</li></ul><p><strong>DFS:</strong></p><ul><li>Detecting cycles</li><li>Topological sorting</li><li>Finding connected components</li><li>Maze solving</li></ul><p>Memory-wise: BFS uses more memory (stores entire level), DFS is more space-efficient for deep graphs.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T14:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T14:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-010",
+  "post": "post-cs5504-002",
+  "author": "910",
+  "authorName": "Michael Jackson",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Let me give you a concrete example:</p><p>Consider a table: <code>Student(student_id, name, dept_id, dept_name)</code></p><p><strong>Transitive dependency:</strong> student_id → dept_id → dept_name</p><p>Here, dept_name depends on dept_id, not directly on student_id. To achieve 3NF, split into:</p><ul><li><code>Student(student_id, name, dept_id)</code></li><li><code>Department(dept_id, dept_name)</code></li></ul>",
+  "createdAt": {
+    "$date": "2025-12-04T18:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T18:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-011",
+  "post": "post-cs5505-002",
+  "author": "904",
+  "authorName": "Michael Jackson",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>For 192.168.1.0/24:</p><p><strong>Usable hosts:</strong> 2^(32-24) - 2 = 254 hosts</p><p>(We subtract 2 for network address and broadcast)</p><p><strong>Broadcast address:</strong> 192.168.1.255</p><p>The /24 means first 24 bits are network, last 8 bits for hosts. All 1s in host portion = broadcast.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T12:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T12:30:00.000Z"
+  }
+},
+{
+  "_id": "answer-012",
+  "post": "post-cs5506-002",
+  "author": "902",
+  "authorName": "Leia Organa",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Yes, Figma is perfectly acceptable!</p><p>In fact, I encourage it for team projects. The real-time collaboration features are excellent for iterating on designs together.</p><p>Just make sure to export your screens as PDFs for the final submission.</p>",
+  "createdAt": {
+    "$date": "2025-12-04T20:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T20:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-013",
+  "post": "post-cs5507-002",
+  "author": "912",
+  "authorName": "Yoda",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Check what uses port 3000, you must!</p><p>Run this command:<br/><code>lsof -i :3000</code> (Mac/Linux)<br/><code>netstat -ano | findstr :3000</code> (Windows)</p><p>Kill the process, then try again. Or change the port in your docker-compose.yml:</p><pre>ports:\n  - \"3001:3000\"</pre>",
+  "createdAt": {
+    "$date": "2025-12-05T18:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T18:00:00.000Z"
+  }
+}]

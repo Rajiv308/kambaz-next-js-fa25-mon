@@ -1,0 +1,560 @@
+[{
+  "_id": "post-1764915677595-wzmu996ts",
+  "course": "CS1234",
+  "author": "123",
+  "authorName": "Tony Stark",
+  "authorRole": "ADMIN",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "You know what i mean",
+  "details": "Hey There",
+  "folders": [
+    "CS1234-folder-3-1764914009166"
+  ],
+  "views": 0,
+  "viewedBy": [],
+  "createdAt": {
+    "$date": "2025-12-05T06:21:17.595Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T06:21:17.595Z"
+  },
+  "__v": 0
+},
+{
+  "_id": "post-cs1234-001",
+  "course": "CS1234",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "postType": "Note",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Welcome to React Fundamentals!",
+  "details": "<p>Hello everyone!</p><p>Welcome to CS1234 - React Fundamentals. I'm excited to be your instructor this semester.</p><p>Please make sure to:</p><ul><li>Review the syllabus</li><li>Set up your development environment</li><li>Join our Slack channel</li></ul><p>Looking forward to a great semester!</p>",
+  "folders": [],
+  "views": 45,
+  "viewedBy": [
+    "123",
+    "234",
+    "567",
+    "789",
+    "909",
+    "912"
+  ],
+  "createdAt": {
+    "$date": "2025-12-01T09:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-01T09:00:00.000Z"
+  }
+},
+{
+  "_id": "post-cs1234-002",
+  "course": "CS1234",
+  "author": "567",
+  "authorName": "Bruce Banner",
+  "authorRole": "STUDENT",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Difference between useState and useReducer?",
+  "details": "<p>Hi everyone,</p><p>I'm confused about when to use <code>useState</code> vs <code>useReducer</code>. The documentation says useReducer is better for complex state logic, but what exactly counts as \"complex\"?</p><p>Can someone give me a practical example?</p>",
+  "folders": [],
+  "views": 32,
+  "viewedBy": [
+    "123",
+    "234",
+    "678",
+    "789"
+  ],
+  "createdAt": {
+    "$date": "2025-12-04T14:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T14:30:00.000Z"
+  }
+},
+{
+  "_id": "post-cs1234-003",
+  "course": "CS1234",
+  "author": "789",
+  "authorName": "Aragorn Elessar",
+  "authorRole": "STUDENT",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Assignment 1 deadline extension?",
+  "details": "<p>Professor,</p><p>Given the issues with the development environment setup that many students faced this week, would it be possible to extend the deadline for Assignment 1 by a few days?</p><p>Thank you for considering this request.</p>",
+  "folders": [],
+  "views": 28,
+  "viewedBy": [
+    "123",
+    "567",
+    "678",
+    "909"
+  ],
+  "createdAt": {
+    "$date": "2025-12-05T10:15:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T10:15:00.000Z"
+  }
+},
+{
+  "_id": "post-cs1234-004",
+  "course": "CS1234",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "postType": "Note",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Office Hours Rescheduled - This Week",
+  "details": "<p>Hi class,</p><p>My office hours for this week have been rescheduled:</p><p><strong>Original:</strong> Thursday 2-4pm<br/><strong>New Time:</strong> Friday 3-5pm</p><p>Location remains the same: Room 302, CS Building.</p><p>See you there!</p>",
+  "folders": [],
+  "views": 19,
+  "viewedBy": [
+    "567",
+    "789",
+    "912"
+  ],
+  "createdAt": {
+    "$date": "2025-12-05T08:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T08:00:00.000Z"
+  }
+},
+{
+  "_id": "post-cs1234-005",
+  "course": "CS1234",
+  "author": "912",
+  "authorName": "Yoda",
+  "authorRole": "FACULTY",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Props drilling vs Context API - Best practices?",
+  "details": "<p>Working on the project, I am. Multiple levels deep, my components are.</p><p>Pass props through 5 components, should I? Or use Context API for everything?</p><p>Guidelines on when to switch, are there?</p>",
+  "folders": [],
+  "views": 41,
+  "viewedBy": [
+    "123",
+    "234",
+    "567",
+    "678",
+    "789"
+  ],
+  "createdAt": {
+    "$date": "2025-12-03T16:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T16:45:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5501-001",
+  "course": "CS5501",
+  "author": "902",
+  "authorName": "Leia Organa",
+  "authorRole": "FACULTY",
+  "postType": "Note",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Midterm Exam Information",
+  "details": "<p>The midterm exam will cover:</p><ul><li>Chapters 1-5 from the textbook</li><li>All lecture materials up to Week 7</li><li>Programming assignments 1-3</li></ul><p><strong>Date:</strong> December 15th<br/><strong>Time:</strong> 2:00 PM - 4:00 PM<br/><strong>Location:</strong> Room 101, Main Hall</p><p>Good luck!</p>",
+  "folders": [],
+  "views": 67,
+  "viewedBy": [
+    "123",
+    "789",
+    "908",
+    "912"
+  ],
+  "createdAt": {
+    "$date": "2025-12-02T11:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-02T11:00:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5501-002",
+  "course": "CS5501",
+  "author": "123",
+  "authorName": "Tony Stark",
+  "authorRole": "STUDENT",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Gradient descent not converging",
+  "details": "<p>I've been trying to implement gradient descent for my neural network, but the loss function isn't converging. I've tried:</p><ul><li>Reducing learning rate to 0.001</li><li>Normalizing input features</li><li>Adding more epochs</li></ul><p>The loss actually increases after epoch 50. Any suggestions?</p>",
+  "folders": [],
+  "views": 23,
+  "viewedBy": [
+    "789",
+    "902",
+    "908"
+  ],
+  "createdAt": {
+    "$date": "2025-12-04T20:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T20:30:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5501-003",
+  "course": "CS5501",
+  "author": "789",
+  "authorName": "Aragorn Elessar",
+  "authorRole": "STUDENT",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Clarification on CNN architecture for HW4",
+  "details": "<p>For homework 4, are we required to use a specific CNN architecture, or can we design our own?</p><p>Also, is transfer learning allowed for this assignment?</p>",
+  "folders": [],
+  "views": 18,
+  "viewedBy": [
+    "123",
+    "902"
+  ],
+  "createdAt": {
+    "$date": "2025-12-05T09:20:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T09:20:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5502-001",
+  "course": "CS5502",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "postType": "Note",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Dynamic Programming Resources",
+  "details": "<p>Here are some additional resources for understanding Dynamic Programming:</p><ul><li><a href='#'>MIT OCW Lecture Notes</a></li><li><a href='#'>Visualgo - DP Visualizations</a></li><li>CLRS Chapter 15</li></ul><p>Practice problems are available on LeetCode under the DP tag.</p>",
+  "folders": [],
+  "views": 55,
+  "viewedBy": [
+    "234",
+    "908",
+    "913"
+  ],
+  "createdAt": {
+    "$date": "2025-11-28T14:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-28T14:00:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5502-002",
+  "course": "CS5502",
+  "author": "234",
+  "authorName": "Bruce Wayne",
+  "authorRole": "STUDENT",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Time complexity of recursive Fibonacci?",
+  "details": "<p>I understand that recursive Fibonacci has exponential time complexity O(2^n), but I'm having trouble understanding the exact derivation.</p><p>Can someone walk through the recurrence relation?</p>",
+  "folders": [],
+  "views": 34,
+  "viewedBy": [
+    "678",
+    "908",
+    "913"
+  ],
+  "createdAt": {
+    "$date": "2025-12-04T11:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T11:45:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5502-003",
+  "course": "CS5502",
+  "author": "913",
+  "authorName": "Obi-Wan Kenobi",
+  "authorRole": "STUDENT",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Graph traversal - BFS vs DFS use cases",
+  "details": "<p>When should I use BFS over DFS and vice versa?</p><p>I know BFS finds shortest path in unweighted graphs, but are there other practical considerations?</p>",
+  "folders": [],
+  "views": 29,
+  "viewedBy": [
+    "234",
+    "678"
+  ],
+  "createdAt": {
+    "$date": "2025-12-05T13:10:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T13:10:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5503-001",
+  "course": "CS5503",
+  "author": "910",
+  "authorName": "Michael Jackson",
+  "authorRole": "FACULTY",
+  "postType": "Note",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Lab 3 - Process Scheduling Simulator",
+  "details": "<p>Lab 3 has been posted. You will implement:</p><ul><li>FCFS (First Come First Serve)</li><li>SJF (Shortest Job First)</li><li>Round Robin with configurable quantum</li></ul><p><strong>Due:</strong> December 12th, 11:59 PM</p><p>Start early - this one takes time!</p>",
+  "folders": [],
+  "views": 42,
+  "viewedBy": [
+    "345",
+    "909",
+    "913"
+  ],
+  "createdAt": {
+    "$date": "2025-12-01T10:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-01T10:30:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5503-002",
+  "course": "CS5503",
+  "author": "345",
+  "authorName": "Natasha Romanoff",
+  "authorRole": "STUDENT",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Deadlock detection algorithm confusion",
+  "details": "<p>In the banker's algorithm, how do we determine the initial safe state?</p><p>The textbook example assumes we already know the allocation matrix, but how is that determined in practice?</p>",
+  "folders": [],
+  "views": 21,
+  "viewedBy": [
+    "909",
+    "910"
+  ],
+  "createdAt": {
+    "$date": "2025-12-05T15:25:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T15:25:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5504-001",
+  "course": "CS5504",
+  "author": "910",
+  "authorName": "Michael Jackson",
+  "authorRole": "FACULTY",
+  "postType": "Note",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "SQL Practice Problems Posted",
+  "details": "<p>I've uploaded 50 SQL practice problems to the course website.</p><p>Topics covered:</p><ul><li>Basic SELECT queries</li><li>JOINs (INNER, LEFT, RIGHT, FULL)</li><li>Aggregations and GROUP BY</li><li>Subqueries</li><li>Window functions</li></ul><p>Solutions will be released next week.</p>",
+  "folders": [],
+  "views": 38,
+  "viewedBy": [
+    "345",
+    "777",
+    "914"
+  ],
+  "createdAt": {
+    "$date": "2025-12-03T09:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T09:00:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5504-002",
+  "course": "CS5504",
+  "author": "777",
+  "authorName": "Ada Lovelace",
+  "authorRole": "STUDENT",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Normalization to 3NF - Step by step?",
+  "details": "<p>I'm struggling with normalizing tables to 3NF. I understand 1NF and 2NF, but identifying transitive dependencies is confusing.</p><p>Could someone explain with a concrete example?</p>",
+  "folders": [],
+  "views": 27,
+  "viewedBy": [
+    "345",
+    "910",
+    "914"
+  ],
+  "createdAt": {
+    "$date": "2025-12-04T16:50:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T16:50:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5505-001",
+  "course": "CS5505",
+  "author": "904",
+  "authorName": "Michael Jackson",
+  "authorRole": "FACULTY",
+  "postType": "Note",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Packet Tracer Installation Guide",
+  "details": "<p>For the networking labs, you'll need Cisco Packet Tracer.</p><p><strong>Installation steps:</strong></p><ol><li>Create a Cisco NetAcad account</li><li>Download Packet Tracer 8.2</li><li>Use your university email for verification</li></ol><p>Let me know if you have issues!</p>",
+  "folders": [],
+  "views": 51,
+  "viewedBy": [
+    "123",
+    "456",
+    "890",
+    "914"
+  ],
+  "createdAt": {
+    "$date": "2025-11-25T13:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-25T13:00:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5505-002",
+  "course": "CS5505",
+  "author": "456",
+  "authorName": "Thor Odinson",
+  "authorRole": "STUDENT",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Subnetting practice - CIDR notation",
+  "details": "<p>I'm confused about CIDR notation. If I have 192.168.1.0/24, how many usable hosts can I have?</p><p>And how do I calculate the broadcast address?</p>",
+  "folders": [],
+  "views": 33,
+  "viewedBy": [
+    "123",
+    "890",
+    "904"
+  ],
+  "createdAt": {
+    "$date": "2025-12-05T11:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T11:30:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5506-001",
+  "course": "CS5506",
+  "author": "902",
+  "authorName": "Leia Organa",
+  "authorRole": "FACULTY",
+  "postType": "Note",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "User Testing Sign-up Sheet",
+  "details": "<p>For your final project, you need to conduct user testing with at least 5 participants.</p><p>Sign-up sheet for the usability lab is now available. Each slot is 1 hour.</p><p>Book your time early - slots fill up fast!</p>",
+  "folders": [],
+  "views": 44,
+  "viewedBy": [
+    "123",
+    "234",
+    "456",
+    "890",
+    "908",
+    "909",
+    "911"
+  ],
+  "createdAt": {
+    "$date": "2025-12-02T08:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-02T08:30:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5506-002",
+  "course": "CS5506",
+  "author": "890",
+  "authorName": "Legolas Greenleaf",
+  "authorRole": "STUDENT",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Figma vs Sketch for prototyping?",
+  "details": "<p>For the wireframing assignment, can we use Figma instead of Sketch?</p><p>I find Figma easier to collaborate with my team since it's web-based.</p>",
+  "folders": [],
+  "views": 22,
+  "viewedBy": [
+    "456",
+    "902",
+    "908"
+  ],
+  "createdAt": {
+    "$date": "2025-12-04T19:15:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T19:15:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5507-001",
+  "course": "CS5507",
+  "author": "912",
+  "authorName": "Yoda",
+  "authorRole": "FACULTY",
+  "postType": "Note",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "AWS Free Tier Setup Instructions",
+  "details": "<p>Set up your AWS accounts, you must.</p><p>Free tier, sufficient for this course it is. Credit card required, but charged you will not be if careful you are.</p><p>Tutorial video, posted on Canvas I have.</p>",
+  "folders": [],
+  "views": 39,
+  "viewedBy": [
+    "234",
+    "567",
+    "777",
+    "911"
+  ],
+  "createdAt": {
+    "$date": "2025-12-01T15:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-01T15:00:00.000Z"
+  }
+},
+{
+  "_id": "post-cs5507-002",
+  "course": "CS5507",
+  "author": "911",
+  "authorName": "Michelangelo TMNT",
+  "authorRole": "STUDENT",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Docker container won't start - port conflict",
+  "details": "<p>I'm getting this error when trying to start my container:</p><pre>Error: Port 3000 is already in use</pre><p>I've tried stopping all other containers but still getting the error. Help!</p>",
+  "folders": [],
+  "views": 15,
+  "viewedBy": [
+    "567",
+    "777",
+    "912"
+  ],
+  "createdAt": {
+    "$date": "2025-12-05T17:40:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T17:40:00.000Z"
+  }
+}]

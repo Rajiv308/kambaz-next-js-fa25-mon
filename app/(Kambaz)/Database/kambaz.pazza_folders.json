@@ -1,0 +1,704 @@
+[{
+  "_id": "CS1234-folder-hw1",
+  "name": "hw1",
+  "course": "CS1234",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS1234-folder-hw2",
+  "name": "hw2",
+  "course": "CS1234",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS1234-folder-hw3",
+  "name": "hw3",
+  "course": "CS1234",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS1234-folder-hw4",
+  "name": "hw4",
+  "course": "CS1234",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS1234-folder-hw5",
+  "name": "hw5",
+  "course": "CS1234",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS1234-folder-hw6",
+  "name": "hw6",
+  "course": "CS1234",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS1234-folder-project",
+  "name": "project",
+  "course": "CS1234",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS1234-folder-exam",
+  "name": "exam",
+  "course": "CS1234",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS1234-folder-logistics",
+  "name": "logistics",
+  "course": "CS1234",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS1234-folder-other",
+  "name": "other",
+  "course": "CS1234",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS1234-folder-office_hours",
+  "name": "office_hours",
+  "course": "CS1234",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5501-folder-hw1",
+  "name": "hw1",
+  "course": "CS5501",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5501-folder-hw2",
+  "name": "hw2",
+  "course": "CS5501",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5501-folder-hw3",
+  "name": "hw3",
+  "course": "CS5501",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5501-folder-hw4",
+  "name": "hw4",
+  "course": "CS5501",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5501-folder-hw5",
+  "name": "hw5",
+  "course": "CS5501",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5501-folder-hw6",
+  "name": "hw6",
+  "course": "CS5501",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5501-folder-project",
+  "name": "project",
+  "course": "CS5501",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5501-folder-exam",
+  "name": "exam",
+  "course": "CS5501",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5501-folder-logistics",
+  "name": "logistics",
+  "course": "CS5501",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5501-folder-other",
+  "name": "other",
+  "course": "CS5501",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5501-folder-office_hours",
+  "name": "office_hours",
+  "course": "CS5501",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5502-folder-hw1",
+  "name": "hw1",
+  "course": "CS5502",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5502-folder-hw2",
+  "name": "hw2",
+  "course": "CS5502",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5502-folder-hw3",
+  "name": "hw3",
+  "course": "CS5502",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5502-folder-hw4",
+  "name": "hw4",
+  "course": "CS5502",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5502-folder-hw5",
+  "name": "hw5",
+  "course": "CS5502",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5502-folder-hw6",
+  "name": "hw6",
+  "course": "CS5502",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5502-folder-project",
+  "name": "project",
+  "course": "CS5502",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5502-folder-exam",
+  "name": "exam",
+  "course": "CS5502",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5502-folder-logistics",
+  "name": "logistics",
+  "course": "CS5502",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5502-folder-other",
+  "name": "other",
+  "course": "CS5502",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5502-folder-office_hours",
+  "name": "office_hours",
+  "course": "CS5502",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5503-folder-hw1",
+  "name": "hw1",
+  "course": "CS5503",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5503-folder-hw2",
+  "name": "hw2",
+  "course": "CS5503",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5503-folder-hw3",
+  "name": "hw3",
+  "course": "CS5503",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5503-folder-hw4",
+  "name": "hw4",
+  "course": "CS5503",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5503-folder-hw5",
+  "name": "hw5",
+  "course": "CS5503",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5503-folder-hw6",
+  "name": "hw6",
+  "course": "CS5503",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5503-folder-project",
+  "name": "project",
+  "course": "CS5503",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5503-folder-exam",
+  "name": "exam",
+  "course": "CS5503",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5503-folder-logistics",
+  "name": "logistics",
+  "course": "CS5503",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5503-folder-other",
+  "name": "other",
+  "course": "CS5503",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5503-folder-office_hours",
+  "name": "office_hours",
+  "course": "CS5503",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5504-folder-hw1",
+  "name": "hw1",
+  "course": "CS5504",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5504-folder-hw2",
+  "name": "hw2",
+  "course": "CS5504",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5504-folder-hw3",
+  "name": "hw3",
+  "course": "CS5504",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5504-folder-hw4",
+  "name": "hw4",
+  "course": "CS5504",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5504-folder-hw5",
+  "name": "hw5",
+  "course": "CS5504",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5504-folder-hw6",
+  "name": "hw6",
+  "course": "CS5504",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5504-folder-project",
+  "name": "project",
+  "course": "CS5504",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5504-folder-exam",
+  "name": "exam",
+  "course": "CS5504",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5504-folder-logistics",
+  "name": "logistics",
+  "course": "CS5504",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5504-folder-other",
+  "name": "other",
+  "course": "CS5504",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5504-folder-office_hours",
+  "name": "office_hours",
+  "course": "CS5504",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5505-folder-hw1",
+  "name": "hw1",
+  "course": "CS5505",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5505-folder-hw2",
+  "name": "hw2",
+  "course": "CS5505",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5505-folder-hw3",
+  "name": "hw3",
+  "course": "CS5505",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5505-folder-hw4",
+  "name": "hw4",
+  "course": "CS5505",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5505-folder-hw5",
+  "name": "hw5",
+  "course": "CS5505",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5505-folder-hw6",
+  "name": "hw6",
+  "course": "CS5505",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5505-folder-project",
+  "name": "project",
+  "course": "CS5505",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5505-folder-exam",
+  "name": "exam",
+  "course": "CS5505",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5505-folder-logistics",
+  "name": "logistics",
+  "course": "CS5505",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5505-folder-other",
+  "name": "other",
+  "course": "CS5505",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5505-folder-office_hours",
+  "name": "office_hours",
+  "course": "CS5505",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5506-folder-hw1",
+  "name": "hw1",
+  "course": "CS5506",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5506-folder-hw2",
+  "name": "hw2",
+  "course": "CS5506",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5506-folder-hw3",
+  "name": "hw3",
+  "course": "CS5506",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5506-folder-hw4",
+  "name": "hw4",
+  "course": "CS5506",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5506-folder-hw5",
+  "name": "hw5",
+  "course": "CS5506",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5506-folder-hw6",
+  "name": "hw6",
+  "course": "CS5506",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5506-folder-project",
+  "name": "project",
+  "course": "CS5506",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5506-folder-exam",
+  "name": "exam",
+  "course": "CS5506",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5506-folder-logistics",
+  "name": "logistics",
+  "course": "CS5506",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5506-folder-other",
+  "name": "other",
+  "course": "CS5506",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5506-folder-office_hours",
+  "name": "office_hours",
+  "course": "CS5506",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5507-folder-hw1",
+  "name": "hw1",
+  "course": "CS5507",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5507-folder-hw2",
+  "name": "hw2",
+  "course": "CS5507",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5507-folder-hw3",
+  "name": "hw3",
+  "course": "CS5507",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5507-folder-hw4",
+  "name": "hw4",
+  "course": "CS5507",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5507-folder-hw5",
+  "name": "hw5",
+  "course": "CS5507",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5507-folder-hw6",
+  "name": "hw6",
+  "course": "CS5507",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5507-folder-project",
+  "name": "project",
+  "course": "CS5507",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5507-folder-exam",
+  "name": "exam",
+  "course": "CS5507",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5507-folder-logistics",
+  "name": "logistics",
+  "course": "CS5507",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5507-folder-other",
+  "name": "other",
+  "course": "CS5507",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": "CS5507-folder-office_hours",
+  "name": "office_hours",
+  "course": "CS5507",
+  "createdAt": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+}]
