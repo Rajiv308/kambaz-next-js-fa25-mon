@@ -21,7 +21,6 @@ export default function Signin() {
 
   return (
     <>
-      {/* Sign-in form stays exactly as before */}
       <div id="wd-signin-screen" className="ms-2" style={{ maxWidth: 400 }}>
         <h1>Sign in</h1>
         <FormControl
@@ -59,14 +58,13 @@ export default function Signin() {
         </button>
       </div>
 
-      {/* Team info box fixed to right */}
       <div
-        className="border p-3 bg-white shadow"
+        className="border p-3 bg-white shadow d-none d-lg-block"
         style={{
           position: "fixed",
           top: "20px",
           right: "20px",
-          width: "350px",
+          width: "250px",
           fontSize: "14px",
           lineHeight: 1.5,
           zIndex: 1000,
@@ -82,8 +80,9 @@ export default function Signin() {
             href="https://github.com/Rajiv308/kambaz-next-js-fa25-mon.git"
             target="_blank"
             rel="noopener noreferrer"
+            className="btn btn-primary btn-sm"
           >
-            github.com/Rajiv308/kambaz-next-js-fa25-mon.git
+            kambaz-next-js-fa25-mon
           </a>
         </div>
         <br />
@@ -93,8 +92,9 @@ export default function Signin() {
             href="https://github.com/Rajiv308/kambaz-node-server-app.git"
             target="_blank"
             rel="noopener noreferrer"
+            className="btn btn-primary btn-sm"
           >
-            github.com/Rajiv308/kambaz-node-server-app.git
+            kambaz-node-server-app
           </a>
         </div>
       </div>
