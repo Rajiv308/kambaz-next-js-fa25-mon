@@ -583,4 +583,21 @@
   ],
   "createdAt": "2025-12-05T21:30:00.000Z",
   "updatedAt": "2025-12-05T21:45:00.000Z"
+},
+{
+  "_id": "followup-1765165679899-m8igs2137",
+  "post": "post-cs1234-015",
+  "author": "567",
+  "authorName": "Bruce Banner",
+  "authorRole": "STUDENT",
+  "content": "Hey I had a doubt about a particular project, could you please ping me on TEAMS?",
+  "resolved": false,
+  "replies": [],
+  "createdAt": {
+    "$date": "2025-12-08T03:47:59.900Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-08T03:47:59.900Z"
+  },
+  "__v": 0
 }]

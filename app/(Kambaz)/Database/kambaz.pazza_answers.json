@@ -1,872 +1,870 @@
-[
-  {
-    "_id": "answer-001",
-    "post": "post-cs1234-002",
-    "author": "678",
-    "authorName": "Frodo Baggins",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Great question! Here's a simple rule of thumb:</p><p><strong>Use useState when:</strong></p><ul><li>You have simple, independent state values</li><li>State updates are straightforward</li></ul><p><strong>Use useReducer when:</strong></p><ul><li>You have multiple related state values</li><li>Next state depends on previous state</li><li>You have complex update logic</li></ul><p>Think of useReducer as useState's bigger sibling for complex scenarios.</p>",
-    "createdAt": {
-      "$date": "2025-12-04T15:30:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-04T15:30:00.000Z"
-    }
+[{
+  "_id": "answer-001",
+  "post": "post-cs1234-002",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Great question! Here's a simple rule of thumb:</p><p><strong>Use useState when:</strong></p><ul><li>You have simple, independent state values</li><li>State updates are straightforward</li></ul><p><strong>Use useReducer when:</strong></p><ul><li>You have multiple related state values</li><li>Next state depends on previous state</li><li>You have complex update logic</li></ul><p>Think of useReducer as useState's bigger sibling for complex scenarios.</p>",
+  "createdAt": {
+    "$date": "2025-12-04T15:30:00.000Z"
   },
-  {
-    "_id": "answer-002",
-    "post": "post-cs1234-002",
-    "author": "912",
-    "authorName": "Yoda",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>A shopping cart, good example it is!</p><p>With useState, track items, quantities, totals separately you must. Messy it becomes.</p><p>With useReducer, actions like ADD_ITEM, REMOVE_ITEM, UPDATE_QUANTITY you dispatch. Cleaner the code stays.</p>",
-    "createdAt": {
-      "$date": "2025-12-04T16:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-04T16:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-003",
-    "post": "post-cs1234-003",
-    "author": "678",
-    "authorName": "Frodo Baggins",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Given the circumstances, I've decided to extend the deadline by 3 days.</p><p><strong>New deadline:</strong> December 10th, 11:59 PM</p><p>Please don't wait until the last minute!</p>",
-    "createdAt": {
-      "$date": "2025-12-05T11:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T11:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-004",
-    "post": "post-cs1234-005",
-    "author": "678",
-    "authorName": "Frodo Baggins",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Good question! Here's my recommendation:</p><p><strong>Props drilling is fine for:</strong> 2-3 levels deep</p><p><strong>Consider Context when:</strong></p><ul><li>Data needed by many components at different nesting levels</li><li>Global state like theme, user auth, language</li></ul><p>Don't use Context for everything - it can cause unnecessary re-renders. For complex state, consider Redux or Zustand.</p>",
-    "createdAt": {
-      "$date": "2025-12-03T18:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-03T18:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-005",
-    "post": "post-cs5501-002",
-    "author": "902",
-    "authorName": "Leia Organa",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>This is a classic problem! The increasing loss after epoch 50 suggests you're experiencing <strong>exploding gradients</strong>.</p><p>Try these solutions:</p><ol><li>Add gradient clipping: <code>torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)</code></li><li>Use a learning rate scheduler</li><li>Check your weight initialization</li><li>Try batch normalization</li></ol><p>Let me know if this helps!</p>",
-    "createdAt": {
-      "$date": "2025-12-04T21:30:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-04T21:30:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-006",
-    "post": "post-cs5501-003",
-    "author": "902",
-    "authorName": "Leia Organa",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>You can design your own architecture! Just make sure it includes:</p><ul><li>At least 2 convolutional layers</li><li>Pooling layers</li><li>Fully connected layers at the end</li></ul><p>Transfer learning is <strong>not allowed</strong> for this assignment - we want you to understand the fundamentals first.</p>",
-    "createdAt": {
-      "$date": "2025-12-05T10:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T10:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-007",
-    "post": "post-cs5502-002",
-    "author": "678",
-    "authorName": "Frodo Baggins",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Let me walk through it:</p><p>The recurrence relation is: <code>T(n) = T(n-1) + T(n-2) + O(1)</code></p><p>This forms a binary tree where each node spawns 2 children. The height is n, so roughly 2^n nodes.</p><p>More precisely, T(n) ≈ φ^n where φ (golden ratio) ≈ 1.618</p><p>So O(2^n) is a simplification, but captures the exponential nature.</p>",
-    "createdAt": {
-      "$date": "2025-12-04T13:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-04T13:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-008",
-    "post": "post-cs5502-002",
-    "author": "908",
-    "authorName": "C-3PO Droid",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>I found drawing the recursion tree helpful!</p><p>For fib(5), you calculate fib(4) and fib(3). But then fib(4) also calculates fib(3)... so you're repeating work!</p><p>That's why memoization or bottom-up DP makes it O(n) instead.</p>",
-    "createdAt": {
-      "$date": "2025-12-04T14:30:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-04T14:30:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-009",
-    "post": "post-cs5502-003",
-    "author": "678",
-    "authorName": "Frodo Baggins",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p><strong>BFS:</strong></p><ul><li>Shortest path in unweighted graphs</li><li>Level-order traversal</li><li>Finding nodes within k distance</li></ul><p><strong>DFS:</strong></p><ul><li>Detecting cycles</li><li>Topological sorting</li><li>Finding connected components</li><li>Maze solving</li></ul><p>Memory-wise: BFS uses more memory (stores entire level), DFS is more space-efficient for deep graphs.</p>",
-    "createdAt": {
-      "$date": "2025-12-05T14:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T14:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-010",
-    "post": "post-cs5504-002",
-    "author": "910",
-    "authorName": "Michael Jackson",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Let me give you a concrete example:</p><p>Consider a table: <code>Student(student_id, name, dept_id, dept_name)</code></p><p><strong>Transitive dependency:</strong> student_id → dept_id → dept_name</p><p>Here, dept_name depends on dept_id, not directly on student_id. To achieve 3NF, split into:</p><ul><li><code>Student(student_id, name, dept_id)</code></li><li><code>Department(dept_id, dept_name)</code></li></ul>",
-    "createdAt": {
-      "$date": "2025-12-04T18:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-04T18:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-011",
-    "post": "post-cs5505-002",
-    "author": "904",
-    "authorName": "Michael Jackson",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>For 192.168.1.0/24:</p><p><strong>Usable hosts:</strong> 2^(32-24) - 2 = 254 hosts</p><p>(We subtract 2 for network address and broadcast)</p><p><strong>Broadcast address:</strong> 192.168.1.255</p><p>The /24 means first 24 bits are network, last 8 bits for hosts. All 1s in host portion = broadcast.</p>",
-    "createdAt": {
-      "$date": "2025-12-05T12:30:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T12:30:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-012",
-    "post": "post-cs5506-002",
-    "author": "902",
-    "authorName": "Leia Organa",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Yes, Figma is perfectly acceptable!</p><p>In fact, I encourage it for team projects. The real-time collaboration features are excellent for iterating on designs together.</p><p>Just make sure to export your screens as PDFs for the final submission.</p>",
-    "createdAt": {
-      "$date": "2025-12-04T20:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-04T20:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-013",
-    "post": "post-cs5507-002",
-    "author": "912",
-    "authorName": "Yoda",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Check what uses port 3000, you must!</p><p>Run this command:<br/><code>lsof -i :3000</code> (Mac/Linux)<br/><code>netstat -ano | findstr :3000</code> (Windows)</p><p>Kill the process, then try again. Or change the port in your docker-compose.yml:</p><pre>ports:\n  - \"3001:3000\"</pre>",
-    "createdAt": {
-      "$date": "2025-12-05T18:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T18:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-014",
-    "post": "post-cs1234-006",
-    "author": "567",
-    "authorName": "Bruce Banner",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>I had the same issue! Turns out I was creating a new function reference on every render.</p><p>Try wrapping your route config in useMemo or using a component-based approach instead of inline functions.</p>",
-    "createdAt": {
-      "$date": "2025-12-05T17:15:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T17:15:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-015",
-    "post": "post-cs1234-006",
-    "author": "789",
-    "authorName": "Aragorn Elessar",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>Here's a clean pattern I recommend:</p><pre>const ProtectedRoute = ({ children }) => {\n  const { user } = useAuth();\n  return user ? children : &lt;Navigate to=\"/login\" /&gt;;\n};</pre><p>Then wrap your protected routes with this component. No infinite loops!</p>",
-    "createdAt": {
-      "$date": "2025-12-05T17:45:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T17:45:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-016",
-    "post": "post-cs1234-007",
-    "author": "920",
-    "authorName": "Severus Snape",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Create custom hooks when you find yourself:</p><ol><li>Repeating the same logic across multiple components</li><li>Combining multiple built-in hooks for a specific purpose</li><li>Wanting to abstract away complex state logic</li></ol><p>Reusability is the main criterion. If it's only used once, keep it in the component.</p>",
-    "createdAt": {
-      "$date": "2025-12-04T14:20:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-04T14:20:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-017",
-    "post": "post-cs1234-008",
-    "author": "917",
-    "authorName": "Harry Potter",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>React.memo is great for preventing re-renders when props haven't changed.</p><p>useMemo is for expensive calculations within a component.</p><p>I'd start by checking if the parent really needs to re-render so often. Sometimes restructuring your state helps more than optimization.</p>",
-    "createdAt": {
-      "$date": "2025-12-06T13:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T13:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-018",
-    "post": "post-cs1234-010",
-    "author": "924",
-    "authorName": "Morpheus Captain",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Redux Toolkit is absolutely worth it. Benefits include:</p><ul><li>Significantly less boilerplate code</li><li>Built-in Immer for immutable updates</li><li>RTK Query for data fetching</li><li>Better TypeScript support</li><li>DevTools integration out of the box</li></ul><p>Migration is usually straightforward - you can do it incrementally, slice by slice.</p>",
-    "createdAt": {
-      "$date": "2025-12-06T14:15:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T14:15:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-019",
-    "post": "post-cs1234-011",
-    "author": "678",
-    "authorName": "Frodo Baggins",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Server Components are production-ready in Next.js 13+, but still experimental in React itself.</p><p>For your final project, I'd recommend focusing on traditional React patterns we've covered in class. Server Components are powerful but add complexity.</p><p>However, if you're using Next.js anyway, feel free to experiment with them!</p>",
-    "createdAt": {
-      "$date": "2025-12-04T18:30:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-04T18:30:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-020",
-    "post": "post-cs1234-014",
-    "author": "929",
-    "authorName": "Vision Synthezoid",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>Next.js is becoming the standard for production React apps, especially with app router and server components.</p><p>However, Create React App is still great for learning React fundamentals without the added complexity of a framework.</p><p>I'd suggest learning React basics with CRA, then moving to Next.js for real projects.</p>",
-    "createdAt": {
-      "$date": "2025-12-04T13:45:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-04T13:45:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-021",
-    "post": "post-cs1234-015",
-    "author": "567",
-    "authorName": "Bruce Banner",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>You can wrap your async calls in a try-catch and set an error state:</p><pre>const [error, setError] = useState(null);\n\ntry {\n  await fetchData();\n} catch (err) {\n  setError(err);\n}</pre><p>Then conditionally render error UI based on that state.</p>",
-    "createdAt": {
-      "$date": "2025-12-06T18:45:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T18:45:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-022",
-    "post": "post-cs1234-016",
-    "author": "912",
-    "authorName": "Yoda",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>React Hook Form, recommend I would!</p><p>Better performance it has - only re-renders the field being updated. Formik re-renders entire form.</p><p>Simpler API, less boilerplate code. For complex forms with many fields, React Hook Form superior is.</p>",
-    "createdAt": {
-      "$date": "2025-12-05T20:10:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T20:10:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-023",
-    "post": "post-cs5501-004",
-    "author": "912",
-    "authorName": "Yoda",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Classic overfitting, this is!</p><p>More solutions, try you should:</p><ul><li>Early stopping - stop training when validation accuracy plateaus</li><li>Reduce model complexity - fewer layers or neurons</li><li>More training data - augmentation helps</li><li>L2 regularization in addition to dropout</li><li>Batch normalization</li></ul><p>Start with early stopping first!</p>",
-    "createdAt": {
-      "$date": "2025-12-05T20:15:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T20:15:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-024",
-    "post": "post-cs5501-006",
-    "author": "789",
-    "authorName": "Aragorn Elessar",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>With 10,000 images, you have enough data to unfreeze more layers.</p><p>I'd suggest:</p><ol><li>Start by freezing all but last layer, train for 5-10 epochs</li><li>Unfreeze last 2-3 conv blocks, reduce learning rate by 10x</li><li>Train until convergence</li></ol><p>This \"progressive unfreezing\" works well in practice.</p>",
-    "createdAt": {
-      "$date": "2025-12-06T12:40:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T12:40:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-025",
-    "post": "post-cs5501-007",
-    "author": "908",
-    "authorName": "C-3PO Droid",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>The attention mechanism is actually quite elegant once you get it!</p><p>Think of it like a database lookup:</p><ul><li><strong>Query:</strong> \"What am I looking for?\"</li><li><strong>Key:</strong> \"What do I contain?\"</li><li><strong>Value:</strong> \"What information do I store?\"</li></ul><p>Self-attention compares each word's query to all keys, then retrieves weighted values. This lets the model focus on relevant parts of the input.</p>",
-    "createdAt": {
-      "$date": "2025-12-05T15:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T15:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-026",
-    "post": "post-cs5501-008",
-    "author": "926",
-    "authorName": "Peter Parker",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>Batch size is a trade-off between:</p><ul><li>Memory: Larger batches need more GPU memory</li><li>Gradient quality: Smaller batches are noisier but can escape local minima</li><li>Training speed: Larger batches train faster per epoch</li></ul><p>Try 32 or 64 as a starting point. If you have GPU memory, 64 is usually a good balance.</p>",
-    "createdAt": {
-      "$date": "2025-12-06T13:20:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T13:20:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-027",
-    "post": "post-cs5501-010",
-    "author": "934",
-    "authorName": "Peter Quill",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>Here's a comparison:</p><p><strong>ReduceLROnPlateau:</strong> Safest option - reduces LR when validation loss plateaus. Set patience=5-10 epochs.</p><p><strong>Cosine annealing:</strong> Smooth decay, good for longer training.</p><p><strong>Step decay:</strong> Simple, drops LR at fixed intervals.</p><p>I'd start with ReduceLROnPlateau since it adapts to your specific training dynamics.</p>",
-    "createdAt": {
-      "$date": "2025-12-05T19:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T19:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-028",
-    "post": "post-cs5501-011",
-    "author": "917",
-    "authorName": "Harry Potter",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>For missing values, the approach depends on:</p><ol><li><strong>If data is MCAR (Missing Completely At Random):</strong> Dropping rows is okay</li><li><strong>If missing values have patterns:</strong> Use imputation</li></ol><p>With 20% missing, I'd use imputation. Start with median for numerical features and mode for categorical.</p><p>Libraries like sklearn's SimpleImputer or fancyimpute can help!</p>",
-    "createdAt": {
-      "$date": "2025-12-06T17:30:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T17:30:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-029",
-    "post": "post-cs5502-004",
-    "author": "913",
-    "authorName": "Obi-Wan Kenobi",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>Choose BST when you need:</p><ul><li>Sorted order iteration</li><li>Range queries (find all elements between x and y)</li><li>Order statistics (find kth smallest)</li></ul><p>Choose Hash Table when:</p><ul><li>You only need exact lookups</li><li>Order doesn't matter</li><li>You want O(1) average case vs O(log n) for BST</li></ul><p>Hash tables are generally faster but BSTs are more versatile.</p>",
-    "createdAt": {
-      "$date": "2025-12-06T12:15:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T12:15:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-030",
-    "post": "post-cs5502-006",
-    "author": "913",
-    "authorName": "Obi-Wan Kenobi",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>A* is better when you have a good heuristic function and want to reach a specific goal node.</p><p>For the heuristic, use:</p><ul><li><strong>Euclidean distance</strong> for grid-based pathfinding</li><li><strong>Manhattan distance</strong> if you can only move in 4 directions</li></ul><p>The key: heuristic must be <em>admissible</em> (never overestimate actual cost) for A* to guarantee shortest path.</p><p>Dijkstra is just A* with heuristic = 0.</p>",
-    "createdAt": {
-      "$date": "2025-12-06T10:50:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T10:50:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-031",
-    "post": "post-cs5502-007",
-    "author": "932",
-    "authorName": "Groot Tree",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>I am Groot! (Translation: Proving greedy algorithms requires two steps)</p><ol><li><strong>Greedy choice property:</strong> Show local optimal choice leads to global optimum</li><li><strong>Optimal substructure:</strong> Optimal solution contains optimal solutions to subproblems</li></ol><p>I am Groot! (Use proof by contradiction - assume greedy doesn't work, then show this leads to a contradiction)</p>",
-    "createdAt": {
-      "$date": "2025-12-05T16:20:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T16:20:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-032",
-    "post": "post-cs5502-012",
-    "author": "929",
-    "authorName": "Vision Synthezoid",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>Space complexity absolutely still matters:</p><ul><li><strong>Embedded systems:</strong> Limited RAM</li><li><strong>Mobile devices:</strong> Memory constraints</li><li><strong>Big data:</strong> Processing datasets larger than RAM</li><li><strong>Cache efficiency:</strong> Better space locality = faster execution</li></ul><p>However, for small datasets on modern machines, prioritize code clarity over micro-optimizations.</p>",
-    "createdAt": {
-      "$date": "2025-12-05T17:05:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T17:05:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-033",
-    "post": "post-cs5503-002",
-    "author": "910",
-    "authorName": "Michael Jackson",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>The allocation matrix is determined by the <em>current state</em> of the system - which resources are currently held by which processes.</p><p>In practice, the OS maintains this through resource allocation tables. When a process requests resources, the system checks if granting it would leave the system in a safe state using Banker's algorithm.</p><p>For your lab, you'll be given the initial allocation - focus on implementing the safety algorithm!</p>",
-    "createdAt": {
-      "$date": "2025-12-05T16:10:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T16:10:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-034",
-    "post": "post-cs5503-003",
-    "author": "913",
-    "authorName": "Obi-Wan Kenobi",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>Good question! The optimal quantum depends on your context switch overhead.</p><p>General guidelines:</p><ul><li><strong>Too small (< 10ms):</strong> High overhead from context switching</li><li><strong>Too large (> 100ms):</strong> Poor responsiveness</li><li><strong>Sweet spot:</strong> 20-50ms for interactive systems</li></ul><p>Rule of thumb: quantum should be ~10x the context switch time.</p>",
-    "createdAt": {
-      "$date": "2025-12-06T10:30:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T10:30:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-035",
-    "post": "post-cs5503-005",
-    "author": "345",
-    "authorName": "Natasha Romanoff",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>Large pages reduce page table overhead but cause <strong>internal fragmentation</strong>.</p><p>With 4MB pages:</p><ul><li>If a process only needs 100KB, you waste 3.9MB</li><li>Fewer page faults, but more wasted memory</li><li>Worse memory utilization</li></ul><p>4KB is the standard compromise. Some systems offer \"huge pages\" (2MB) as an optimization for specific workloads like databases.</p>",
-    "createdAt": {
-      "$date": "2025-12-06T14:45:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T14:45:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-036",
-    "post": "post-cs5503-006",
-    "author": "927",
-    "authorName": "Stephen Strange",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Excellent question! Counting semaphores are perfect for:</p><ol><li><strong>Resource pools:</strong> Limited number of identical resources (e.g., 5 database connections)</li><li><strong>Producer-consumer:</strong> Buffer with finite capacity</li><li><strong>Rate limiting:</strong> Allow max N concurrent operations</li></ol><p>Example: Parking lot with 100 spaces. Semaphore initialized to 100. Each car entering does wait(), leaving does signal().</p><p>Mutex is just a semaphore with count=1, specialized for mutual exclusion.</p>",
-    "createdAt": {
-      "$date": "2025-12-05T13:30:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T13:30:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-037",
-    "post": "post-cs5503-010",
-    "author": "915",
-    "authorName": "Samwise Gamgee",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>I'd go with RAID 10 if you can afford it! Here's why:</p><p><strong>RAID 5:</strong></p><ul><li>Better storage efficiency (n-1 drives usable)</li><li>Slower writes (parity calculation)</li><li>Vulnerable during rebuild</li></ul><p><strong>RAID 10:</strong></p><ul><li>Excellent performance (no parity overhead)</li><li>Better reliability</li><li>50% storage efficiency</li></ul><p>For a database, RAID 10 is worth the extra cost!</p>",
-    "createdAt": {
-      "$date": "2025-12-06T18:25:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T18:25:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-038",
-    "post": "post-cs5504-003",
-    "author": "345",
-    "authorName": "Natasha Romanoff",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>Your query is missing indexes! Add these:</p><pre>CREATE INDEX idx_orders_date ON orders(date);\nCREATE INDEX idx_orders_customer ON orders(customer_id);\nCREATE INDEX idx_orders_product ON orders(product_id);</pre><p>Also, use SELECT specific columns instead of SELECT *. You're pulling unnecessary data.</p><p>After adding indexes, check the execution plan with EXPLAIN to verify they're being used.</p>",
-    "createdAt": {
-      "$date": "2025-12-05T18:10:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T18:10:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-039",
-    "post": "post-cs5504-005",
-    "author": "924",
-    "authorName": "Morpheus Captain",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p><strong>READ_COMMITTED:</strong> Sees only committed data, but data can change during transaction (non-repeatable reads possible)</p><p><strong>REPEATABLE_READ:</strong> Once you read data, it won't change until transaction ends (prevents non-repeatable reads)</p><p>Choose READ_COMMITTED for better concurrency when you can tolerate minor inconsistencies.</p><p>Use REPEATABLE_READ for financial transactions or when consistency is critical.</p><p>Performance: READ_COMMITTED is faster due to less locking.</p>",
-    "createdAt": {
-      "$date": "2025-12-06T10:05:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T10:05:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-040",
-    "post": "post-cs5504-006",
-    "author": "916",
-    "authorName": "Hermione Granger",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>I researched this extensively for my project!</p><p><strong>Use MongoDB when:</strong></p><ul><li>Schema changes frequently</li><li>You need horizontal scaling</li><li>Document-oriented data model fits naturally</li></ul><p><strong>Use PostgreSQL when:</strong></p><ul><li>You need complex queries with JOINs</li><li>ACID compliance is critical</li><li>You want strong consistency</li></ul><p>Since you need complex queries, I'd lean toward PostgreSQL. Modern PostgreSQL also supports JSON for flexible schema!</p>",
-    "createdAt": {
-      "$date": "2025-12-05T17:45:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T17:45:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-041",
-    "post": "post-cs5504-010",
-    "author": "930",
-    "authorName": "Shuri Princess",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>Connection pooling best practices from my experience:</p><p>Formula: <code>pool_size = ((core_count * 2) + effective_spindle_count)</code></p><p>For your case with ~1000 req/min:</p><ul><li>Start with pool size of 20-30</li><li>Monitor connection usage</li><li>Adjust based on actual utilization</li><li>Set max_connections on PostgreSQL to pool_size * num_app_servers</li></ul><p>More connections ≠ better performance. Too many causes context switching overhead!</p>",
-    "createdAt": {
-      "$date": "2025-12-06T15:50:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T15:50:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-042",
-    "post": "post-cs5505-003",
-    "author": "456",
-    "authorName": "Thor Odinson",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>I had this exact issue! Check:</p><ol><li><strong>Phase 1 IKE negotiation:</strong> Are encryption algorithms matching on both sides?</li><li><strong>Authentication:</strong> Pre-shared keys must be identical</li><li><strong>DPD (Dead Peer Detection):</strong> Timeout settings might be too aggressive</li><li><strong>NAT-T:</strong> If behind NAT, ensure NAT-T is enabled</li></ol><p>Use packet capture on both sides to see where negotiation fails. Wireshark can decode IKE packets!</p>",
-    "createdAt": {
-      "$date": "2025-12-06T11:20:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T11:20:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-043",
-    "post": "post-cs5505-005",
-    "author": "904",
-    "authorName": "Michael Jackson",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Great practical question!</p><p><strong>Router-on-a-stick</strong> uses one physical interface with subinterfaces (802.1Q trunking). Cheaper but slower - traffic must traverse router.</p><p><strong>Layer 3 switch</strong> routes at wire speed in hardware. Much faster, but more expensive.</p><p>For 3 VLANs with moderate traffic, router-on-a-stick is fine. For production with heavy inter-VLAN traffic, invest in L3 switch.</p><p>Config example on Canvas under \"VLAN Routing\"!</p>",
-    "createdAt": {
-      "$date": "2025-12-06T15:15:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T15:15:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-044",
-    "post": "post-cs5505-007",
-    "author": "890",
-    "authorName": "Legolas Greenleaf",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>Think of TCP congestion control as driving on a highway:</p><p><strong>Slow Start:</strong> You just merged - accelerate quickly (exponential growth) until you reach speed limit or sense congestion</p><p><strong>Congestion Avoidance:</strong> Cruising at highway speed - increase slowly (linear growth), careful not to cause traffic jam</p><p>Switch happens at <em>ssthresh</em> (slow start threshold). After packet loss, ssthresh is updated and you restart slow start.</p>",
-    "createdAt": {
-      "$date": "2025-12-06T14:05:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T14:05:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-045",
-    "post": "post-cs5505-008",
-    "author": "917",
-    "authorName": "Harry Potter",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>Quick DNS record guide:</p><p><strong>A record:</strong> Maps domain to IPv4 address<br/><code>example.com → 192.0.2.1</code></p><p><strong>AAAA record:</strong> Maps domain to IPv6 address<br/><code>example.com → 2001:0db8::1</code></p><p><strong>CNAME:</strong> Alias to another domain<br/><code>www.example.com → example.com</code></p><p>Use CNAME for aliases (www, blog, etc). Use A/AAAA for root domain and direct IP mapping. Can't use CNAME for root domain!</p>",
-    "createdAt": {
-      "$date": "2025-12-05T12:25:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T12:25:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-046",
-    "post": "post-cs5505-010",
-    "author": "904",
-    "authorName": "Michael Jackson",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>This is a common issue - HTTP runs on TCP port 80/443, ping uses ICMP (different protocol).</p><p>Possibilities:</p><ol><li><strong>Firewall blocking HTTP:</strong> Allows ICMP but blocks TCP 80/443</li><li><strong>Web server not running:</strong> OS responds to ping but no HTTP service</li><li><strong>SELinux/AppArmor:</strong> Security policy blocking web server</li></ol><p>Test with: <code>telnet server_ip 80</code> or <code>curl -v http://server_ip</code></p><p>Check firewall: <code>iptables -L</code> or <code>firewall-cmd --list-all</code></p>",
-    "createdAt": {
-      "$date": "2025-12-06T16:35:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T16:35:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-047",
-    "post": "post-cs5506-003",
-    "author": "902",
-    "authorName": "Leia Organa",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>The \"5 users find 85% of issues\" comes from Jakob Nielsen's research.</p><p>For your project:</p><ul><li><strong>Minimum:</strong> 5 participants (as stated in requirements)</li><li><strong>Ideal:</strong> 8-10 for more confidence</li></ul><p>Participants should match your target demographic as closely as possible. Recruiting the wrong users can lead to misleading results.</p><p>Focus on qualitative insights rather than statistical significance - HCI is about understanding user behavior, not just numbers!</p>",
-    "createdAt": {
-      "$date": "2025-12-05T15:35:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T15:35:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-048",
-    "post": "post-cs5506-005",
-    "author": "908",
-    "authorName": "C-3PO Droid",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>For WCAG 2.1 AA compliance:</p><ul><li><strong>Normal text:</strong> 4.5:1 minimum contrast ratio</li><li><strong>Large text (18pt+ or 14pt+ bold):</strong> 3:1 minimum</li><li><strong>Logos and decorative elements:</strong> No contrast requirements</li><li><strong>UI components (buttons, form fields):</strong> 3:1 minimum</li></ul><p>Use tools like WebAIM Contrast Checker or Chrome DevTools to test. They'll tell you if you pass AA standards!</p>",
-    "createdAt": {
-      "$date": "2025-12-06T16:20:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T16:20:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-049",
-    "post": "post-cs5506-006",
-    "author": "890",
-    "authorName": "Legolas Greenleaf",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>To avoid leading questions, use the \"How might we...\" framework:</p><p><strong>Bad (leading):</strong> \"Don't you think the checkout process is too complicated?\"</p><p><strong>Good (open-ended):</strong> \"Walk me through your last online purchase. What was that experience like?\"</p><p>Tips:</p><ul><li>Ask \"why\" to dig deeper</li><li>Use silence - let them think</li><li>Focus on behaviors, not opinions</li><li>\"Tell me about a time when...\"</li></ul>",
-    "createdAt": {
-      "$date": "2025-12-05T11:05:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T11:05:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-050",
-    "post": "post-cs5506-007",
-    "author": "928",
-    "authorName": "Wanda Maximoff",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>We used Material UI for our project and it worked great!</p><p><strong>Pros of existing systems:</strong></p><ul><li>Save tons of development time</li><li>Battle-tested components</li><li>Accessibility built-in</li><li>Responsive by default</li></ul><p><strong>Cons:</strong></p><ul><li>Can look generic</li><li>Customization can be tricky</li><li>Bundle size</li></ul><p>For academic projects, I'd recommend using existing system and customizing the theme. Focus on UX, not reinventing buttons!</p>",
-    "createdAt": {
-      "$date": "2025-12-06T11:40:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T11:40:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-051",
-    "post": "post-cs5506-009",
-    "author": "911",
-    "authorName": "Michelangelo TMNT",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>Dude, for A/B testing you need to calculate sample size based on:</p><ol><li><strong>Baseline conversion:</strong> 5%</li><li><strong>Minimum detectable effect:</strong> How much improvement matters? (e.g., 0.5%)</li><li><strong>Statistical power:</strong> Usually 80%</li><li><strong>Significance level:</strong> Usually 5% (α = 0.05)</li></ol><p>Use online calculators like Optimizely or Evan Miller's. For 5% baseline with 20% relative lift, you'd need ~4000 users per variant.</p><p>Don't stop early - let it run to calculated sample size!</p>",
-    "createdAt": {
-      "$date": "2025-12-06T14:20:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T14:20:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-052",
-    "post": "post-cs5506-010",
-    "author": "902",
-    "authorName": "Leia Organa",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>In 2025, I strongly recommend mobile-first!</p><p>Here's why:</p><ul><li>Forces you to prioritize essential features</li><li>Easier to scale up than down</li><li>Mobile usage continues to grow</li><li>Better for progressive enhancement</li></ul><p>Even if desktop is currently dominant, mobile-first thinking creates cleaner, more focused designs.</p><p>Start with 320px viewport, then tablet (768px), then desktop (1024px+).</p>",
-    "createdAt": {
-      "$date": "2025-12-05T12:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T12:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-053",
-    "post": "post-cs5507-003",
-    "author": "912",
-    "authorName": "Yoda",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>CrashLoopBackOff, frustrating it is!</p><p>The error \"Cannot find module\" - dependencies missing, they are.</p><p>Check you must:</p><ol><li>Dockerfile includes npm install: <code>RUN npm install</code></li><li>package.json copied before install</li><li>node_modules in .dockerignore file</li><li>Correct working directory set</li></ol><p>Debug with: <code>kubectl logs pod-name</code> and <code>kubectl describe pod pod-name</code></p><p>Build image again with proper dependencies, you must!</p>",
-    "createdAt": {
-      "$date": "2025-12-06T09:15:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T09:15:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-054",
-    "post": "post-cs5507-005",
-    "author": "934",
-    "authorName": "Peter Quill",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>The issue is that depends_on only waits for container to START, not be READY.</p><p>Solutions:</p><ol><li><strong>Use wait-for-it script:</strong><pre>command: [\"/wait-for-it.sh\", \"db:5432\", \"--\", \"npm\", \"start\"]</pre></li><li><strong>Add healthcheck to DB:</strong><pre>healthcheck:\n  test: [\"CMD\", \"pg_isready\"]\n  interval: 5s</pre></li><li><strong>Use restart policy:</strong><pre>restart: on-failure</pre></li></ol><p>I recommend option 2 - proper healthchecks make your stack more robust!</p>",
-    "createdAt": {
-      "$date": "2025-12-06T17:15:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T17:15:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-055",
-    "post": "post-cs5507-006",
-    "author": "567",
-    "authorName": "Bruce Banner",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>I evaluated both for my project. Here's the breakdown:</p><p><strong>Use Lambda when:</strong></p><ul><li>Sporadic, event-driven workload ✓ (fits your case!)</li><li>Stateless operations</li><li>Want zero infrastructure management</li><li>Can tolerate cold starts</li></ul><p><strong>Use EC2 when:</strong></p><ul><li>Constant high traffic</li><li>Need specific OS/runtime control</li><li>Long-running processes</li></ul><p>For sporadic traffic with spikes, Lambda is perfect. You only pay for execution time. With EC2, you pay 24/7 even during idle periods.</p>",
-    "createdAt": {
-      "$date": "2025-12-05T10:00:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T10:00:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-056",
-    "post": "post-cs5507-007",
-    "author": "925",
-    "authorName": "Trinity Hacker",
-    "authorRole": "ASSISTANT",
-    "answerType": "ta",
-    "content": "<p>For your requirements, I'd suggest GitHub Actions:</p><p><strong>GitHub Actions Pros:</strong></p><ul><li>Native GitHub integration</li><li>Free for public repos, generous for private</li><li>Simple YAML config</li><li>AWS deployment via official actions</li><li>Less maintenance overhead</li></ul><p><strong>Jenkins Pros:</strong></p><ul><li>More powerful and flexible</li><li>Better for complex pipelines</li><li>Self-hosted = more control</li></ul><p>Since you're already on GitHub and need simple AWS deployment, GitHub Actions is the easier choice. You can always migrate to Jenkins later if needed.</p>",
-    "createdAt": {
-      "$date": "2025-12-06T16:05:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T16:05:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-057",
-    "post": "post-cs5507-009",
-    "author": "928",
-    "authorName": "Wanda Maximoff",
-    "authorRole": "STUDENT",
-    "answerType": "student",
-    "content": "<p>Terraform is better for multi-cloud!</p><p>Here's why we chose Terraform:</p><ul><li><strong>Cloud-agnostic:</strong> Same language for AWS, Azure, GCP</li><li><strong>State management:</strong> Track infrastructure changes</li><li><strong>Larger ecosystem:</strong> More modules and providers</li><li><strong>Better for version control:</strong> Infrastructure as code</li></ul><p>CloudFormation is AWS-only. If you might switch to Azure, you'd have to rewrite everything. With Terraform, just swap providers!</p><p>Plus, Terraform has better tooling (terraform plan is amazing for previewing changes).</p>",
-    "createdAt": {
-      "$date": "2025-12-06T18:10:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-06T18:10:00.000Z"
-    }
-  },
-  {
-    "_id": "answer-058",
-    "post": "post-cs5507-010",
-    "author": "931",
-    "authorName": "T'Challa King",
-    "authorRole": "FACULTY",
-    "answerType": "instructor",
-    "content": "<p>Container security is critical! Here are free tools you should integrate:</p><ol><li><strong>Trivy:</strong> Excellent, easy to use<br/><code>trivy image your-image:tag</code></li><li><strong>Grype:</strong> From Anchore, good vulnerability detection</li><li><strong>Docker Scout:</strong> Built into Docker Desktop</li><li><strong>Snyk:</strong> Free for open source</li></ol><p>For CI/CD integration, add to GitHub Actions:</p><pre>- name: Run Trivy\n  uses: aquasecurity/trivy-action@master\n  with:\n    image-ref: 'your-image:tag'</pre><p>Fail the build if high/critical vulnerabilities are found!</p>",
-    "createdAt": {
-      "$date": "2025-12-05T16:30:00.000Z"
-    },
-    "updatedAt": {
-      "$date": "2025-12-05T16:30:00.000Z"
-    }
+  "updatedAt": {
+    "$date": "2025-12-04T15:30:00.000Z"
   }
-]
+},
+{
+  "_id": "answer-002",
+  "post": "post-cs1234-002",
+  "author": "912",
+  "authorName": "Yoda",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>A shopping cart, good example it is!</p><p>With useState, track items, quantities, totals separately you must. Messy it becomes.</p><p>With useReducer, actions like ADD_ITEM, REMOVE_ITEM, UPDATE_QUANTITY you dispatch. Cleaner the code stays.</p>",
+  "createdAt": {
+    "$date": "2025-12-04T16:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T16:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-003",
+  "post": "post-cs1234-003",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Given the circumstances, I've decided to extend the deadline by 3 days.</p><p><strong>New deadline:</strong> December 10th, 11:59 PM</p><p>Please don't wait until the last minute!</p>",
+  "createdAt": {
+    "$date": "2025-12-05T11:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T11:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-004",
+  "post": "post-cs1234-005",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Good question! Here's my recommendation:</p><p><strong>Props drilling is fine for:</strong> 2-3 levels deep</p><p><strong>Consider Context when:</strong></p><ul><li>Data needed by many components at different nesting levels</li><li>Global state like theme, user auth, language</li></ul><p>Don't use Context for everything - it can cause unnecessary re-renders. For complex state, consider Redux or Zustand.</p>",
+  "createdAt": {
+    "$date": "2025-12-03T18:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T18:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-005",
+  "post": "post-cs5501-002",
+  "author": "902",
+  "authorName": "Leia Organa",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>This is a classic problem! The increasing loss after epoch 50 suggests you're experiencing <strong>exploding gradients</strong>.</p><p>Try these solutions:</p><ol><li>Add gradient clipping: <code>torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)</code></li><li>Use a learning rate scheduler</li><li>Check your weight initialization</li><li>Try batch normalization</li></ol><p>Let me know if this helps!</p>",
+  "createdAt": {
+    "$date": "2025-12-04T21:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T21:30:00.000Z"
+  }
+},
+{
+  "_id": "answer-006",
+  "post": "post-cs5501-003",
+  "author": "902",
+  "authorName": "Leia Organa",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>You can design your own architecture! Just make sure it includes:</p><ul><li>At least 2 convolutional layers</li><li>Pooling layers</li><li>Fully connected layers at the end</li></ul><p>Transfer learning is <strong>not allowed</strong> for this assignment - we want you to understand the fundamentals first.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T10:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T10:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-007",
+  "post": "post-cs5502-002",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Let me walk through it:</p><p>The recurrence relation is: <code>T(n) = T(n-1) + T(n-2) + O(1)</code></p><p>This forms a binary tree where each node spawns 2 children. The height is n, so roughly 2^n nodes.</p><p>More precisely, T(n) ≈ φ^n where φ (golden ratio) ≈ 1.618</p><p>So O(2^n) is a simplification, but captures the exponential nature.</p>",
+  "createdAt": {
+    "$date": "2025-12-04T13:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T13:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-008",
+  "post": "post-cs5502-002",
+  "author": "908",
+  "authorName": "C-3PO Droid",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>I found drawing the recursion tree helpful!</p><p>For fib(5), you calculate fib(4) and fib(3). But then fib(4) also calculates fib(3)... so you're repeating work!</p><p>That's why memoization or bottom-up DP makes it O(n) instead.</p>",
+  "createdAt": {
+    "$date": "2025-12-04T14:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T14:30:00.000Z"
+  }
+},
+{
+  "_id": "answer-009",
+  "post": "post-cs5502-003",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p><strong>BFS:</strong></p><ul><li>Shortest path in unweighted graphs</li><li>Level-order traversal</li><li>Finding nodes within k distance</li></ul><p><strong>DFS:</strong></p><ul><li>Detecting cycles</li><li>Topological sorting</li><li>Finding connected components</li><li>Maze solving</li></ul><p>Memory-wise: BFS uses more memory (stores entire level), DFS is more space-efficient for deep graphs.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T14:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T14:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-010",
+  "post": "post-cs5504-002",
+  "author": "910",
+  "authorName": "Michael Jackson",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Let me give you a concrete example:</p><p>Consider a table: <code>Student(student_id, name, dept_id, dept_name)</code></p><p><strong>Transitive dependency:</strong> student_id → dept_id → dept_name</p><p>Here, dept_name depends on dept_id, not directly on student_id. To achieve 3NF, split into:</p><ul><li><code>Student(student_id, name, dept_id)</code></li><li><code>Department(dept_id, dept_name)</code></li></ul>",
+  "createdAt": {
+    "$date": "2025-12-04T18:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T18:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-011",
+  "post": "post-cs5505-002",
+  "author": "904",
+  "authorName": "Michael Jackson",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>For 192.168.1.0/24:</p><p><strong>Usable hosts:</strong> 2^(32-24) - 2 = 254 hosts</p><p>(We subtract 2 for network address and broadcast)</p><p><strong>Broadcast address:</strong> 192.168.1.255</p><p>The /24 means first 24 bits are network, last 8 bits for hosts. All 1s in host portion = broadcast.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T12:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T12:30:00.000Z"
+  }
+},
+{
+  "_id": "answer-012",
+  "post": "post-cs5506-002",
+  "author": "902",
+  "authorName": "Leia Organa",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Yes, Figma is perfectly acceptable!</p><p>In fact, I encourage it for team projects. The real-time collaboration features are excellent for iterating on designs together.</p><p>Just make sure to export your screens as PDFs for the final submission.</p>",
+  "createdAt": {
+    "$date": "2025-12-04T20:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T20:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-013",
+  "post": "post-cs5507-002",
+  "author": "912",
+  "authorName": "Yoda",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Check what uses port 3000, you must!</p><p>Run this command:<br/><code>lsof -i :3000</code> (Mac/Linux)<br/><code>netstat -ano | findstr :3000</code> (Windows)</p><p>Kill the process, then try again. Or change the port in your docker-compose.yml:</p><pre>ports:\n  - \"3001:3000\"</pre>",
+  "createdAt": {
+    "$date": "2025-12-05T18:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T18:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-014",
+  "post": "post-cs1234-006",
+  "author": "567",
+  "authorName": "Bruce Banner",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>I had the same issue! Turns out I was creating a new function reference on every render.</p><p>Try wrapping your route config in useMemo or using a component-based approach instead of inline functions.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T17:15:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T17:15:00.000Z"
+  }
+},
+{
+  "_id": "answer-015",
+  "post": "post-cs1234-006",
+  "author": "789",
+  "authorName": "Aragorn Elessar",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>Here's a clean pattern I recommend:</p><pre>const ProtectedRoute = ({ children }) => {\n  const { user } = useAuth();\n  return user ? children : &lt;Navigate to=\"/login\" /&gt;;\n};</pre><p>Then wrap your protected routes with this component. No infinite loops!</p>",
+  "createdAt": {
+    "$date": "2025-12-05T17:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T17:45:00.000Z"
+  }
+},
+{
+  "_id": "answer-016",
+  "post": "post-cs1234-007",
+  "author": "920",
+  "authorName": "Severus Snape",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Create custom hooks when you find yourself:</p><ol><li>Repeating the same logic across multiple components</li><li>Combining multiple built-in hooks for a specific purpose</li><li>Wanting to abstract away complex state logic</li></ol><p>Reusability is the main criterion. If it's only used once, keep it in the component.</p>",
+  "createdAt": {
+    "$date": "2025-12-04T14:20:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T14:20:00.000Z"
+  }
+},
+{
+  "_id": "answer-017",
+  "post": "post-cs1234-008",
+  "author": "917",
+  "authorName": "Harry Potter",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>React.memo is great for preventing re-renders when props haven't changed.</p><p>useMemo is for expensive calculations within a component.</p><p>I'd start by checking if the parent really needs to re-render so often. Sometimes restructuring your state helps more than optimization.</p>",
+  "createdAt": {
+    "$date": "2025-12-06T13:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T13:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-018",
+  "post": "post-cs1234-010",
+  "author": "924",
+  "authorName": "Morpheus Captain",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Redux Toolkit is absolutely worth it. Benefits include:</p><ul><li>Significantly less boilerplate code</li><li>Built-in Immer for immutable updates</li><li>RTK Query for data fetching</li><li>Better TypeScript support</li><li>DevTools integration out of the box</li></ul><p>Migration is usually straightforward - you can do it incrementally, slice by slice.</p>",
+  "createdAt": {
+    "$date": "2025-12-06T14:15:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T14:15:00.000Z"
+  }
+},
+{
+  "_id": "answer-019",
+  "post": "post-cs1234-011",
+  "author": "678",
+  "authorName": "Frodo Baggins",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Server Components are production-ready in Next.js 13+, but still experimental in React itself.</p><p>For your final project, I'd recommend focusing on traditional React patterns we've covered in class. Server Components are powerful but add complexity.</p><p>However, if you're using Next.js anyway, feel free to experiment with them!</p>",
+  "createdAt": {
+    "$date": "2025-12-04T18:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T18:30:00.000Z"
+  }
+},
+{
+  "_id": "answer-020",
+  "post": "post-cs1234-014",
+  "author": "929",
+  "authorName": "Vision Synthezoid",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>Next.js is becoming the standard for production React apps, especially with app router and server components.</p><p>However, Create React App is still great for learning React fundamentals without the added complexity of a framework.</p><p>I'd suggest learning React basics with CRA, then moving to Next.js for real projects.</p>",
+  "createdAt": {
+    "$date": "2025-12-04T13:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T13:45:00.000Z"
+  }
+},
+{
+  "_id": "answer-021",
+  "post": "post-cs1234-015",
+  "author": "567",
+  "authorName": "Bruce Banner",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>You can wrap your async calls in a try-catch and set an error state:</p><pre>const [error, setError] = useState(null);\n\ntry {\n  await fetchData();\n} catch (err) {\n  setError(err);\n}</pre><p>Then conditionally render error UI based on that state.</p>",
+  "createdAt": {
+    "$date": "2025-12-06T18:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T18:45:00.000Z"
+  }
+},
+{
+  "_id": "answer-022",
+  "post": "post-cs1234-016",
+  "author": "912",
+  "authorName": "Yoda",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>React Hook Form, recommend I would!</p><p>Better performance it has - only re-renders the field being updated. Formik re-renders entire form.</p><p>Simpler API, less boilerplate code. For complex forms with many fields, React Hook Form superior is.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T20:10:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T20:10:00.000Z"
+  }
+},
+{
+  "_id": "answer-023",
+  "post": "post-cs5501-004",
+  "author": "912",
+  "authorName": "Yoda",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Classic overfitting, this is!</p><p>More solutions, try you should:</p><ul><li>Early stopping - stop training when validation accuracy plateaus</li><li>Reduce model complexity - fewer layers or neurons</li><li>More training data - augmentation helps</li><li>L2 regularization in addition to dropout</li><li>Batch normalization</li></ul><p>Start with early stopping first!</p>",
+  "createdAt": {
+    "$date": "2025-12-05T20:15:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T20:15:00.000Z"
+  }
+},
+{
+  "_id": "answer-024",
+  "post": "post-cs5501-006",
+  "author": "789",
+  "authorName": "Aragorn Elessar",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>With 10,000 images, you have enough data to unfreeze more layers.</p><p>I'd suggest:</p><ol><li>Start by freezing all but last layer, train for 5-10 epochs</li><li>Unfreeze last 2-3 conv blocks, reduce learning rate by 10x</li><li>Train until convergence</li></ol><p>This \"progressive unfreezing\" works well in practice.</p>",
+  "createdAt": {
+    "$date": "2025-12-06T12:40:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T12:40:00.000Z"
+  }
+},
+{
+  "_id": "answer-025",
+  "post": "post-cs5501-007",
+  "author": "908",
+  "authorName": "C-3PO Droid",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>The attention mechanism is actually quite elegant once you get it!</p><p>Think of it like a database lookup:</p><ul><li><strong>Query:</strong> \"What am I looking for?\"</li><li><strong>Key:</strong> \"What do I contain?\"</li><li><strong>Value:</strong> \"What information do I store?\"</li></ul><p>Self-attention compares each word's query to all keys, then retrieves weighted values. This lets the model focus on relevant parts of the input.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T15:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T15:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-026",
+  "post": "post-cs5501-008",
+  "author": "926",
+  "authorName": "Peter Parker",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>Batch size is a trade-off between:</p><ul><li>Memory: Larger batches need more GPU memory</li><li>Gradient quality: Smaller batches are noisier but can escape local minima</li><li>Training speed: Larger batches train faster per epoch</li></ul><p>Try 32 or 64 as a starting point. If you have GPU memory, 64 is usually a good balance.</p>",
+  "createdAt": {
+    "$date": "2025-12-06T13:20:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T13:20:00.000Z"
+  }
+},
+{
+  "_id": "answer-027",
+  "post": "post-cs5501-010",
+  "author": "934",
+  "authorName": "Peter Quill",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>Here's a comparison:</p><p><strong>ReduceLROnPlateau:</strong> Safest option - reduces LR when validation loss plateaus. Set patience=5-10 epochs.</p><p><strong>Cosine annealing:</strong> Smooth decay, good for longer training.</p><p><strong>Step decay:</strong> Simple, drops LR at fixed intervals.</p><p>I'd start with ReduceLROnPlateau since it adapts to your specific training dynamics.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T19:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T19:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-028",
+  "post": "post-cs5501-011",
+  "author": "917",
+  "authorName": "Harry Potter",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>For missing values, the approach depends on:</p><ol><li><strong>If data is MCAR (Missing Completely At Random):</strong> Dropping rows is okay</li><li><strong>If missing values have patterns:</strong> Use imputation</li></ol><p>With 20% missing, I'd use imputation. Start with median for numerical features and mode for categorical.</p><p>Libraries like sklearn's SimpleImputer or fancyimpute can help!</p>",
+  "createdAt": {
+    "$date": "2025-12-06T17:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T17:30:00.000Z"
+  }
+},
+{
+  "_id": "answer-029",
+  "post": "post-cs5502-004",
+  "author": "913",
+  "authorName": "Obi-Wan Kenobi",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>Choose BST when you need:</p><ul><li>Sorted order iteration</li><li>Range queries (find all elements between x and y)</li><li>Order statistics (find kth smallest)</li></ul><p>Choose Hash Table when:</p><ul><li>You only need exact lookups</li><li>Order doesn't matter</li><li>You want O(1) average case vs O(log n) for BST</li></ul><p>Hash tables are generally faster but BSTs are more versatile.</p>",
+  "createdAt": {
+    "$date": "2025-12-06T12:15:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T12:15:00.000Z"
+  }
+},
+{
+  "_id": "answer-030",
+  "post": "post-cs5502-006",
+  "author": "913",
+  "authorName": "Obi-Wan Kenobi",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>A* is better when you have a good heuristic function and want to reach a specific goal node.</p><p>For the heuristic, use:</p><ul><li><strong>Euclidean distance</strong> for grid-based pathfinding</li><li><strong>Manhattan distance</strong> if you can only move in 4 directions</li></ul><p>The key: heuristic must be <em>admissible</em> (never overestimate actual cost) for A* to guarantee shortest path.</p><p>Dijkstra is just A* with heuristic = 0.</p>",
+  "createdAt": {
+    "$date": "2025-12-06T10:50:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T10:50:00.000Z"
+  }
+},
+{
+  "_id": "answer-031",
+  "post": "post-cs5502-007",
+  "author": "932",
+  "authorName": "Groot Tree",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>I am Groot! (Translation: Proving greedy algorithms requires two steps)</p><ol><li><strong>Greedy choice property:</strong> Show local optimal choice leads to global optimum</li><li><strong>Optimal substructure:</strong> Optimal solution contains optimal solutions to subproblems</li></ol><p>I am Groot! (Use proof by contradiction - assume greedy doesn't work, then show this leads to a contradiction)</p>",
+  "createdAt": {
+    "$date": "2025-12-05T16:20:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T16:20:00.000Z"
+  }
+},
+{
+  "_id": "answer-032",
+  "post": "post-cs5502-012",
+  "author": "929",
+  "authorName": "Vision Synthezoid",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>Space complexity absolutely still matters:</p><ul><li><strong>Embedded systems:</strong> Limited RAM</li><li><strong>Mobile devices:</strong> Memory constraints</li><li><strong>Big data:</strong> Processing datasets larger than RAM</li><li><strong>Cache efficiency:</strong> Better space locality = faster execution</li></ul><p>However, for small datasets on modern machines, prioritize code clarity over micro-optimizations.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T17:05:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T17:05:00.000Z"
+  }
+},
+{
+  "_id": "answer-033",
+  "post": "post-cs5503-002",
+  "author": "910",
+  "authorName": "Michael Jackson",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>The allocation matrix is determined by the <em>current state</em> of the system - which resources are currently held by which processes.</p><p>In practice, the OS maintains this through resource allocation tables. When a process requests resources, the system checks if granting it would leave the system in a safe state using Banker's algorithm.</p><p>For your lab, you'll be given the initial allocation - focus on implementing the safety algorithm!</p>",
+  "createdAt": {
+    "$date": "2025-12-05T16:10:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T16:10:00.000Z"
+  }
+},
+{
+  "_id": "answer-034",
+  "post": "post-cs5503-003",
+  "author": "913",
+  "authorName": "Obi-Wan Kenobi",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>Good question! The optimal quantum depends on your context switch overhead.</p><p>General guidelines:</p><ul><li><strong>Too small (< 10ms):</strong> High overhead from context switching</li><li><strong>Too large (> 100ms):</strong> Poor responsiveness</li><li><strong>Sweet spot:</strong> 20-50ms for interactive systems</li></ul><p>Rule of thumb: quantum should be ~10x the context switch time.</p>",
+  "createdAt": {
+    "$date": "2025-12-06T10:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T10:30:00.000Z"
+  }
+},
+{
+  "_id": "answer-035",
+  "post": "post-cs5503-005",
+  "author": "345",
+  "authorName": "Natasha Romanoff",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>Large pages reduce page table overhead but cause <strong>internal fragmentation</strong>.</p><p>With 4MB pages:</p><ul><li>If a process only needs 100KB, you waste 3.9MB</li><li>Fewer page faults, but more wasted memory</li><li>Worse memory utilization</li></ul><p>4KB is the standard compromise. Some systems offer \"huge pages\" (2MB) as an optimization for specific workloads like databases.</p>",
+  "createdAt": {
+    "$date": "2025-12-06T14:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T14:45:00.000Z"
+  }
+},
+{
+  "_id": "answer-036",
+  "post": "post-cs5503-006",
+  "author": "927",
+  "authorName": "Stephen Strange",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Excellent question! Counting semaphores are perfect for:</p><ol><li><strong>Resource pools:</strong> Limited number of identical resources (e.g., 5 database connections)</li><li><strong>Producer-consumer:</strong> Buffer with finite capacity</li><li><strong>Rate limiting:</strong> Allow max N concurrent operations</li></ol><p>Example: Parking lot with 100 spaces. Semaphore initialized to 100. Each car entering does wait(), leaving does signal().</p><p>Mutex is just a semaphore with count=1, specialized for mutual exclusion.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T13:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T13:30:00.000Z"
+  }
+},
+{
+  "_id": "answer-037",
+  "post": "post-cs5503-010",
+  "author": "915",
+  "authorName": "Samwise Gamgee",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>I'd go with RAID 10 if you can afford it! Here's why:</p><p><strong>RAID 5:</strong></p><ul><li>Better storage efficiency (n-1 drives usable)</li><li>Slower writes (parity calculation)</li><li>Vulnerable during rebuild</li></ul><p><strong>RAID 10:</strong></p><ul><li>Excellent performance (no parity overhead)</li><li>Better reliability</li><li>50% storage efficiency</li></ul><p>For a database, RAID 10 is worth the extra cost!</p>",
+  "createdAt": {
+    "$date": "2025-12-06T18:25:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T18:25:00.000Z"
+  }
+},
+{
+  "_id": "answer-038",
+  "post": "post-cs5504-003",
+  "author": "345",
+  "authorName": "Natasha Romanoff",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>Your query is missing indexes! Add these:</p><pre>CREATE INDEX idx_orders_date ON orders(date);\nCREATE INDEX idx_orders_customer ON orders(customer_id);\nCREATE INDEX idx_orders_product ON orders(product_id);</pre><p>Also, use SELECT specific columns instead of SELECT *. You're pulling unnecessary data.</p><p>After adding indexes, check the execution plan with EXPLAIN to verify they're being used.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T18:10:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T18:10:00.000Z"
+  }
+},
+{
+  "_id": "answer-039",
+  "post": "post-cs5504-005",
+  "author": "924",
+  "authorName": "Morpheus Captain",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p><strong>READ_COMMITTED:</strong> Sees only committed data, but data can change during transaction (non-repeatable reads possible)</p><p><strong>REPEATABLE_READ:</strong> Once you read data, it won't change until transaction ends (prevents non-repeatable reads)</p><p>Choose READ_COMMITTED for better concurrency when you can tolerate minor inconsistencies.</p><p>Use REPEATABLE_READ for financial transactions or when consistency is critical.</p><p>Performance: READ_COMMITTED is faster due to less locking.</p>",
+  "createdAt": {
+    "$date": "2025-12-06T10:05:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T10:05:00.000Z"
+  }
+},
+{
+  "_id": "answer-040",
+  "post": "post-cs5504-006",
+  "author": "916",
+  "authorName": "Hermione Granger",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>I researched this extensively for my project!</p><p><strong>Use MongoDB when:</strong></p><ul><li>Schema changes frequently</li><li>You need horizontal scaling</li><li>Document-oriented data model fits naturally</li></ul><p><strong>Use PostgreSQL when:</strong></p><ul><li>You need complex queries with JOINs</li><li>ACID compliance is critical</li><li>You want strong consistency</li></ul><p>Since you need complex queries, I'd lean toward PostgreSQL. Modern PostgreSQL also supports JSON for flexible schema!</p>",
+  "createdAt": {
+    "$date": "2025-12-05T17:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T17:45:00.000Z"
+  }
+},
+{
+  "_id": "answer-041",
+  "post": "post-cs5504-010",
+  "author": "930",
+  "authorName": "Shuri Princess",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>Connection pooling best practices from my experience:</p><p>Formula: <code>pool_size = ((core_count * 2) + effective_spindle_count)</code></p><p>For your case with ~1000 req/min:</p><ul><li>Start with pool size of 20-30</li><li>Monitor connection usage</li><li>Adjust based on actual utilization</li><li>Set max_connections on PostgreSQL to pool_size * num_app_servers</li></ul><p>More connections ≠ better performance. Too many causes context switching overhead!</p>",
+  "createdAt": {
+    "$date": "2025-12-06T15:50:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T15:50:00.000Z"
+  }
+},
+{
+  "_id": "answer-042",
+  "post": "post-cs5505-003",
+  "author": "456",
+  "authorName": "Thor Odinson",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>I had this exact issue! Check:</p><ol><li><strong>Phase 1 IKE negotiation:</strong> Are encryption algorithms matching on both sides?</li><li><strong>Authentication:</strong> Pre-shared keys must be identical</li><li><strong>DPD (Dead Peer Detection):</strong> Timeout settings might be too aggressive</li><li><strong>NAT-T:</strong> If behind NAT, ensure NAT-T is enabled</li></ol><p>Use packet capture on both sides to see where negotiation fails. Wireshark can decode IKE packets!</p>",
+  "createdAt": {
+    "$date": "2025-12-06T11:20:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T11:20:00.000Z"
+  }
+},
+{
+  "_id": "answer-043",
+  "post": "post-cs5505-005",
+  "author": "904",
+  "authorName": "Michael Jackson",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Great practical question!</p><p><strong>Router-on-a-stick</strong> uses one physical interface with subinterfaces (802.1Q trunking). Cheaper but slower - traffic must traverse router.</p><p><strong>Layer 3 switch</strong> routes at wire speed in hardware. Much faster, but more expensive.</p><p>For 3 VLANs with moderate traffic, router-on-a-stick is fine. For production with heavy inter-VLAN traffic, invest in L3 switch.</p><p>Config example on Canvas under \"VLAN Routing\"!</p>",
+  "createdAt": {
+    "$date": "2025-12-06T15:15:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T15:15:00.000Z"
+  }
+},
+{
+  "_id": "answer-044",
+  "post": "post-cs5505-007",
+  "author": "890",
+  "authorName": "Legolas Greenleaf",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>Think of TCP congestion control as driving on a highway:</p><p><strong>Slow Start:</strong> You just merged - accelerate quickly (exponential growth) until you reach speed limit or sense congestion</p><p><strong>Congestion Avoidance:</strong> Cruising at highway speed - increase slowly (linear growth), careful not to cause traffic jam</p><p>Switch happens at <em>ssthresh</em> (slow start threshold). After packet loss, ssthresh is updated and you restart slow start.</p>",
+  "createdAt": {
+    "$date": "2025-12-06T14:05:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T14:05:00.000Z"
+  }
+},
+{
+  "_id": "answer-045",
+  "post": "post-cs5505-008",
+  "author": "917",
+  "authorName": "Harry Potter",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>Quick DNS record guide:</p><p><strong>A record:</strong> Maps domain to IPv4 address<br/><code>example.com → 192.0.2.1</code></p><p><strong>AAAA record:</strong> Maps domain to IPv6 address<br/><code>example.com → 2001:0db8::1</code></p><p><strong>CNAME:</strong> Alias to another domain<br/><code>www.example.com → example.com</code></p><p>Use CNAME for aliases (www, blog, etc). Use A/AAAA for root domain and direct IP mapping. Can't use CNAME for root domain!</p>",
+  "createdAt": {
+    "$date": "2025-12-05T12:25:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T12:25:00.000Z"
+  }
+},
+{
+  "_id": "answer-046",
+  "post": "post-cs5505-010",
+  "author": "904",
+  "authorName": "Michael Jackson",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>This is a common issue - HTTP runs on TCP port 80/443, ping uses ICMP (different protocol).</p><p>Possibilities:</p><ol><li><strong>Firewall blocking HTTP:</strong> Allows ICMP but blocks TCP 80/443</li><li><strong>Web server not running:</strong> OS responds to ping but no HTTP service</li><li><strong>SELinux/AppArmor:</strong> Security policy blocking web server</li></ol><p>Test with: <code>telnet server_ip 80</code> or <code>curl -v http://server_ip</code></p><p>Check firewall: <code>iptables -L</code> or <code>firewall-cmd --list-all</code></p>",
+  "createdAt": {
+    "$date": "2025-12-06T16:35:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T16:35:00.000Z"
+  }
+},
+{
+  "_id": "answer-047",
+  "post": "post-cs5506-003",
+  "author": "902",
+  "authorName": "Leia Organa",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>The \"5 users find 85% of issues\" comes from Jakob Nielsen's research.</p><p>For your project:</p><ul><li><strong>Minimum:</strong> 5 participants (as stated in requirements)</li><li><strong>Ideal:</strong> 8-10 for more confidence</li></ul><p>Participants should match your target demographic as closely as possible. Recruiting the wrong users can lead to misleading results.</p><p>Focus on qualitative insights rather than statistical significance - HCI is about understanding user behavior, not just numbers!</p>",
+  "createdAt": {
+    "$date": "2025-12-05T15:35:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T15:35:00.000Z"
+  }
+},
+{
+  "_id": "answer-048",
+  "post": "post-cs5506-005",
+  "author": "908",
+  "authorName": "C-3PO Droid",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>For WCAG 2.1 AA compliance:</p><ul><li><strong>Normal text:</strong> 4.5:1 minimum contrast ratio</li><li><strong>Large text (18pt+ or 14pt+ bold):</strong> 3:1 minimum</li><li><strong>Logos and decorative elements:</strong> No contrast requirements</li><li><strong>UI components (buttons, form fields):</strong> 3:1 minimum</li></ul><p>Use tools like WebAIM Contrast Checker or Chrome DevTools to test. They'll tell you if you pass AA standards!</p>",
+  "createdAt": {
+    "$date": "2025-12-06T16:20:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T16:20:00.000Z"
+  }
+},
+{
+  "_id": "answer-049",
+  "post": "post-cs5506-006",
+  "author": "890",
+  "authorName": "Legolas Greenleaf",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>To avoid leading questions, use the \"How might we...\" framework:</p><p><strong>Bad (leading):</strong> \"Don't you think the checkout process is too complicated?\"</p><p><strong>Good (open-ended):</strong> \"Walk me through your last online purchase. What was that experience like?\"</p><p>Tips:</p><ul><li>Ask \"why\" to dig deeper</li><li>Use silence - let them think</li><li>Focus on behaviors, not opinions</li><li>\"Tell me about a time when...\"</li></ul>",
+  "createdAt": {
+    "$date": "2025-12-05T11:05:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T11:05:00.000Z"
+  }
+},
+{
+  "_id": "answer-050",
+  "post": "post-cs5506-007",
+  "author": "928",
+  "authorName": "Wanda Maximoff",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>We used Material UI for our project and it worked great!</p><p><strong>Pros of existing systems:</strong></p><ul><li>Save tons of development time</li><li>Battle-tested components</li><li>Accessibility built-in</li><li>Responsive by default</li></ul><p><strong>Cons:</strong></p><ul><li>Can look generic</li><li>Customization can be tricky</li><li>Bundle size</li></ul><p>For academic projects, I'd recommend using existing system and customizing the theme. Focus on UX, not reinventing buttons!</p>",
+  "createdAt": {
+    "$date": "2025-12-06T11:40:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T11:40:00.000Z"
+  }
+},
+{
+  "_id": "answer-051",
+  "post": "post-cs5506-009",
+  "author": "911",
+  "authorName": "Michelangelo TMNT",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>Dude, for A/B testing you need to calculate sample size based on:</p><ol><li><strong>Baseline conversion:</strong> 5%</li><li><strong>Minimum detectable effect:</strong> How much improvement matters? (e.g., 0.5%)</li><li><strong>Statistical power:</strong> Usually 80%</li><li><strong>Significance level:</strong> Usually 5% (α = 0.05)</li></ol><p>Use online calculators like Optimizely or Evan Miller's. For 5% baseline with 20% relative lift, you'd need ~4000 users per variant.</p><p>Don't stop early - let it run to calculated sample size!</p>",
+  "createdAt": {
+    "$date": "2025-12-06T14:20:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T14:20:00.000Z"
+  }
+},
+{
+  "_id": "answer-052",
+  "post": "post-cs5506-010",
+  "author": "902",
+  "authorName": "Leia Organa",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>In 2025, I strongly recommend mobile-first!</p><p>Here's why:</p><ul><li>Forces you to prioritize essential features</li><li>Easier to scale up than down</li><li>Mobile usage continues to grow</li><li>Better for progressive enhancement</li></ul><p>Even if desktop is currently dominant, mobile-first thinking creates cleaner, more focused designs.</p><p>Start with 320px viewport, then tablet (768px), then desktop (1024px+).</p>",
+  "createdAt": {
+    "$date": "2025-12-05T12:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T12:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-053",
+  "post": "post-cs5507-003",
+  "author": "912",
+  "authorName": "Yoda",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>CrashLoopBackOff, frustrating it is!</p><p>The error \"Cannot find module\" - dependencies missing, they are.</p><p>Check you must:</p><ol><li>Dockerfile includes npm install: <code>RUN npm install</code></li><li>package.json copied before install</li><li>node_modules in .dockerignore file</li><li>Correct working directory set</li></ol><p>Debug with: <code>kubectl logs pod-name</code> and <code>kubectl describe pod pod-name</code></p><p>Build image again with proper dependencies, you must!</p>",
+  "createdAt": {
+    "$date": "2025-12-06T09:15:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T09:15:00.000Z"
+  }
+},
+{
+  "_id": "answer-054",
+  "post": "post-cs5507-005",
+  "author": "934",
+  "authorName": "Peter Quill",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>The issue is that depends_on only waits for container to START, not be READY.</p><p>Solutions:</p><ol><li><strong>Use wait-for-it script:</strong><pre>command: [\"/wait-for-it.sh\", \"db:5432\", \"--\", \"npm\", \"start\"]</pre></li><li><strong>Add healthcheck to DB:</strong><pre>healthcheck:\n  test: [\"CMD\", \"pg_isready\"]\n  interval: 5s</pre></li><li><strong>Use restart policy:</strong><pre>restart: on-failure</pre></li></ol><p>I recommend option 2 - proper healthchecks make your stack more robust!</p>",
+  "createdAt": {
+    "$date": "2025-12-06T17:15:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T17:15:00.000Z"
+  }
+},
+{
+  "_id": "answer-055",
+  "post": "post-cs5507-006",
+  "author": "567",
+  "authorName": "Bruce Banner",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>I evaluated both for my project. Here's the breakdown:</p><p><strong>Use Lambda when:</strong></p><ul><li>Sporadic, event-driven workload ✓ (fits your case!)</li><li>Stateless operations</li><li>Want zero infrastructure management</li><li>Can tolerate cold starts</li></ul><p><strong>Use EC2 when:</strong></p><ul><li>Constant high traffic</li><li>Need specific OS/runtime control</li><li>Long-running processes</li></ul><p>For sporadic traffic with spikes, Lambda is perfect. You only pay for execution time. With EC2, you pay 24/7 even during idle periods.</p>",
+  "createdAt": {
+    "$date": "2025-12-05T10:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T10:00:00.000Z"
+  }
+},
+{
+  "_id": "answer-056",
+  "post": "post-cs5507-007",
+  "author": "925",
+  "authorName": "Trinity Hacker",
+  "authorRole": "ASSISTANT",
+  "answerType": "ta",
+  "content": "<p>For your requirements, I'd suggest GitHub Actions:</p><p><strong>GitHub Actions Pros:</strong></p><ul><li>Native GitHub integration</li><li>Free for public repos, generous for private</li><li>Simple YAML config</li><li>AWS deployment via official actions</li><li>Less maintenance overhead</li></ul><p><strong>Jenkins Pros:</strong></p><ul><li>More powerful and flexible</li><li>Better for complex pipelines</li><li>Self-hosted = more control</li></ul><p>Since you're already on GitHub and need simple AWS deployment, GitHub Actions is the easier choice. You can always migrate to Jenkins later if needed.</p>",
+  "createdAt": {
+    "$date": "2025-12-06T16:05:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T16:05:00.000Z"
+  }
+},
+{
+  "_id": "answer-057",
+  "post": "post-cs5507-009",
+  "author": "928",
+  "authorName": "Wanda Maximoff",
+  "authorRole": "STUDENT",
+  "answerType": "student",
+  "content": "<p>Terraform is better for multi-cloud!</p><p>Here's why we chose Terraform:</p><ul><li><strong>Cloud-agnostic:</strong> Same language for AWS, Azure, GCP</li><li><strong>State management:</strong> Track infrastructure changes</li><li><strong>Larger ecosystem:</strong> More modules and providers</li><li><strong>Better for version control:</strong> Infrastructure as code</li></ul><p>CloudFormation is AWS-only. If you might switch to Azure, you'd have to rewrite everything. With Terraform, just swap providers!</p><p>Plus, Terraform has better tooling (terraform plan is amazing for previewing changes).</p>",
+  "createdAt": {
+    "$date": "2025-12-06T18:10:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T18:10:00.000Z"
+  }
+},
+{
+  "_id": "answer-058",
+  "post": "post-cs5507-010",
+  "author": "931",
+  "authorName": "T'Challa King",
+  "authorRole": "FACULTY",
+  "answerType": "instructor",
+  "content": "<p>Container security is critical! Here are free tools you should integrate:</p><ol><li><strong>Trivy:</strong> Excellent, easy to use<br/><code>trivy image your-image:tag</code></li><li><strong>Grype:</strong> From Anchore, good vulnerability detection</li><li><strong>Docker Scout:</strong> Built into Docker Desktop</li><li><strong>Snyk:</strong> Free for open source</li></ol><p>For CI/CD integration, add to GitHub Actions:</p><pre>- name: Run Trivy\n  uses: aquasecurity/trivy-action@master\n  with:\n    image-ref: 'your-image:tag'</pre><p>Fail the build if high/critical vulnerabilities are found!</p>",
+  "createdAt": {
+    "$date": "2025-12-05T16:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T16:30:00.000Z"
+  }
+}]

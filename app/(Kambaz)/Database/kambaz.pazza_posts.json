@@ -11,17 +11,18 @@
   "summary": "You know what i mean",
   "details": "Hey There",
   "folders": [
-    "CS1234-folder-3-1764914009166"
+    "CS1234-folder-hw3",
+    "CS1234-folder-exam"
   ],
   "views": 1,
   "viewedBy": [
     "917"
   ],
   "createdAt": {
-    "$date": "2025-12-05T06:21:17.595Z"
+    "$date": "2025-11-18T06:21:17.595Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T06:21:17.595Z"
+    "$date": "2025-11-18T06:21:17.595Z"
   },
   "__v": 1
 },
@@ -37,7 +38,9 @@
   "visibleTo": [],
   "summary": "Welcome to React Fundamentals!",
   "details": "<p>Hello everyone!</p><p>Welcome to CS1234 - React Fundamentals. I'm excited to be your instructor this semester.</p><p>Please make sure to:</p><ul><li>Review the syllabus</li><li>Set up your development environment</li><li>Join our Slack channel</li></ul><p>Looking forward to a great semester!</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-logistics"
+  ],
   "views": 7,
   "viewedBy": [
     "123",
@@ -49,10 +52,10 @@
     "917"
   ],
   "createdAt": {
-    "$date": "2025-12-01T09:00:00.000Z"
+    "$date": "2025-11-01T09:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-01T09:00:00.000Z"
+    "$date": "2025-11-01T09:00:00.000Z"
   },
   "__v": 1
 },
@@ -68,7 +71,9 @@
   "visibleTo": [],
   "summary": "Difference between useState and useReducer?",
   "details": "<p>Hi everyone,</p><p>I'm confused about when to use <code>useState</code> vs <code>useReducer</code>. The documentation says useReducer is better for complex state logic, but what exactly counts as \"complex\"?</p><p>Can someone give me a practical example?</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-hw2"
+  ],
   "views": 32,
   "viewedBy": [
     "123",
@@ -77,10 +82,10 @@
     "789"
   ],
   "createdAt": {
-    "$date": "2025-12-04T14:30:00.000Z"
+    "$date": "2025-11-14T14:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T14:30:00.000Z"
+    "$date": "2025-11-14T14:30:00.000Z"
   }
 },
 {
@@ -95,7 +100,10 @@
   "visibleTo": [],
   "summary": "Assignment 1 deadline extension?",
   "details": "<p>Professor,</p><p>Given the issues with the development environment setup that many students faced this week, would it be possible to extend the deadline for Assignment 1 by a few days?</p><p>Thank you for considering this request.</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-hw1",
+    "CS1234-folder-logistics"
+  ],
   "views": 5,
   "viewedBy": [
     "123",
@@ -124,7 +132,9 @@
   "visibleTo": [],
   "summary": "Office Hours Rescheduled - This Week",
   "details": "<p>Hi class,</p><p>My office hours for this week have been rescheduled:</p><p><strong>Original:</strong> Thursday 2-4pm<br/><strong>New Time:</strong> Friday 3-5pm</p><p>Location remains the same: Room 302, CS Building.</p><p>See you there!</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-office_hours"
+  ],
   "views": 4,
   "viewedBy": [
     "567",
@@ -152,7 +162,9 @@
   "visibleTo": [],
   "summary": "Props drilling vs Context API - Best practices?",
   "details": "<p>Working on the project, I am. Multiple levels deep, my components are.</p><p>Pass props through 5 components, should I? Or use Context API for everything?</p><p>Guidelines on when to switch, are there?</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-project"
+  ],
   "views": 6,
   "viewedBy": [
     "123",
@@ -163,10 +175,10 @@
     "917"
   ],
   "createdAt": {
-    "$date": "2025-12-03T16:45:00.000Z"
+    "$date": "2025-11-23T16:45:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-03T16:45:00.000Z"
+    "$date": "2025-11-23T16:45:00.000Z"
   },
   "__v": 1
 },
@@ -182,7 +194,9 @@
   "visibleTo": [],
   "summary": "Midterm Exam Information",
   "details": "<p>The midterm exam will cover:</p><ul><li>Chapters 1-5 from the textbook</li><li>All lecture materials up to Week 7</li><li>Programming assignments 1-3</li></ul><p><strong>Date:</strong> December 15th<br/><strong>Time:</strong> 2:00 PM - 4:00 PM<br/><strong>Location:</strong> Room 101, Main Hall</p><p>Good luck!</p>",
-  "folders": [],
+  "folders": [
+    "CS5501-folder-exam"
+  ],
   "views": 67,
   "viewedBy": [
     "123",
@@ -191,10 +205,10 @@
     "912"
   ],
   "createdAt": {
-    "$date": "2025-12-02T11:00:00.000Z"
+    "$date": "2025-11-12T11:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-02T11:00:00.000Z"
+    "$date": "2025-11-12T11:00:00.000Z"
   }
 },
 {
@@ -209,7 +223,9 @@
   "visibleTo": [],
   "summary": "Gradient descent not converging",
   "details": "<p>I've been trying to implement gradient descent for my neural network, but the loss function isn't converging. I've tried:</p><ul><li>Reducing learning rate to 0.001</li><li>Normalizing input features</li><li>Adding more epochs</li></ul><p>The loss actually increases after epoch 50. Any suggestions?</p>",
-  "folders": [],
+  "folders": [
+    "CS5501-folder-hw3"
+  ],
   "views": 23,
   "viewedBy": [
     "789",
@@ -217,10 +233,10 @@
     "908"
   ],
   "createdAt": {
-    "$date": "2025-12-04T20:30:00.000Z"
+    "$date": "2025-11-24T20:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T20:30:00.000Z"
+    "$date": "2025-11-24T20:30:00.000Z"
   }
 },
 {
@@ -235,7 +251,9 @@
   "visibleTo": [],
   "summary": "Clarification on CNN architecture for HW4",
   "details": "<p>For homework 4, are we required to use a specific CNN architecture, or can we design our own?</p><p>Also, is transfer learning allowed for this assignment?</p>",
-  "folders": [],
+  "folders": [
+    "CS5501-folder-hw4"
+  ],
   "views": 18,
   "viewedBy": [
     "123",
@@ -260,7 +278,9 @@
   "visibleTo": [],
   "summary": "Dynamic Programming Resources",
   "details": "<p>Here are some additional resources for understanding Dynamic Programming:</p><ul><li><a href='#'>MIT OCW Lecture Notes</a></li><li><a href='#'>Visualgo - DP Visualizations</a></li><li>CLRS Chapter 15</li></ul><p>Practice problems are available on LeetCode under the DP tag.</p>",
-  "folders": [],
+  "folders": [
+    "CS5502-folder-logistics"
+  ],
   "views": 55,
   "viewedBy": [
     "234",
@@ -268,10 +288,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-11-28T14:00:00.000Z"
+    "$date": "2025-10-28T14:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-11-28T14:00:00.000Z"
+    "$date": "2025-10-28T14:00:00.000Z"
   }
 },
 {
@@ -286,7 +306,9 @@
   "visibleTo": [],
   "summary": "Time complexity of recursive Fibonacci?",
   "details": "<p>I understand that recursive Fibonacci has exponential time complexity O(2^n), but I'm having trouble understanding the exact derivation.</p><p>Can someone walk through the recurrence relation?</p>",
-  "folders": [],
+  "folders": [
+    "CS5502-folder-hw2"
+  ],
   "views": 34,
   "viewedBy": [
     "678",
@@ -294,10 +316,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-04T11:45:00.000Z"
+    "$date": "2025-11-14T11:45:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T11:45:00.000Z"
+    "$date": "2025-11-14T11:45:00.000Z"
   }
 },
 {
@@ -312,7 +334,10 @@
   "visibleTo": [],
   "summary": "Graph traversal - BFS vs DFS use cases",
   "details": "<p>When should I use BFS over DFS and vice versa?</p><p>I know BFS finds shortest path in unweighted graphs, but are there other practical considerations?</p>",
-  "folders": [],
+  "folders": [
+    "CS5502-folder-hw3",
+    "CS5502-folder-project"
+  ],
   "views": 29,
   "viewedBy": [
     "234",
@@ -337,7 +362,9 @@
   "visibleTo": [],
   "summary": "Lab 3 - Process Scheduling Simulator",
   "details": "<p>Lab 3 has been posted. You will implement:</p><ul><li>FCFS (First Come First Serve)</li><li>SJF (Shortest Job First)</li><li>Round Robin with configurable quantum</li></ul><p><strong>Due:</strong> December 12th, 11:59 PM</p><p>Start early - this one takes time!</p>",
-  "folders": [],
+  "folders": [
+    "CS5503-folder-hw3"
+  ],
   "views": 42,
   "viewedBy": [
     "345",
@@ -345,10 +372,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-01T10:30:00.000Z"
+    "$date": "2025-11-01T10:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-01T10:30:00.000Z"
+    "$date": "2025-11-01T10:30:00.000Z"
   }
 },
 {
@@ -363,7 +390,9 @@
   "visibleTo": [],
   "summary": "Deadlock detection algorithm confusion",
   "details": "<p>In the banker's algorithm, how do we determine the initial safe state?</p><p>The textbook example assumes we already know the allocation matrix, but how is that determined in practice?</p>",
-  "folders": [],
+  "folders": [
+    "CS5503-folder-hw4"
+  ],
   "views": 21,
   "viewedBy": [
     "909",
@@ -388,7 +417,10 @@
   "visibleTo": [],
   "summary": "SQL Practice Problems Posted",
   "details": "<p>I've uploaded 50 SQL practice problems to the course website.</p><p>Topics covered:</p><ul><li>Basic SELECT queries</li><li>JOINs (INNER, LEFT, RIGHT, FULL)</li><li>Aggregations and GROUP BY</li><li>Subqueries</li><li>Window functions</li></ul><p>Solutions will be released next week.</p>",
-  "folders": [],
+  "folders": [
+    "CS5504-folder-hw2",
+    "CS5504-folder-hw3"
+  ],
   "views": 38,
   "viewedBy": [
     "345",
@@ -396,10 +428,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-03T09:00:00.000Z"
+    "$date": "2025-11-13T09:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-03T09:00:00.000Z"
+    "$date": "2025-11-13T09:00:00.000Z"
   }
 },
 {
@@ -414,7 +446,9 @@
   "visibleTo": [],
   "summary": "Normalization to 3NF - Step by step?",
   "details": "<p>I'm struggling with normalizing tables to 3NF. I understand 1NF and 2NF, but identifying transitive dependencies is confusing.</p><p>Could someone explain with a concrete example?</p>",
-  "folders": [],
+  "folders": [
+    "CS5504-folder-hw1"
+  ],
   "views": 4,
   "viewedBy": [
     "345",
@@ -423,10 +457,10 @@
     "904"
   ],
   "createdAt": {
-    "$date": "2025-12-04T16:50:00.000Z"
+    "$date": "2025-11-24T16:50:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T16:50:00.000Z"
+    "$date": "2025-11-24T16:50:00.000Z"
   },
   "__v": 1
 },
@@ -442,7 +476,10 @@
   "visibleTo": [],
   "summary": "Packet Tracer Installation Guide",
   "details": "<p>For the networking labs, you'll need Cisco Packet Tracer.</p><p><strong>Installation steps:</strong></p><ol><li>Create a Cisco NetAcad account</li><li>Download Packet Tracer 8.2</li><li>Use your university email for verification</li></ol><p>Let me know if you have issues!</p>",
-  "folders": [],
+  "folders": [
+    "CS5505-folder-logistics",
+    "CS5505-folder-hw1"
+  ],
   "views": 51,
   "viewedBy": [
     "123",
@@ -451,10 +488,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-11-25T13:00:00.000Z"
+    "$date": "2025-10-25T13:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-11-25T13:00:00.000Z"
+    "$date": "2025-10-25T13:00:00.000Z"
   }
 },
 {
@@ -469,7 +506,9 @@
   "visibleTo": [],
   "summary": "Subnetting practice - CIDR notation",
   "details": "<p>I'm confused about CIDR notation. If I have 192.168.1.0/24, how many usable hosts can I have?</p><p>And how do I calculate the broadcast address?</p>",
-  "folders": [],
+  "folders": [
+    "CS5505-folder-hw2"
+  ],
   "views": 33,
   "viewedBy": [
     "123",
@@ -495,7 +534,9 @@
   "visibleTo": [],
   "summary": "User Testing Sign-up Sheet",
   "details": "<p>For your final project, you need to conduct user testing with at least 5 participants.</p><p>Sign-up sheet for the usability lab is now available. Each slot is 1 hour.</p><p>Book your time early - slots fill up fast!</p>",
-  "folders": [],
+  "folders": [
+    "CS5506-folder-project"
+  ],
   "views": 44,
   "viewedBy": [
     "123",
@@ -507,10 +548,10 @@
     "911"
   ],
   "createdAt": {
-    "$date": "2025-12-02T08:30:00.000Z"
+    "$date": "2025-11-12T08:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-02T08:30:00.000Z"
+    "$date": "2025-11-12T08:30:00.000Z"
   }
 },
 {
@@ -525,7 +566,9 @@
   "visibleTo": [],
   "summary": "Figma vs Sketch for prototyping?",
   "details": "<p>For the wireframing assignment, can we use Figma instead of Sketch?</p><p>I find Figma easier to collaborate with my team since it's web-based.</p>",
-  "folders": [],
+  "folders": [
+    "CS5506-folder-hw1"
+  ],
   "views": 22,
   "viewedBy": [
     "456",
@@ -533,10 +576,10 @@
     "908"
   ],
   "createdAt": {
-    "$date": "2025-12-04T19:15:00.000Z"
+    "$date": "2025-11-04T19:15:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T19:15:00.000Z"
+    "$date": "2025-11-04T19:15:00.000Z"
   }
 },
 {
@@ -551,7 +594,10 @@
   "visibleTo": [],
   "summary": "AWS Free Tier Setup Instructions",
   "details": "<p>Set up your AWS accounts, you must.</p><p>Free tier, sufficient for this course it is. Credit card required, but charged you will not be if careful you are.</p><p>Tutorial video, posted on Canvas I have.</p>",
-  "folders": [],
+  "folders": [
+    "CS5507-folder-logistics",
+    "CS5507-folder-hw1"
+  ],
   "views": 39,
   "viewedBy": [
     "234",
@@ -560,10 +606,10 @@
     "911"
   ],
   "createdAt": {
-    "$date": "2025-12-01T15:00:00.000Z"
+    "$date": "2025-11-01T15:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-01T15:00:00.000Z"
+    "$date": "2025-11-01T15:00:00.000Z"
   }
 },
 {
@@ -578,7 +624,9 @@
   "visibleTo": [],
   "summary": "Docker container won't start - port conflict",
   "details": "<p>I'm getting this error when trying to start my container:</p><pre>Error: Port 3000 is already in use</pre><p>I've tried stopping all other containers but still getting the error. Help!</p>",
-  "folders": [],
+  "folders": [
+    "CS5507-folder-hw2"
+  ],
   "views": 15,
   "viewedBy": [
     "567",
@@ -604,17 +652,20 @@
   "visibleTo": [],
   "summary": "VPN configuration not working - timeout errors",
   "details": "<p>Trying to set up a site-to-site VPN between two offices but getting timeout errors during tunnel establishment.</p><p>Configuration details:</p><ul><li>Both sites have static IPs</li><li>Using IPSec with pre-shared keys</li><li>Firewall rules allow UDP 500 and 4500</li></ul><p>Still can't establish the tunnel. Any troubleshooting steps?</p>",
-  "folders": [],
+  "folders": [
+    "CS5505-folder-hw4",
+    "CS5505-folder-project"
+  ],
   "views": 12,
   "viewedBy": [
     "456",
     "904"
   ],
   "createdAt": {
-    "$date": "2025-12-06T10:30:00.000Z"
+    "$date": "2025-11-26T10:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T10:30:00.000Z"
+    "$date": "2025-11-26T10:30:00.000Z"
   }
 },
 {
@@ -629,7 +680,9 @@
   "visibleTo": [],
   "summary": "Network Lab 4 - BGP Configuration",
   "details": "<p>Lab 4 is now available on Canvas.</p><p>You will configure:</p><ul><li>BGP peering between autonomous systems</li><li>Route filtering and advertisements</li><li>Policy-based routing</li></ul><p><strong>Due:</strong> December 18th, 11:59 PM</p><p>This lab requires Packet Tracer 8.2 or GNS3.</p>",
-  "folders": [],
+  "folders": [
+    "CS5505-folder-hw4"
+  ],
   "views": 28,
   "viewedBy": [
     "456",
@@ -637,10 +690,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-04T09:00:00.000Z"
+    "$date": "2025-11-14T09:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T09:00:00.000Z"
+    "$date": "2025-11-14T09:00:00.000Z"
   }
 },
 {
@@ -655,7 +708,10 @@
   "visibleTo": [],
   "summary": "Usability testing - how many participants needed?",
   "details": "<p>For our final project usability testing, how many participants do we need for statistically significant results?</p><p>I've heard 5 users can find 85% of usability issues. Is this true?</p><p>Also, should participants be from our target demographic or can they be anyone?</p>",
-  "folders": [],
+  "folders": [
+    "CS5506-folder-hw3",
+    "CS5506-folder-project"
+  ],
   "views": 19,
   "viewedBy": [
     "890",
@@ -681,7 +737,9 @@
   "visibleTo": [],
   "summary": "Guest Lecture - UX at Google",
   "details": "<p>We have a special guest lecturer next Tuesday!</p><p><strong>Speaker:</strong> Jane Smith, Senior UX Researcher at Google<br/><strong>Topic:</strong> Large-scale User Research<br/><strong>Time:</strong> Tuesday, December 10th, 2:00 PM<br/><strong>Location:</strong> Zoom (link on Canvas)</p><p>Attendance is mandatory and counts toward participation grade.</p>",
-  "folders": [],
+  "folders": [
+    "CS5506-folder-logistics"
+  ],
   "views": 41,
   "viewedBy": [
     "123",
@@ -692,10 +750,10 @@
     "911"
   ],
   "createdAt": {
-    "$date": "2025-12-03T11:00:00.000Z"
+    "$date": "2025-11-23T11:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-03T11:00:00.000Z"
+    "$date": "2025-11-23T11:00:00.000Z"
   }
 },
 {
@@ -710,7 +768,9 @@
   "visibleTo": [],
   "summary": "Kubernetes pod keeps restarting - CrashLoopBackOff",
   "details": "<p>My pod status shows CrashLoopBackOff and I can't figure out why.</p><p>Here's my deployment YAML:</p><pre>apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: my-app\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: my-app</pre><p>The container logs just show 'Error: Cannot find module'</p><p>How do I debug this?</p>",
-  "folders": [],
+  "folders": [
+    "CS5507-folder-hw3"
+  ],
   "views": 17,
   "viewedBy": [
     "567",
@@ -718,10 +778,10 @@
     "912"
   ],
   "createdAt": {
-    "$date": "2025-12-06T08:20:00.000Z"
+    "$date": "2025-11-26T08:20:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T08:20:00.000Z"
+    "$date": "2025-11-26T08:20:00.000Z"
   }
 },
 {
@@ -736,7 +796,9 @@
   "visibleTo": [],
   "summary": "Final Project - Microservices Architecture",
   "details": "<p>Your final project, ready it is!</p><p>Build a microservices application you must, with:</p><ul><li>At least 3 services, containerized</li><li>Service mesh (Istio or Linkerd), implement you will</li><li>CI/CD pipeline with GitHub Actions</li><li>Deployed on AWS, Azure, or GCP</li></ul><p><strong>Due:</strong> December 20th, 11:59 PM</p><p>Work in teams of 3-4 students. Form your teams by Friday.</p>",
-  "folders": [],
+  "folders": [
+    "CS5507-folder-project"
+  ],
   "views": 53,
   "viewedBy": [
     "234",
@@ -745,10 +807,10 @@
     "911"
   ],
   "createdAt": {
-    "$date": "2025-12-02T10:00:00.000Z"
+    "$date": "2025-11-12T10:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-02T10:00:00.000Z"
+    "$date": "2025-11-12T10:00:00.000Z"
   }
 },
 {
@@ -763,7 +825,10 @@
   "visibleTo": [],
   "summary": "React Router v6 - protected routes implementation",
   "details": "<p>Need help implementing protected routes in React Router v6.</p><p>I want to redirect users to /login if they're not authenticated, but my current approach causes infinite redirect loops.</p><p>Should I use a wrapper component or is there a better pattern?</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-hw4",
+    "CS1234-folder-project"
+  ],
   "views": 5,
   "viewedBy": [
     "567",
@@ -792,7 +857,9 @@
   "visibleTo": [],
   "summary": "Custom hooks - when to create them?",
   "details": "<p>I'm refactoring my code and wondering when I should extract logic into custom hooks vs keeping it in components.</p><p>What's the criteria for deciding? Performance? Reusability? Or just personal preference?</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-hw3"
+  ],
   "views": 6,
   "viewedBy": [
     "567",
@@ -803,10 +870,10 @@
     "917"
   ],
   "createdAt": {
-    "$date": "2025-12-04T13:15:00.000Z"
+    "$date": "2025-11-19T13:15:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T13:15:00.000Z"
+    "$date": "2025-11-19T13:15:00.000Z"
   },
   "__v": 1
 },
@@ -822,7 +889,10 @@
   "visibleTo": [],
   "summary": "Overfitting - validation accuracy stuck at 60%",
   "details": "<p>My model has 99% training accuracy but only 60% validation accuracy.</p><p>I've tried:</p><ul><li>Adding dropout layers</li><li>Reducing model complexity</li><li>Data augmentation</li></ul><p>Validation accuracy won't budge. What else can I try?</p>",
-  "folders": [],
+  "folders": [
+    "CS5501-folder-hw4",
+    "CS5501-folder-project"
+  ],
   "views": 27,
   "viewedBy": [
     "123",
@@ -848,7 +918,10 @@
   "visibleTo": [],
   "summary": "ML Competition - Kaggle Dataset",
   "details": "<p>Bonus opportunity! Complete the Kaggle competition for extra credit.</p><p><strong>Dataset:</strong> Image Classification Challenge<br/><strong>Deadline:</strong> December 15th<br/><strong>Extra Credit:</strong> Up to 5% added to final grade</p><p>Top 3 performers get additional recognition!</p>",
-  "folders": [],
+  "folders": [
+    "CS5501-folder-project",
+    "CS5501-folder-other"
+  ],
   "views": 48,
   "viewedBy": [
     "123",
@@ -857,10 +930,10 @@
     "912"
   ],
   "createdAt": {
-    "$date": "2025-12-03T14:00:00.000Z"
+    "$date": "2025-11-23T14:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-03T14:00:00.000Z"
+    "$date": "2025-11-23T14:00:00.000Z"
   }
 },
 {
@@ -875,7 +948,9 @@
   "visibleTo": [],
   "summary": "Binary search tree vs Hash table - when to use?",
   "details": "<p>Both offer fast lookups, but when should I choose BST over hash table?</p><p>Is it just about needing sorted order, or are there other considerations?</p>",
-  "folders": [],
+  "folders": [
+    "CS5502-folder-hw4"
+  ],
   "views": 22,
   "viewedBy": [
     "234",
@@ -883,10 +958,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-06T11:00:00.000Z"
+    "$date": "2025-11-27T11:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T11:00:00.000Z"
+    "$date": "2025-11-27T11:00:00.000Z"
   }
 },
 {
@@ -901,7 +976,9 @@
   "visibleTo": [],
   "summary": "Practice Problems - Graph Algorithms",
   "details": "<p>Additional practice problems posted on Canvas:</p><ul><li>Dijkstra's shortest path</li><li>Topological sorting</li><li>Minimum spanning trees</li><li>Strongly connected components</li></ul><p>Solutions will be discussed in next week's recitation.</p>",
-  "folders": [],
+  "folders": [
+    "CS5502-folder-hw5"
+  ],
   "views": 39,
   "viewedBy": [
     "234",
@@ -909,10 +986,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-04T10:30:00.000Z"
+    "$date": "2025-11-24T10:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T10:30:00.000Z"
+    "$date": "2025-11-24T10:30:00.000Z"
   }
 },
 {
@@ -927,7 +1004,9 @@
   "visibleTo": [],
   "summary": "Process scheduling - Round Robin quantum size?",
   "details": "<p>For Round Robin scheduling, how do we choose the optimal time quantum?</p><p>Too small = too many context switches<br/>Too large = approaches FCFS</p><p>Is there a formula or rule of thumb?</p>",
-  "folders": [],
+  "folders": [
+    "CS5503-folder-hw5"
+  ],
   "views": 4,
   "viewedBy": [
     "345",
@@ -936,10 +1015,10 @@
     "904"
   ],
   "createdAt": {
-    "$date": "2025-12-06T09:45:00.000Z"
+    "$date": "2025-11-29T09:45:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T09:45:00.000Z"
+    "$date": "2025-11-29T09:45:00.000Z"
   },
   "__v": 1
 },
@@ -955,7 +1034,10 @@
   "visibleTo": [],
   "summary": "Lab 4 Extension - Memory Management",
   "details": "<p>Due to technical difficulties with the lab environment, Lab 4 deadline is extended.</p><p><strong>New Deadline:</strong> December 14th, 11:59 PM</p><p>No late penalty for submissions before new deadline.</p>",
-  "folders": [],
+  "folders": [
+    "CS5503-folder-hw4",
+    "CS5503-folder-logistics"
+  ],
   "views": 35,
   "viewedBy": [
     "345",
@@ -981,7 +1063,9 @@
   "visibleTo": [],
   "summary": "SQL query optimization - taking 30 seconds",
   "details": "<p>My query joins 3 tables and takes 30 seconds to run:</p><pre>SELECT * FROM orders o\nJOIN customers c ON o.customer_id = c.id\nJOIN products p ON o.product_id = p.id\nWHERE o.date > '2024-01-01'</pre><p>How do I optimize this? Should I add indexes?</p>",
-  "folders": [],
+  "folders": [
+    "CS5504-folder-hw4"
+  ],
   "views": 26,
   "viewedBy": [
     "345",
@@ -1007,7 +1091,9 @@
   "visibleTo": [],
   "summary": "Database Design Project - Team Formation",
   "details": "<p>Time to form teams for the final database design project!</p><p>Requirements:</p><ul><li>Teams of 3-4 students</li><li>Design and implement a full database system</li><li>Must include normalization, indexing, and transactions</li></ul><p>Submit team roster by Friday on Canvas.</p>",
-  "folders": [],
+  "folders": [
+    "CS5504-folder-project"
+  ],
   "views": 44,
   "viewedBy": [
     "345",
@@ -1015,10 +1101,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-03T15:30:00.000Z"
+    "$date": "2025-11-20T15:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-03T15:30:00.000Z"
+    "$date": "2025-11-20T15:30:00.000Z"
   }
 },
 {
@@ -1033,7 +1119,9 @@
   "visibleTo": [],
   "summary": "React performance - unnecessary re-renders",
   "details": "<p>My parent component re-renders and causes all children to re-render even though their props haven't changed.</p><p>Should I use React.memo? useMemo? Or restructure my components?</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-hw5"
+  ],
   "views": 5,
   "viewedBy": [
     "234",
@@ -1043,10 +1131,10 @@
     "917"
   ],
   "createdAt": {
-    "$date": "2025-12-06T12:10:00.000Z"
+    "$date": "2025-11-30T12:10:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T12:10:00.000Z"
+    "$date": "2025-11-30T12:10:00.000Z"
   },
   "__v": 1
 },
@@ -1062,7 +1150,9 @@
   "visibleTo": [],
   "summary": "React 18 New Features - Lecture Recording Posted",
   "details": "<p>Today's lecture on React 18 features is now available on Canvas.</p><p>Topics covered:</p><ul><li>Concurrent rendering</li><li>Automatic batching</li><li>Suspense improvements</li><li>Server Components</li></ul><p>Watch before next class as we'll have a quiz!</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-logistics"
+  ],
   "views": 7,
   "viewedBy": [
     "123",
@@ -1093,7 +1183,9 @@
   "visibleTo": [],
   "summary": "VLAN configuration - inter-VLAN routing not working",
   "details": "<p>Set up 3 VLANs on my switch but devices in different VLANs can't communicate.</p><p>VLAN 10: 192.168.10.0/24<br/>VLAN 20: 192.168.20.0/24<br/>VLAN 30: 192.168.30.0/24</p><p>Do I need a Layer 3 switch or can I use router-on-a-stick?</p>",
-  "folders": [],
+  "folders": [
+    "CS5505-folder-hw3"
+  ],
   "views": 15,
   "viewedBy": [
     "456",
@@ -1101,10 +1193,10 @@
     "904"
   ],
   "createdAt": {
-    "$date": "2025-12-06T14:30:00.000Z"
+    "$date": "2025-11-28T14:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T14:30:00.000Z"
+    "$date": "2025-11-28T14:30:00.000Z"
   }
 },
 {
@@ -1119,7 +1211,9 @@
   "visibleTo": [],
   "summary": "Network Security Assignment Posted",
   "details": "<p>Assignment 3 is now on Canvas: Network Security Analysis</p><p>Tasks:</p><ul><li>Perform a security audit on a sample network</li><li>Identify vulnerabilities</li><li>Propose mitigation strategies</li><li>Implement firewall rules</li></ul><p><strong>Due:</strong> December 16th, 11:59 PM</p>",
-  "folders": [],
+  "folders": [
+    "CS5505-folder-hw5"
+  ],
   "views": 37,
   "viewedBy": [
     "123",
@@ -1128,10 +1222,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-04T16:00:00.000Z"
+    "$date": "2025-11-21T16:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T16:00:00.000Z"
+    "$date": "2025-11-21T16:00:00.000Z"
   }
 },
 {
@@ -1146,7 +1240,9 @@
   "visibleTo": [],
   "summary": "WCAG 2.1 AA compliance - color contrast requirements",
   "details": "<p>Working on making my design accessible and confused about color contrast ratios.</p><p>For WCAG 2.1 AA, do I need 4.5:1 for all text or just normal text?</p><p>What about logos and decorative elements?</p>",
-  "folders": [],
+  "folders": [
+    "CS5506-folder-hw4"
+  ],
   "views": 14,
   "viewedBy": [
     "890",
@@ -1154,10 +1250,10 @@
     "908"
   ],
   "createdAt": {
-    "$date": "2025-12-06T15:45:00.000Z"
+    "$date": "2025-11-29T15:45:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T15:45:00.000Z"
+    "$date": "2025-11-29T15:45:00.000Z"
   }
 },
 {
@@ -1172,7 +1268,9 @@
   "visibleTo": [],
   "summary": "User interview techniques - avoiding leading questions",
   "details": "<p>Conducting user interviews for my research project. How do I avoid asking leading questions that bias the responses?</p><p>Any good frameworks or question templates to follow?</p>",
-  "folders": [],
+  "folders": [
+    "CS5506-folder-hw2"
+  ],
   "views": 21,
   "viewedBy": [
     "890",
@@ -1181,10 +1279,10 @@
     "911"
   ],
   "createdAt": {
-    "$date": "2025-12-05T10:20:00.000Z"
+    "$date": "2025-11-15T10:20:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T10:20:00.000Z"
+    "$date": "2025-11-15T10:20:00.000Z"
   }
 },
 {
@@ -1199,7 +1297,9 @@
   "visibleTo": [],
   "summary": "Docker compose - service dependency order",
   "details": "<p>My app container starts before the database is ready, causing connection errors.</p><p>I've tried depends_on but it doesn't wait for the DB to be actually ready, just started.</p><p>How do I ensure proper startup order?</p>",
-  "folders": [],
+  "folders": [
+    "CS5507-folder-hw4"
+  ],
   "views": 23,
   "viewedBy": [
     "777",
@@ -1207,10 +1307,10 @@
     "912"
   ],
   "createdAt": {
-    "$date": "2025-12-06T16:30:00.000Z"
+    "$date": "2025-11-28T16:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T16:30:00.000Z"
+    "$date": "2025-11-28T16:30:00.000Z"
   }
 },
 {
@@ -1225,7 +1325,10 @@
   "visibleTo": [],
   "summary": "AWS Lambda vs EC2 - when to use serverless?",
   "details": "<p>For my project, should I deploy on Lambda or EC2?</p><p>The app handles sporadic traffic with occasional spikes.</p><p>What are the cost and performance trade-offs?</p>",
-  "folders": [],
+  "folders": [
+    "CS5507-folder-project",
+    "CS5507-folder-hw5"
+  ],
   "views": 19,
   "viewedBy": [
     "567",
@@ -1233,10 +1336,10 @@
     "912"
   ],
   "createdAt": {
-    "$date": "2025-12-05T09:15:00.000Z"
+    "$date": "2025-11-16T09:15:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T09:15:00.000Z"
+    "$date": "2025-11-16T09:15:00.000Z"
   }
 },
 {
@@ -1251,7 +1354,9 @@
   "visibleTo": [],
   "summary": "Redux Toolkit vs plain Redux - migration worth it?",
   "details": "<p>My project uses plain Redux with a lot of boilerplate. Is migrating to Redux Toolkit worth the effort?</p><p>What are the main benefits besides less code?</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-project"
+  ],
   "views": 5,
   "viewedBy": [
     "234",
@@ -1261,10 +1366,10 @@
     "917"
   ],
   "createdAt": {
-    "$date": "2025-12-06T13:40:00.000Z"
+    "$date": "2025-11-30T13:40:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T13:40:00.000Z"
+    "$date": "2025-11-30T13:40:00.000Z"
   },
   "__v": 1
 },
@@ -1280,7 +1385,10 @@
   "visibleTo": [],
   "summary": "React Server Components - production ready?",
   "details": "<p>Read about Server Components I did. Production ready, are they?</p><p>Or experimental still, hmm?</p><p>For the final project, use them we should?</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-project",
+    "CS1234-folder-other"
+  ],
   "views": 34,
   "viewedBy": [
     "123",
@@ -1291,10 +1399,10 @@
     "909"
   ],
   "createdAt": {
-    "$date": "2025-12-04T17:20:00.000Z"
+    "$date": "2025-11-22T17:20:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T17:20:00.000Z"
+    "$date": "2025-11-22T17:20:00.000Z"
   }
 },
 {
@@ -1309,7 +1417,9 @@
   "visibleTo": [],
   "summary": "Transfer learning - which layers to freeze?",
   "details": "<p>Using ResNet50 pretrained on ImageNet for my custom dataset.</p><p>Should I freeze all layers except the last one? Or unfreeze some earlier layers?</p><p>My dataset has 10,000 images across 50 classes.</p>",
-  "folders": [],
+  "folders": [
+    "CS5501-folder-hw5"
+  ],
   "views": 25,
   "viewedBy": [
     "123",
@@ -1317,10 +1427,10 @@
     "908"
   ],
   "createdAt": {
-    "$date": "2025-12-06T11:50:00.000Z"
+    "$date": "2025-11-27T11:50:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T11:50:00.000Z"
+    "$date": "2025-11-27T11:50:00.000Z"
   }
 },
 {
@@ -1335,7 +1445,10 @@
   "visibleTo": [],
   "summary": "Attention mechanism - how does it work?",
   "details": "<p>The attention mechanism in transformers, understand it I must.</p><p>Self-attention, query, key, value - confusing these concepts are.</p><p>A clear explanation with example, provide someone can?</p>",
-  "folders": [],
+  "folders": [
+    "CS5501-folder-hw6",
+    "CS5501-folder-other"
+  ],
   "views": 38,
   "viewedBy": [
     "123",
@@ -1344,10 +1457,10 @@
     "908"
   ],
   "createdAt": {
-    "$date": "2025-12-05T14:10:00.000Z"
+    "$date": "2025-11-19T14:10:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T14:10:00.000Z"
+    "$date": "2025-11-19T14:10:00.000Z"
   }
 },
 {
@@ -1362,7 +1475,9 @@
   "visibleTo": [],
   "summary": "Dijkstra vs A* pathfinding - when to use A*?",
   "details": "<p>Both find shortest path, but when is A* actually better than Dijkstra?</p><p>The heuristic function seems complicated. How do you choose a good heuristic?</p>",
-  "folders": [],
+  "folders": [
+    "CS5502-folder-hw6"
+  ],
   "views": 20,
   "viewedBy": [
     "678",
@@ -1370,10 +1485,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-06T10:05:00.000Z"
+    "$date": "2025-11-25T10:05:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T10:05:00.000Z"
+    "$date": "2025-11-25T10:05:00.000Z"
   }
 },
 {
@@ -1388,7 +1503,9 @@
   "visibleTo": [],
   "summary": "Greedy algorithms - how to prove correctness?",
   "details": "<p>I can implement greedy algorithms but struggle to prove they're optimal.</p><p>What's the general approach for proving greedy choice property and optimal substructure?</p>",
-  "folders": [],
+  "folders": [
+    "CS5502-folder-exam"
+  ],
   "views": 18,
   "viewedBy": [
     "234",
@@ -1396,10 +1513,10 @@
     "908"
   ],
   "createdAt": {
-    "$date": "2025-12-05T15:30:00.000Z"
+    "$date": "2025-11-18T15:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T15:30:00.000Z"
+    "$date": "2025-11-18T15:30:00.000Z"
   }
 },
 {
@@ -1414,7 +1531,9 @@
   "visibleTo": [],
   "summary": "Virtual memory - why page size matters?",
   "details": "<p>Why can't we just use very large page sizes to reduce page table size?</p><p>What's the downside of 4MB pages vs 4KB pages?</p>",
-  "folders": [],
+  "folders": [
+    "CS5503-folder-hw6"
+  ],
   "views": 16,
   "viewedBy": [
     "909",
@@ -1422,10 +1541,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-06T14:00:00.000Z"
+    "$date": "2025-11-30T14:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T14:00:00.000Z"
+    "$date": "2025-11-30T14:00:00.000Z"
   }
 },
 {
@@ -1440,7 +1559,9 @@
   "visibleTo": [],
   "summary": "Thread synchronization - mutex vs semaphore clarification",
   "details": "<p>I know mutex is binary and semaphore can be counting, but when would I actually need a counting semaphore over a mutex?</p><p>Real-world examples would help!</p>",
-  "folders": [],
+  "folders": [
+    "CS5503-folder-hw2"
+  ],
   "views": 24,
   "viewedBy": [
     "345",
@@ -1448,10 +1569,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-05T12:45:00.000Z"
+    "$date": "2025-11-10T12:45:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T12:45:00.000Z"
+    "$date": "2025-11-10T12:45:00.000Z"
   }
 },
 {
@@ -1466,7 +1587,9 @@
   "visibleTo": [],
   "summary": "Transaction isolation levels - READ_COMMITTED vs REPEATABLE_READ",
   "details": "<p>What's the practical difference between READ_COMMITTED and REPEATABLE_READ?</p><p>When would I choose one over the other? Performance implications?</p>",
-  "folders": [],
+  "folders": [
+    "CS5504-folder-hw5"
+  ],
   "views": 22,
   "viewedBy": [
     "777",
@@ -1474,10 +1597,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-06T09:20:00.000Z"
+    "$date": "2025-11-29T09:20:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T09:20:00.000Z"
+    "$date": "2025-11-29T09:20:00.000Z"
   }
 },
 {
@@ -1492,7 +1615,9 @@
   "visibleTo": [],
   "summary": "NoSQL vs SQL - when to choose MongoDB?",
   "details": "<p>For my project, should I use MongoDB or PostgreSQL?</p><p>Data structure isn't super strict but I need complex queries. Which is better?</p>",
-  "folders": [],
+  "folders": [
+    "CS5504-folder-project"
+  ],
   "views": 28,
   "viewedBy": [
     "345",
@@ -1500,10 +1625,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-05T16:55:00.000Z"
+    "$date": "2025-11-17T16:55:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T16:55:00.000Z"
+    "$date": "2025-11-17T16:55:00.000Z"
   }
 },
 {
@@ -1518,7 +1643,9 @@
   "visibleTo": [],
   "summary": "TCP congestion control - slow start vs congestion avoidance",
   "details": "<p>Can someone explain the difference between slow start and congestion avoidance phases in TCP?</p><p>When does TCP switch between them?</p>",
-  "folders": [],
+  "folders": [
+    "CS5505-folder-hw6"
+  ],
   "views": 17,
   "viewedBy": [
     "890",
@@ -1526,10 +1653,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-06T13:15:00.000Z"
+    "$date": "2025-11-30T13:15:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T13:15:00.000Z"
+    "$date": "2025-11-30T13:15:00.000Z"
   }
 },
 {
@@ -1544,7 +1671,9 @@
   "visibleTo": [],
   "summary": "DNS records - A vs CNAME vs AAAA",
   "details": "<p>Setting up DNS for my domain. When should I use CNAME vs A record?</p><p>And what's AAAA for? IPv6?</p>",
-  "folders": [],
+  "folders": [
+    "CS5505-folder-hw1"
+  ],
   "views": 19,
   "viewedBy": [
     "456",
@@ -1552,10 +1681,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-05T11:40:00.000Z"
+    "$date": "2025-11-08T11:40:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T11:40:00.000Z"
+    "$date": "2025-11-08T11:40:00.000Z"
   }
 },
 {
@@ -1570,7 +1699,9 @@
   "visibleTo": [],
   "summary": "Design system - starting from scratch or use existing?",
   "details": "<p>For our project, should we create a custom design system or use Material UI / Ant Design?</p><p>What are the pros and cons of each approach?</p>",
-  "folders": [],
+  "folders": [
+    "CS5506-folder-project"
+  ],
   "views": 25,
   "viewedBy": [
     "902",
@@ -1579,10 +1710,10 @@
     "911"
   ],
   "createdAt": {
-    "$date": "2025-12-06T10:50:00.000Z"
+    "$date": "2025-11-26T10:50:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T10:50:00.000Z"
+    "$date": "2025-11-26T10:50:00.000Z"
   }
 },
 {
@@ -1597,7 +1728,10 @@
   "visibleTo": [],
   "summary": "Final Project Presentations - Schedule",
   "details": "<p>Final project presentations will be held during finals week.</p><p><strong>Schedule:</strong></p><ul><li>Monday, Dec 16: Teams 1-5</li><li>Wednesday, Dec 18: Teams 6-10</li><li>Friday, Dec 20: Teams 11-15</li></ul><p>Each team gets 15 minutes + 5 minutes Q&A.</p><p>Presentation order will be posted on Canvas by Friday.</p>",
-  "folders": [],
+  "folders": [
+    "CS5506-folder-project",
+    "CS5506-folder-logistics"
+  ],
   "views": 47,
   "viewedBy": [
     "123",
@@ -1608,10 +1742,10 @@
     "911"
   ],
   "createdAt": {
-    "$date": "2025-12-04T14:30:00.000Z"
+    "$date": "2025-11-21T14:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T14:30:00.000Z"
+    "$date": "2025-11-21T14:30:00.000Z"
   }
 },
 {
@@ -1626,7 +1760,9 @@
   "visibleTo": [],
   "summary": "CI/CD pipeline - GitHub Actions vs Jenkins",
   "details": "<p>Setting up CI/CD for our project. Should we use GitHub Actions or Jenkins?</p><p>We need automated testing, building, and deployment to AWS.</p><p>Which is easier to set up and maintain?</p>",
-  "folders": [],
+  "folders": [
+    "CS5507-folder-project"
+  ],
   "views": 21,
   "viewedBy": [
     "567",
@@ -1635,10 +1771,10 @@
     "912"
   ],
   "createdAt": {
-    "$date": "2025-12-06T15:20:00.000Z"
+    "$date": "2025-11-29T15:20:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T15:20:00.000Z"
+    "$date": "2025-11-29T15:20:00.000Z"
   }
 },
 {
@@ -1653,7 +1789,10 @@
   "visibleTo": [],
   "summary": "Cloud Cost Optimization Workshop - Optional",
   "details": "<p>An optional workshop on cloud cost optimization, hosting I am.</p><p><strong>When:</strong> Saturday, December 14th, 10:00 AM<br/><strong>Where:</strong> Zoom (link on Canvas)<br/><strong>Topics:</strong></p><ul><li>Right-sizing instances</li><li>Spot instances and reserved capacity</li><li>Monitoring and alerts</li><li>Cost allocation tags</li></ul><p>Attend you should, save money you will!</p>",
-  "folders": [],
+  "folders": [
+    "CS5507-folder-logistics",
+    "CS5507-folder-other"
+  ],
   "views": 33,
   "viewedBy": [
     "234",
@@ -1662,10 +1801,10 @@
     "911"
   ],
   "createdAt": {
-    "$date": "2025-12-05T13:45:00.000Z"
+    "$date": "2025-11-20T13:45:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T13:45:00.000Z"
+    "$date": "2025-11-20T13:45:00.000Z"
   }
 },
 {
@@ -1680,7 +1819,9 @@
   "visibleTo": [],
   "summary": "React Testing Library - testing async components",
   "details": "<p>How do I properly test a component that fetches data with useEffect?</p><p>My tests are failing because the component renders before data loads.</p><p>Should I use waitFor or findBy queries?</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-hw6"
+  ],
   "views": 5,
   "viewedBy": [
     "234",
@@ -1690,10 +1831,10 @@
     "917"
   ],
   "createdAt": {
-    "$date": "2025-12-06T17:00:00.000Z"
+    "$date": "2025-12-01T17:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T17:00:00.000Z"
+    "$date": "2025-12-01T17:00:00.000Z"
   },
   "__v": 1
 },
@@ -1709,7 +1850,10 @@
   "visibleTo": [],
   "summary": "Assignment 3 Clarification - State Management",
   "details": "<p>Many students asked about Assignment 3 requirements.</p><p>You may use ANY state management solution:</p><ul><li>Context API</li><li>Redux / Redux Toolkit</li><li>Zustand</li><li>Jotai</li><li>Recoil</li></ul><p>Just be prepared to justify your choice in the report.</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-hw3",
+    "CS1234-folder-logistics"
+  ],
   "views": 7,
   "viewedBy": [
     "123",
@@ -1721,10 +1865,10 @@
     "917"
   ],
   "createdAt": {
-    "$date": "2025-12-05T16:30:00.000Z"
+    "$date": "2025-11-18T16:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T16:30:00.000Z"
+    "$date": "2025-11-18T16:30:00.000Z"
   },
   "__v": 1
 },
@@ -1740,7 +1884,9 @@
   "visibleTo": [],
   "summary": "Next.js vs Create React App - which to learn?",
   "details": "<p>Should I learn Next.js or stick with Create React App?</p><p>Is Next.js becoming the standard for React apps?</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-other"
+  ],
   "views": 6,
   "viewedBy": [
     "234",
@@ -1751,10 +1897,10 @@
     "917"
   ],
   "createdAt": {
-    "$date": "2025-12-04T12:20:00.000Z"
+    "$date": "2025-11-11T12:20:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T12:20:00.000Z"
+    "$date": "2025-11-11T12:20:00.000Z"
   },
   "__v": 1
 },
@@ -1770,7 +1916,9 @@
   "visibleTo": [],
   "summary": "Batch size selection - 32, 64, or 128?",
   "details": "<p>Training my model with different batch sizes gives different results.</p><p>Batch 32: slower but better accuracy<br/>Batch 128: faster but lower accuracy</p><p>How do I choose the optimal batch size?</p>",
-  "folders": [],
+  "folders": [
+    "CS5501-folder-hw2"
+  ],
   "views": 23,
   "viewedBy": [
     "789",
@@ -1778,10 +1926,10 @@
     "908"
   ],
   "createdAt": {
-    "$date": "2025-12-06T12:40:00.000Z"
+    "$date": "2025-11-07T12:40:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T12:40:00.000Z"
+    "$date": "2025-11-07T12:40:00.000Z"
   }
 },
 {
@@ -1796,7 +1944,9 @@
   "visibleTo": [],
   "summary": "Guest Lecture - Deep Learning at Tesla",
   "details": "<p>We have a special guest next Thursday!</p><p><strong>Speaker:</strong> Dr. Sarah Chen, ML Engineer at Tesla Autopilot<br/><strong>Topic:</strong> Computer Vision for Autonomous Driving<br/><strong>Time:</strong> Thursday, December 12th, 3:00 PM<br/><strong>Location:</strong> Room 201 + Zoom</p><p>This is a great opportunity to learn about real-world AI applications!</p>",
-  "folders": [],
+  "folders": [
+    "CS5501-folder-logistics"
+  ],
   "views": 58,
   "viewedBy": [
     "123",
@@ -1805,10 +1955,10 @@
     "912"
   ],
   "createdAt": {
-    "$date": "2025-12-04T10:00:00.000Z"
+    "$date": "2025-11-25T10:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T10:00:00.000Z"
+    "$date": "2025-11-25T10:00:00.000Z"
   }
 },
 {
@@ -1823,7 +1973,9 @@
   "visibleTo": [],
   "summary": "Learning rate scheduling - which strategy to use?",
   "details": "<p>My training plateaus after 50 epochs. Should I use:</p><ul><li>Step decay</li><li>Exponential decay</li><li>Cosine annealing</li><li>ReduceLROnPlateau</li></ul><p>What are the pros and cons of each?</p>",
-  "folders": [],
+  "folders": [
+    "CS5501-folder-hw6"
+  ],
   "views": 21,
   "viewedBy": [
     "123",
@@ -1831,10 +1983,10 @@
     "902"
   ],
   "createdAt": {
-    "$date": "2025-12-05T18:10:00.000Z"
+    "$date": "2025-11-22T18:10:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T18:10:00.000Z"
+    "$date": "2025-11-22T18:10:00.000Z"
   }
 },
 {
@@ -1849,7 +2001,9 @@
   "visibleTo": [],
   "summary": "Midterm Exam - Study Guide Posted",
   "details": "<p>The study guide for the midterm exam is now on Canvas.</p><p><strong>Exam Date:</strong> December 11th, 2:00 PM<br/><strong>Duration:</strong> 2 hours<br/><strong>Format:</strong> In-person, closed book</p><p><strong>Topics:</strong></p><ul><li>Time complexity analysis</li><li>Sorting algorithms</li><li>Trees and graphs</li><li>Dynamic programming basics</li></ul><p>Review sessions on Monday and Tuesday.</p>",
-  "folders": [],
+  "folders": [
+    "CS5502-folder-exam"
+  ],
   "views": 64,
   "viewedBy": [
     "234",
@@ -1857,10 +2011,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-03T09:00:00.000Z"
+    "$date": "2025-11-05T09:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-03T09:00:00.000Z"
+    "$date": "2025-11-05T09:00:00.000Z"
   }
 },
 {
@@ -1875,7 +2029,9 @@
   "visibleTo": [],
   "summary": "Minimum spanning tree - Kruskal vs Prim performance",
   "details": "<p>Both find MST but which is faster in practice?</p><p>I know Kruskal is O(E log E) and Prim is O(E log V).</p><p>When would one be preferred over the other?</p>",
-  "folders": [],
+  "folders": [
+    "CS5502-folder-hw1"
+  ],
   "views": 19,
   "viewedBy": [
     "234",
@@ -1883,10 +2039,10 @@
     "908"
   ],
   "createdAt": {
-    "$date": "2025-12-06T11:25:00.000Z"
+    "$date": "2025-10-30T11:25:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T11:25:00.000Z"
+    "$date": "2025-10-30T11:25:00.000Z"
   }
 },
 {
@@ -1901,7 +2057,10 @@
   "visibleTo": [],
   "summary": "Backtracking vs Dynamic Programming - how to choose?",
   "details": "<p>Some problems can be solved with both approaches. How do I decide which to use?</p><p>Is DP always better when there are overlapping subproblems?</p>",
-  "folders": [],
+  "folders": [
+    "CS5502-folder-exam",
+    "CS5502-folder-other"
+  ],
   "views": 24,
   "viewedBy": [
     "678",
@@ -1909,10 +2068,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-05T13:50:00.000Z"
+    "$date": "2025-11-16T13:50:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T13:50:00.000Z"
+    "$date": "2025-11-16T13:50:00.000Z"
   }
 },
 {
@@ -1927,7 +2086,9 @@
   "visibleTo": [],
   "summary": "Office Hours Extended This Week",
   "details": "<p>With the lab deadline coming up, I'm extending office hours:</p><p><strong>Regular:</strong> Thursday 2-4pm<br/><strong>Extra:</strong> Friday 10am-12pm, Saturday 2-4pm</p><p>All sessions will be hybrid (in-person + Zoom).</p><p>Come prepared with specific questions!</p>",
-  "folders": [],
+  "folders": [
+    "CS5503-folder-office_hours"
+  ],
   "views": 36,
   "viewedBy": [
     "345",
@@ -1953,7 +2114,9 @@
   "visibleTo": [],
   "summary": "File system - journaling vs copy-on-write",
   "details": "<p>What's the difference between journaling file systems (ext4) and copy-on-write (btrfs, ZFS)?</p><p>Which is better for reliability and performance?</p>",
-  "folders": [],
+  "folders": [
+    "CS5503-folder-other"
+  ],
   "views": 3,
   "viewedBy": [
     "909",
@@ -1961,10 +2124,10 @@
     "904"
   ],
   "createdAt": {
-    "$date": "2025-12-06T16:15:00.000Z"
+    "$date": "2025-12-02T16:15:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T16:15:00.000Z"
+    "$date": "2025-12-02T16:15:00.000Z"
   },
   "__v": 1
 },
@@ -1980,7 +2143,9 @@
   "visibleTo": [],
   "summary": "Context switching overhead - how significant?",
   "details": "<p>How much performance do we lose from context switching between threads?</p><p>Is it significant enough to avoid creating too many threads?</p>",
-  "folders": [],
+  "folders": [
+    "CS5503-folder-project"
+  ],
   "views": 20,
   "viewedBy": [
     "345",
@@ -1988,10 +2153,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-05T17:30:00.000Z"
+    "$date": "2025-11-13T17:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T17:30:00.000Z"
+    "$date": "2025-11-13T17:30:00.000Z"
   }
 },
 {
@@ -2006,7 +2171,10 @@
   "visibleTo": [],
   "summary": "Database Performance Tuning Workshop",
   "details": "<p>Optional workshop on database performance optimization!</p><p><strong>Date:</strong> Sunday, December 15th, 1:00 PM<br/><strong>Location:</strong> Lab 301</p><p><strong>Topics:</strong></p><ul><li>Query optimization techniques</li><li>Index strategies</li><li>Analyzing execution plans</li><li>Caching strategies</li></ul><p>Bring your laptops with PostgreSQL installed.</p>",
-  "folders": [],
+  "folders": [
+    "CS5504-folder-logistics",
+    "CS5504-folder-other"
+  ],
   "views": 42,
   "viewedBy": [
     "345",
@@ -2014,10 +2182,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-04T13:00:00.000Z"
+    "$date": "2025-11-26T13:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T13:00:00.000Z"
+    "$date": "2025-11-26T13:00:00.000Z"
   }
 },
 {
@@ -2032,7 +2200,9 @@
   "visibleTo": [],
   "summary": "Database replication - master-slave vs master-master",
   "details": "<p>For high availability, should I use master-slave or master-master replication?</p><p>What are the conflict resolution issues with master-master?</p>",
-  "folders": [],
+  "folders": [
+    "CS5504-folder-hw6"
+  ],
   "views": 18,
   "viewedBy": [
     "345",
@@ -2040,10 +2210,10 @@
     "910"
   ],
   "createdAt": {
-    "$date": "2025-12-06T14:40:00.000Z"
+    "$date": "2025-11-28T14:40:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T14:40:00.000Z"
+    "$date": "2025-11-28T14:40:00.000Z"
   }
 },
 {
@@ -2058,7 +2228,9 @@
   "visibleTo": [],
   "summary": "CAP theorem - practical implications",
   "details": "<p>The CAP theorem says we can only have 2 of 3: Consistency, Availability, Partition tolerance.</p><p>In practice, how do databases like Cassandra and MongoDB make this tradeoff?</p>",
-  "folders": [],
+  "folders": [
+    "CS5504-folder-other"
+  ],
   "views": 25,
   "viewedBy": [
     "345",
@@ -2066,10 +2238,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-05T12:10:00.000Z"
+    "$date": "2025-11-09T12:10:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T12:10:00.000Z"
+    "$date": "2025-11-09T12:10:00.000Z"
   }
 },
 {
@@ -2084,7 +2256,9 @@
   "visibleTo": [],
   "summary": "Final Exam - Comprehensive Review Session",
   "details": "<p>Comprehensive review session for the final exam!</p><p><strong>Date:</strong> December 17th, 6:00 PM<br/><strong>Location:</strong> Auditorium A + Zoom</p><p>We'll cover:</p><ul><li>All layers of OSI model</li><li>Routing protocols</li><li>Network security</li><li>Wireless networking</li></ul><p>Bring your questions!</p>",
-  "folders": [],
+  "folders": [
+    "CS5505-folder-exam"
+  ],
   "views": 51,
   "viewedBy": [
     "123",
@@ -2093,10 +2267,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-04T11:30:00.000Z"
+    "$date": "2025-11-27T11:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T11:30:00.000Z"
+    "$date": "2025-11-27T11:30:00.000Z"
   }
 },
 {
@@ -2111,7 +2285,9 @@
   "visibleTo": [],
   "summary": "Network troubleshooting - ping works but HTTP doesn't",
   "details": "<p>I can ping a server successfully but HTTP requests timeout.</p><p>Both machines are on the same network. What could cause this?</p><p>Firewall issue?</p>",
-  "folders": [],
+  "folders": [
+    "CS5505-folder-other"
+  ],
   "views": 16,
   "viewedBy": [
     "890",
@@ -2119,10 +2295,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-06T15:50:00.000Z"
+    "$date": "2025-12-03T15:50:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T15:50:00.000Z"
+    "$date": "2025-12-03T15:50:00.000Z"
   }
 },
 {
@@ -2137,7 +2313,9 @@
   "visibleTo": [],
   "summary": "QoS configuration - prioritizing video traffic",
   "details": "<p>Need to configure QoS to prioritize video conferencing traffic over downloads.</p><p>What's the best approach? Traffic shaping or packet prioritization?</p>",
-  "folders": [],
+  "folders": [
+    "CS5505-folder-project"
+  ],
   "views": 14,
   "viewedBy": [
     "456",
@@ -2145,10 +2323,10 @@
     "904"
   ],
   "createdAt": {
-    "$date": "2025-12-05T14:20:00.000Z"
+    "$date": "2025-11-12T14:20:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T14:20:00.000Z"
+    "$date": "2025-11-12T14:20:00.000Z"
   }
 },
 {
@@ -2163,7 +2341,9 @@
   "visibleTo": [],
   "summary": "A/B testing - sample size calculation",
   "details": "<p>How many users do I need for a valid A/B test?</p><p>Testing a new button color change. Current conversion rate is 5%.</p><p>What statistical significance should I aim for?</p>",
-  "folders": [],
+  "folders": [
+    "CS5506-folder-hw5"
+  ],
   "views": 20,
   "viewedBy": [
     "890",
@@ -2171,10 +2351,10 @@
     "909"
   ],
   "createdAt": {
-    "$date": "2025-12-06T13:35:00.000Z"
+    "$date": "2025-12-01T13:35:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T13:35:00.000Z"
+    "$date": "2025-12-01T13:35:00.000Z"
   }
 },
 {
@@ -2189,7 +2369,9 @@
   "visibleTo": [],
   "summary": "Mobile-first vs desktop-first design approach",
   "details": "<p>For our project, should we design mobile-first or desktop-first?</p><p>Most users will access from desktop, but mobile is growing.</p><p>Which approach is recommended for 2025?</p>",
-  "folders": [],
+  "folders": [
+    "CS5506-folder-hw6"
+  ],
   "views": 22,
   "viewedBy": [
     "890",
@@ -2198,10 +2380,10 @@
     "909"
   ],
   "createdAt": {
-    "$date": "2025-12-05T11:15:00.000Z"
+    "$date": "2025-10-29T11:15:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T11:15:00.000Z"
+    "$date": "2025-10-29T11:15:00.000Z"
   }
 },
 {
@@ -2216,7 +2398,9 @@
   "visibleTo": [],
   "summary": "Terraform vs CloudFormation - infrastructure as code",
   "details": "<p>For provisioning AWS infrastructure, should I use Terraform or CloudFormation?</p><p>We might switch to Azure later. Does that matter?</p>",
-  "folders": [],
+  "folders": [
+    "CS5507-folder-hw6"
+  ],
   "views": 18,
   "viewedBy": [
     "567",
@@ -2224,10 +2408,10 @@
     "912"
   ],
   "createdAt": {
-    "$date": "2025-12-06T17:25:00.000Z"
+    "$date": "2025-12-04T17:25:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T17:25:00.000Z"
+    "$date": "2025-12-04T17:25:00.000Z"
   }
 },
 {
@@ -2242,7 +2426,10 @@
   "visibleTo": [],
   "summary": "Container security - scanning for vulnerabilities",
   "details": "<p>How do I scan my Docker images for security vulnerabilities?</p><p>Are there free tools for this? Should I integrate into CI/CD?</p>",
-  "folders": [],
+  "folders": [
+    "CS5507-folder-project",
+    "CS5507-folder-other"
+  ],
   "views": 19,
   "viewedBy": [
     "777",
@@ -2250,10 +2437,10 @@
     "912"
   ],
   "createdAt": {
-    "$date": "2025-12-05T15:40:00.000Z"
+    "$date": "2025-11-14T15:40:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T15:40:00.000Z"
+    "$date": "2025-11-14T15:40:00.000Z"
   }
 },
 {
@@ -2268,7 +2455,10 @@
   "visibleTo": [],
   "summary": "Final Project Demo Day - December 19th",
   "details": "<p>Demo Day approaching, it is!</p><p><strong>Date:</strong> Thursday, December 19th<br/><strong>Time:</strong> 10:00 AM - 4:00 PM<br/><strong>Location:</strong> Student Center Hall</p><p>Present your projects to judges and peers, you will. Industry professionals attending, there will be!</p><p>Best projects receive prizes and recognition.</p><p>May the cloud be with you!</p>",
-  "folders": [],
+  "folders": [
+    "CS5507-folder-project",
+    "CS5507-folder-logistics"
+  ],
   "views": 47,
   "viewedBy": [
     "234",
@@ -2277,10 +2467,10 @@
     "911"
   ],
   "createdAt": {
-    "$date": "2025-12-03T12:00:00.000Z"
+    "$date": "2025-11-06T12:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-03T12:00:00.000Z"
+    "$date": "2025-11-06T12:00:00.000Z"
   }
 },
 {
@@ -2295,7 +2485,10 @@
   "visibleTo": [],
   "summary": "Error boundaries - handling async errors",
   "details": "<p>Error boundaries don't catch errors in async code or event handlers.</p><p>What's the best practice for handling these errors in React?</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-hw6",
+    "CS1234-folder-other"
+  ],
   "views": 4,
   "viewedBy": [
     "234",
@@ -2304,10 +2497,10 @@
     "917"
   ],
   "createdAt": {
-    "$date": "2025-12-06T18:05:00.000Z"
+    "$date": "2025-12-03T18:05:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T18:05:00.000Z"
+    "$date": "2025-12-03T18:05:00.000Z"
   },
   "__v": 1
 },
@@ -2323,7 +2516,9 @@
   "visibleTo": [],
   "summary": "Form validation - Formik vs React Hook Form",
   "details": "<p>Need to add form validation to my app. Should I use Formik or React Hook Form?</p><p>Which has better performance and developer experience?</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-hw5"
+  ],
   "views": 5,
   "viewedBy": [
     "234",
@@ -2333,10 +2528,10 @@
     "917"
   ],
   "createdAt": {
-    "$date": "2025-12-05T19:20:00.000Z"
+    "$date": "2025-11-20T19:20:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T19:20:00.000Z"
+    "$date": "2025-11-20T19:20:00.000Z"
   },
   "__v": 1
 },
@@ -2352,7 +2547,9 @@
   "visibleTo": [],
   "summary": "Course Evaluations - Please Complete",
   "details": "<p>Course evaluations are now open on the student portal.</p><p>Your feedback helps improve the course for future students. Please take 5 minutes to complete the evaluation.</p><p><strong>Deadline:</strong> December 15th</p><p>Thank you for a great semester!</p>",
-  "folders": [],
+  "folders": [
+    "CS1234-folder-logistics"
+  ],
   "views": 7,
   "viewedBy": [
     "123",
@@ -2383,7 +2580,9 @@
   "visibleTo": [],
   "summary": "Data preprocessing - handling missing values",
   "details": "<p>My dataset has 20% missing values. Should I:</p><ul><li>Drop rows with missing data</li><li>Impute with mean/median</li><li>Use advanced imputation methods</li></ul><p>What's the best practice?</p>",
-  "folders": [],
+  "folders": [
+    "CS5501-folder-hw1"
+  ],
   "views": 22,
   "viewedBy": [
     "123",
@@ -2391,10 +2590,10 @@
     "908"
   ],
   "createdAt": {
-    "$date": "2025-12-06T16:45:00.000Z"
+    "$date": "2025-10-31T16:45:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T16:45:00.000Z"
+    "$date": "2025-10-31T16:45:00.000Z"
   }
 },
 {
@@ -2409,7 +2608,9 @@
   "visibleTo": [],
   "summary": "Reinforcement learning - Q-learning vs Deep Q-Networks",
   "details": "<p>The difference between Q-learning and DQN, explain someone can?</p><p>When Deep Q-Networks necessary are?</p>",
-  "folders": [],
+  "folders": [
+    "CS5501-folder-other"
+  ],
   "views": 26,
   "viewedBy": [
     "123",
@@ -2418,10 +2619,10 @@
     "908"
   ],
   "createdAt": {
-    "$date": "2025-12-04T15:30:00.000Z"
+    "$date": "2025-11-15T15:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T15:30:00.000Z"
+    "$date": "2025-11-15T15:30:00.000Z"
   }
 },
 {
@@ -2436,7 +2637,10 @@
   "visibleTo": [],
   "summary": "AI Ethics Discussion - Extra Credit Opportunity",
   "details": "<p>Optional discussion session on AI ethics and responsible AI development.</p><p><strong>Date:</strong> Monday, December 16th, 4:00 PM<br/><strong>Location:</strong> Zoom</p><p><strong>Topics:</strong></p><ul><li>Bias in ML models</li><li>Privacy concerns</li><li>Fairness and transparency</li><li>AI safety</li></ul><p>Participation counts as extra credit (2%).</p>",
-  "folders": [],
+  "folders": [
+    "CS5501-folder-logistics",
+    "CS5501-folder-other"
+  ],
   "views": 39,
   "viewedBy": [
     "123",
@@ -2445,10 +2649,10 @@
     "912"
   ],
   "createdAt": {
-    "$date": "2025-12-05T08:00:00.000Z"
+    "$date": "2025-11-21T08:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T08:00:00.000Z"
+    "$date": "2025-11-21T08:00:00.000Z"
   }
 },
 {
@@ -2463,7 +2667,9 @@
   "visibleTo": [],
   "summary": "Bitwise operations - practical use cases",
   "details": "<p>I understand how bitwise operations work, but when are they actually useful in practice?</p><p>Modern compilers optimize most things anyway. Are they still relevant?</p>",
-  "folders": [],
+  "folders": [
+    "CS5502-folder-other"
+  ],
   "views": 17,
   "viewedBy": [
     "234",
@@ -2471,10 +2677,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-06T14:55:00.000Z"
+    "$date": "2025-12-02T14:55:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T14:55:00.000Z"
+    "$date": "2025-12-02T14:55:00.000Z"
   }
 },
 {
@@ -2489,7 +2695,9 @@
   "visibleTo": [],
   "summary": "Space complexity - when does it matter?",
   "details": "<p>In practice, when should I optimize for space over time complexity?</p><p>With modern RAM sizes, does space complexity still matter much?</p>",
-  "folders": [],
+  "folders": [
+    "CS5502-folder-project"
+  ],
   "views": 21,
   "viewedBy": [
     "678",
@@ -2497,10 +2705,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-05T16:10:00.000Z"
+    "$date": "2025-11-04T16:10:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T16:10:00.000Z"
+    "$date": "2025-11-04T16:10:00.000Z"
   }
 },
 {
@@ -2515,7 +2723,10 @@
   "visibleTo": [],
   "summary": "Algorithm Design Patterns - Cheat Sheet Posted",
   "details": "<p>I've posted a comprehensive cheat sheet on Canvas covering:</p><ul><li>When to use each algorithm pattern</li><li>Time/space complexity comparisons</li><li>Common pitfalls and edge cases</li><li>Problem-solving strategies</li></ul><p>This will be helpful for the final exam!</p>",
-  "folders": [],
+  "folders": [
+    "CS5502-folder-exam",
+    "CS5502-folder-logistics"
+  ],
   "views": 56,
   "viewedBy": [
     "234",
@@ -2523,10 +2734,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-04T14:00:00.000Z"
+    "$date": "2025-11-25T14:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T14:00:00.000Z"
+    "$date": "2025-11-25T14:00:00.000Z"
   }
 },
 {
@@ -2541,7 +2752,9 @@
   "visibleTo": [],
   "summary": "RAID configurations - which level for database server?",
   "details": "<p>Setting up a database server. Which RAID level should I use?</p><p>RAID 5 for balance or RAID 10 for performance?</p><p>Budget is somewhat limited.</p>",
-  "folders": [],
+  "folders": [
+    "CS5503-folder-project"
+  ],
   "views": 15,
   "viewedBy": [
     "345",
@@ -2549,10 +2762,10 @@
     "910"
   ],
   "createdAt": {
-    "$date": "2025-12-06T17:50:00.000Z"
+    "$date": "2025-12-04T17:50:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T17:50:00.000Z"
+    "$date": "2025-12-04T17:50:00.000Z"
   }
 },
 {
@@ -2567,7 +2780,10 @@
   "visibleTo": [],
   "summary": "Final Project Submission Guidelines",
   "details": "<p><strong>Final Project Due: December 18th, 11:59 PM</strong></p><p>Submit via Canvas:</p><ul><li>Source code (GitHub link or ZIP)</li><li>README with setup instructions</li><li>Design document (PDF)</li><li>Demo video (5-10 minutes)</li></ul><p>Late submissions: -10% per day</p><p>No extensions will be granted.</p>",
-  "folders": [],
+  "folders": [
+    "CS5503-folder-project",
+    "CS5503-folder-logistics"
+  ],
   "views": 48,
   "viewedBy": [
     "345",
@@ -2575,10 +2791,10 @@
     "913"
   ],
   "createdAt": {
-    "$date": "2025-12-05T09:30:00.000Z"
+    "$date": "2025-11-19T09:30:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-05T09:30:00.000Z"
+    "$date": "2025-11-19T09:30:00.000Z"
   }
 },
 {
@@ -2593,7 +2809,9 @@
   "visibleTo": [],
   "summary": "Database connection pooling - configuration best practices",
   "details": "<p>How many connections should I configure in my database pool?</p><p>Application handles ~1000 requests/minute. PostgreSQL backend.</p><p>What's the formula for sizing the pool?</p>",
-  "folders": [],
+  "folders": [
+    "CS5504-folder-project"
+  ],
   "views": 19,
   "viewedBy": [
     "777",
@@ -2601,10 +2819,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-06T15:05:00.000Z"
+    "$date": "2025-12-01T15:05:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-06T15:05:00.000Z"
+    "$date": "2025-12-01T15:05:00.000Z"
   }
 },
 {
@@ -2619,7 +2837,9 @@
   "visibleTo": [],
   "summary": "Database Final Exam - Format and Topics",
   "details": "<p><strong>Final Exam: December 17th, 2:00 PM - 4:00 PM</strong></p><p><strong>Format:</strong> Written exam, closed book</p><p><strong>Topics:</strong></p><ul><li>SQL queries (40%)</li><li>Database design and normalization (25%)</li><li>Transactions and concurrency (20%)</li><li>Indexing and optimization (15%)</li></ul><p>Practice problems will be posted this weekend.</p>",
-  "folders": [],
+  "folders": [
+    "CS5504-folder-exam"
+  ],
   "views": 52,
   "viewedBy": [
     "345",
@@ -2627,10 +2847,10 @@
     "914"
   ],
   "createdAt": {
-    "$date": "2025-12-04T12:00:00.000Z"
+    "$date": "2025-11-17T12:00:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-04T12:00:00.000Z"
+    "$date": "2025-11-17T12:00:00.000Z"
   }
 },
 {
@@ -2644,8 +2864,10 @@
   "postTo": "Entire Class",
   "visibleTo": [],
   "summary": "Network monitoring tools - Wireshark vs tcpdump",
-  "details": "<p>For packet analysis, is Wireshark always better than tcpdump?</p><p>When would you use tcpdump instead of Wireshark?<br>OK</p>",
-  "folders": [],
+  "details": "<p>For packet analysis, is Wireshark always better than tcpdump?</p><p>When would you use tcpdump instead of Wireshark?</p>",
+  "folders": [
+    "CS5505-folder-other"
+  ],
   "views": 16,
   "viewedBy": [
     "456",
@@ -2671,7 +2893,9 @@
   "visibleTo": [],
   "summary": "Thank You and Best Wishes",
   "details": "<p>As we wrap up the semester, I want to thank you all for your hard work and dedication.</p><p>It's been a pleasure watching you grow as UX designers and researchers. Your projects showed creativity, empathy, and strong design thinking.</p><p><strong>Final reminders:</strong></p><ul><li>Final presentations: Dec 16, 18, 20</li><li>Course evaluations due Dec 15</li><li>Portfolio submissions due Dec 20</li></ul><p>Best of luck with your finals and future careers in HCI!</p><p>Stay in touch and keep designing great experiences!</p>",
-  "folders": [],
+  "folders": [
+    "CS5506-folder-logistics"
+  ],
   "views": 43,
   "viewedBy": [
     "123",

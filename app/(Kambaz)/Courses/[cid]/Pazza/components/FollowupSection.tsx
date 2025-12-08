@@ -220,8 +220,7 @@ export default function FollowupSection({
                 <span className="pazza-followup-author">
                   {followup.authorName}
                 </span>
-                {(followup.authorRole === "FACULTY" ||
-                  followup.authorRole === "ADMIN") && (
+                {followup.authorRole === "FACULTY" && (
                   <Badge
                     bg="warning"
                     text="dark"
@@ -259,8 +258,7 @@ export default function FollowupSection({
                       <span className="pazza-followup-author">
                         {reply.authorName}
                       </span>
-                      {(reply.authorRole === "FACULTY" ||
-                        reply.authorRole === "ADMIN") && (
+                      {reply.authorRole === "FACULTY" && (
                         <Badge
                           bg="warning"
                           text="dark"
