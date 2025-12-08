@@ -90,7 +90,7 @@ export default function AnswersSection({
           <>
             <div className="pazza-answer-updated">
               Updated {formatTimeAgo(studentAnswer.updatedAt)} by{" "}
-              {studentAnswer.authorName}
+              {studentAnswer.lastEditedByName || studentAnswer.authorName}
             </div>
             {editingId === studentAnswer._id ? (
               <div className="pazza-answer-body">
@@ -192,7 +192,8 @@ export default function AnswersSection({
             <>
               <div className="pazza-answer-updated">
                 Updated {formatTimeAgo(instructorAnswer.updatedAt)} by{" "}
-                {instructorAnswer.authorName}
+                {instructorAnswer.lastEditedByName ||
+                  instructorAnswer.authorName}
               </div>
               {editingId === instructorAnswer._id ? (
                 <div className="pazza-answer-body">

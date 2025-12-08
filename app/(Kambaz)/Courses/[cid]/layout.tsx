@@ -49,8 +49,6 @@ export default function CoursesLayout({ children }: { children: ReactNode }) {
 
       try {
         const enrollments = await client.fetchEnrollmentsForUser(currentUserId);
-        console.log("Enrollments:", enrollments);
-        console.log("Current CID:", cid);
         const isEnrolled = enrollments.some(
           (enrollment: any) => enrollment._id === cid
         );

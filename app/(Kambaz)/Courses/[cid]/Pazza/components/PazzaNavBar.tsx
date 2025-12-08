@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Link from "next/link";
@@ -26,7 +27,7 @@ export default function PazzaNavBar({
     <div className="pazza-navbar">
       <div className="d-flex align-items-center">
         <span className="pazza-logo">pazza</span>
-        <span className="pazza-course-name">{courseName}</span>
+        <span className="pazza-course-name">{cid}</span>
       </div>
 
       <div className="pazza-nav-tabs">

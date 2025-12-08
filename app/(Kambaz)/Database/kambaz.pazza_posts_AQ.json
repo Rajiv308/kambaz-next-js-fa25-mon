@@ -13,17 +13,15 @@
   "folders": [
     "CS1234-folder-3-1764914009166"
   ],
-  "views": 1,
-  "viewedBy": [
-    "917"
-  ],
+  "views": 0,
+  "viewedBy": [],
   "createdAt": {
     "$date": "2025-12-05T06:21:17.595Z"
   },
   "updatedAt": {
     "$date": "2025-12-05T06:21:17.595Z"
   },
-  "__v": 1
+  "__v": 0
 },
 {
   "_id": "post-cs1234-001",
@@ -38,23 +36,21 @@
   "summary": "Welcome to React Fundamentals!",
   "details": "<p>Hello everyone!</p><p>Welcome to CS1234 - React Fundamentals. I'm excited to be your instructor this semester.</p><p>Please make sure to:</p><ul><li>Review the syllabus</li><li>Set up your development environment</li><li>Join our Slack channel</li></ul><p>Looking forward to a great semester!</p>",
   "folders": [],
-  "views": 7,
+  "views": 45,
   "viewedBy": [
     "123",
     "234",
     "567",
     "789",
     "909",
-    "912",
-    "917"
+    "912"
   ],
   "createdAt": {
     "$date": "2025-12-01T09:00:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-01T09:00:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs1234-002",
@@ -96,21 +92,19 @@
   "summary": "Assignment 1 deadline extension?",
   "details": "<p>Professor,</p><p>Given the issues with the development environment setup that many students faced this week, would it be possible to extend the deadline for Assignment 1 by a few days?</p><p>Thank you for considering this request.</p>",
   "folders": [],
-  "views": 5,
+  "views": 28,
   "viewedBy": [
     "123",
     "567",
     "678",
-    "909",
-    "917"
+    "909"
   ],
   "createdAt": {
     "$date": "2025-12-05T10:15:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-05T10:15:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs1234-004",
@@ -125,20 +119,18 @@
   "summary": "Office Hours Rescheduled - This Week",
   "details": "<p>Hi class,</p><p>My office hours for this week have been rescheduled:</p><p><strong>Original:</strong> Thursday 2-4pm<br/><strong>New Time:</strong> Friday 3-5pm</p><p>Location remains the same: Room 302, CS Building.</p><p>See you there!</p>",
   "folders": [],
-  "views": 4,
+  "views": 19,
   "viewedBy": [
     "567",
     "789",
-    "912",
-    "917"
+    "912"
   ],
   "createdAt": {
     "$date": "2025-12-05T08:00:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-05T08:00:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs1234-005",
@@ -153,22 +145,20 @@
   "summary": "Props drilling vs Context API - Best practices?",
   "details": "<p>Working on the project, I am. Multiple levels deep, my components are.</p><p>Pass props through 5 components, should I? Or use Context API for everything?</p><p>Guidelines on when to switch, are there?</p>",
   "folders": [],
-  "views": 6,
+  "views": 41,
   "viewedBy": [
     "123",
     "234",
     "567",
     "678",
-    "789",
-    "917"
+    "789"
   ],
   "createdAt": {
     "$date": "2025-12-03T16:45:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-03T16:45:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs5501-001",
@@ -415,20 +405,18 @@
   "summary": "Normalization to 3NF - Step by step?",
   "details": "<p>I'm struggling with normalizing tables to 3NF. I understand 1NF and 2NF, but identifying transitive dependencies is confusing.</p><p>Could someone explain with a concrete example?</p>",
   "folders": [],
-  "views": 4,
+  "views": 27,
   "viewedBy": [
     "345",
     "910",
-    "914",
-    "904"
+    "914"
   ],
   "createdAt": {
     "$date": "2025-12-04T16:50:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-04T16:50:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs5505-001",
@@ -764,21 +752,19 @@
   "summary": "React Router v6 - protected routes implementation",
   "details": "<p>Need help implementing protected routes in React Router v6.</p><p>I want to redirect users to /login if they're not authenticated, but my current approach causes infinite redirect loops.</p><p>Should I use a wrapper component or is there a better pattern?</p>",
   "folders": [],
-  "views": 5,
+  "views": 24,
   "viewedBy": [
     "567",
     "678",
     "789",
-    "912",
-    "917"
+    "912"
   ],
   "createdAt": {
     "$date": "2025-12-05T16:20:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-05T16:20:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs1234-007",
@@ -793,22 +779,20 @@
   "summary": "Custom hooks - when to create them?",
   "details": "<p>I'm refactoring my code and wondering when I should extract logic into custom hooks vs keeping it in components.</p><p>What's the criteria for deciding? Performance? Reusability? Or just personal preference?</p>",
   "folders": [],
-  "views": 6,
+  "views": 31,
   "viewedBy": [
     "567",
     "678",
     "789",
     "909",
-    "912",
-    "917"
+    "912"
   ],
   "createdAt": {
     "$date": "2025-12-04T13:15:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-04T13:15:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs5501-004",
@@ -928,20 +912,18 @@
   "summary": "Process scheduling - Round Robin quantum size?",
   "details": "<p>For Round Robin scheduling, how do we choose the optimal time quantum?</p><p>Too small = too many context switches<br/>Too large = approaches FCFS</p><p>Is there a formula or rule of thumb?</p>",
   "folders": [],
-  "views": 4,
+  "views": 18,
   "viewedBy": [
     "345",
     "909",
-    "910",
-    "904"
+    "910"
   ],
   "createdAt": {
     "$date": "2025-12-06T09:45:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-06T09:45:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs5503-004",
@@ -1034,21 +1016,19 @@
   "summary": "React performance - unnecessary re-renders",
   "details": "<p>My parent component re-renders and causes all children to re-render even though their props haven't changed.</p><p>Should I use React.memo? useMemo? Or restructure my components?</p>",
   "folders": [],
-  "views": 5,
+  "views": 29,
   "viewedBy": [
     "234",
     "678",
     "789",
-    "909",
-    "917"
+    "909"
   ],
   "createdAt": {
     "$date": "2025-12-06T12:10:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-06T12:10:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs1234-009",
@@ -1063,23 +1043,21 @@
   "summary": "React 18 New Features - Lecture Recording Posted",
   "details": "<p>Today's lecture on React 18 features is now available on Canvas.</p><p>Topics covered:</p><ul><li>Concurrent rendering</li><li>Automatic batching</li><li>Suspense improvements</li><li>Server Components</li></ul><p>Watch before next class as we'll have a quiz!</p>",
   "folders": [],
-  "views": 7,
+  "views": 52,
   "viewedBy": [
     "123",
     "234",
     "567",
     "789",
     "909",
-    "912",
-    "917"
+    "912"
   ],
   "createdAt": {
     "$date": "2025-12-05T18:00:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-05T18:00:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs5505-005",
@@ -1252,21 +1230,19 @@
   "summary": "Redux Toolkit vs plain Redux - migration worth it?",
   "details": "<p>My project uses plain Redux with a lot of boilerplate. Is migrating to Redux Toolkit worth the effort?</p><p>What are the main benefits besides less code?</p>",
   "folders": [],
-  "views": 5,
+  "views": 27,
   "viewedBy": [
     "234",
     "567",
     "678",
-    "909",
-    "917"
+    "909"
   ],
   "createdAt": {
     "$date": "2025-12-06T13:40:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-06T13:40:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs1234-011",
@@ -1681,21 +1657,19 @@
   "summary": "React Testing Library - testing async components",
   "details": "<p>How do I properly test a component that fetches data with useEffect?</p><p>My tests are failing because the component renders before data loads.</p><p>Should I use waitFor or findBy queries?</p>",
   "folders": [],
-  "views": 5,
+  "views": 26,
   "viewedBy": [
     "234",
     "567",
     "678",
-    "909",
-    "917"
+    "909"
   ],
   "createdAt": {
     "$date": "2025-12-06T17:00:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-06T17:00:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs1234-013",
@@ -1710,23 +1684,21 @@
   "summary": "Assignment 3 Clarification - State Management",
   "details": "<p>Many students asked about Assignment 3 requirements.</p><p>You may use ANY state management solution:</p><ul><li>Context API</li><li>Redux / Redux Toolkit</li><li>Zustand</li><li>Jotai</li><li>Recoil</li></ul><p>Just be prepared to justify your choice in the report.</p>",
   "folders": [],
-  "views": 7,
+  "views": 45,
   "viewedBy": [
     "123",
     "234",
     "567",
     "789",
     "909",
-    "912",
-    "917"
+    "912"
   ],
   "createdAt": {
     "$date": "2025-12-05T16:30:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-05T16:30:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs1234-014",
@@ -1741,22 +1713,20 @@
   "summary": "Next.js vs Create React App - which to learn?",
   "details": "<p>Should I learn Next.js or stick with Create React App?</p><p>Is Next.js becoming the standard for React apps?</p>",
   "folders": [],
-  "views": 6,
+  "views": 32,
   "viewedBy": [
     "234",
     "567",
     "678",
     "789",
-    "912",
-    "917"
+    "912"
   ],
   "createdAt": {
     "$date": "2025-12-04T12:20:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-04T12:20:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs5501-008",
@@ -1954,19 +1924,17 @@
   "summary": "File system - journaling vs copy-on-write",
   "details": "<p>What's the difference between journaling file systems (ext4) and copy-on-write (btrfs, ZFS)?</p><p>Which is better for reliability and performance?</p>",
   "folders": [],
-  "views": 3,
+  "views": 17,
   "viewedBy": [
     "909",
-    "910",
-    "904"
+    "910"
   ],
   "createdAt": {
     "$date": "2025-12-06T16:15:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-06T16:15:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs5503-009",
@@ -2296,20 +2264,18 @@
   "summary": "Error boundaries - handling async errors",
   "details": "<p>Error boundaries don't catch errors in async code or event handlers.</p><p>What's the best practice for handling these errors in React?</p>",
   "folders": [],
-  "views": 4,
+  "views": 23,
   "viewedBy": [
     "234",
     "678",
-    "789",
-    "917"
+    "789"
   ],
   "createdAt": {
     "$date": "2025-12-06T18:05:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-06T18:05:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs1234-016",
@@ -2324,21 +2290,19 @@
   "summary": "Form validation - Formik vs React Hook Form",
   "details": "<p>Need to add form validation to my app. Should I use Formik or React Hook Form?</p><p>Which has better performance and developer experience?</p>",
   "folders": [],
-  "views": 5,
+  "views": 28,
   "viewedBy": [
     "234",
     "567",
     "678",
-    "909",
-    "917"
+    "909"
   ],
   "createdAt": {
     "$date": "2025-12-05T19:20:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-05T19:20:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs1234-017",
@@ -2353,23 +2317,21 @@
   "summary": "Course Evaluations - Please Complete",
   "details": "<p>Course evaluations are now open on the student portal.</p><p>Your feedback helps improve the course for future students. Please take 5 minutes to complete the evaluation.</p><p><strong>Deadline:</strong> December 15th</p><p>Thank you for a great semester!</p>",
   "folders": [],
-  "views": 7,
+  "views": 41,
   "viewedBy": [
     "123",
     "234",
     "567",
     "789",
     "909",
-    "912",
-    "917"
+    "912"
   ],
   "createdAt": {
     "$date": "2025-12-06T09:00:00.000Z"
   },
   "updatedAt": {
     "$date": "2025-12-06T09:00:00.000Z"
-  },
-  "__v": 1
+  }
 },
 {
   "_id": "post-cs5501-011",
@@ -2644,7 +2606,7 @@
   "postTo": "Entire Class",
   "visibleTo": [],
   "summary": "Network monitoring tools - Wireshark vs tcpdump",
-  "details": "<p>For packet analysis, is Wireshark always better than tcpdump?</p><p>When would you use tcpdump instead of Wireshark?<br>OK</p>",
+  "details": "<p>For packet analysis, is Wireshark always better than tcpdump?</p><p>When would you use tcpdump instead of Wireshark?</p>",
   "folders": [],
   "views": 16,
   "viewedBy": [
@@ -2656,7 +2618,7 @@
     "$date": "2025-12-06T18:20:00.000Z"
   },
   "updatedAt": {
-    "$date": "2025-12-08T02:11:28.084Z"
+    "$date": "2025-12-06T18:20:00.000Z"
   }
 },
 {
@@ -2687,4 +2649,56 @@
   "updatedAt": {
     "$date": "2025-12-06T10:00:00.000Z"
   }
+},
+{
+  "_id": "post-1765139148164-0er9ravyu",
+  "postNumber": 101,
+  "course": "CS5505",
+  "author": "904",
+  "authorName": "Michael Jackson",
+  "authorRole": "FACULTY",
+  "postType": "Question",
+  "postTo": "Entire Class",
+  "visibleTo": [],
+  "summary": "Sample",
+  "details": "Testing123",
+  "folders": [
+    "CS5505-folder-hw2"
+  ],
+  "views": 0,
+  "viewedBy": [],
+  "createdAt": {
+    "$date": "2025-12-07T20:25:48.164Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-07T20:25:48.164Z"
+  },
+  "__v": 0
+},
+{
+  "_id": "post-1765142189781-t7zwykre2",
+  "postNumber": 102,
+  "course": "CS5505",
+  "author": "904",
+  "authorName": "Michael Jackson",
+  "authorRole": "FACULTY",
+  "postType": "Question",
+  "postTo": "Individual",
+  "visibleTo": [
+    "890"
+  ],
+  "summary": "nenen",
+  "details": "nnen",
+  "folders": [
+    "CS5505-folder-hw4"
+  ],
+  "views": 0,
+  "viewedBy": [],
+  "createdAt": {
+    "$date": "2025-12-07T21:16:29.781Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-07T21:16:29.781Z"
+  },
+  "__v": 0
 }]

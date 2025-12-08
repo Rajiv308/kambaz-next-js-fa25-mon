@@ -4,29 +4,41 @@
   "author": "567",
   "authorName": "Bruce Banner",
   "authorRole": "STUDENT",
-  "content": "Thanks for the explanation! One follow-up: does useReducer work well with TypeScript? I heard type inference is better.",
+  "content": "Does useReducer work well with TypeScript?",
   "resolved": true,
   "replies": [
     {
       "_id": "reply-001-1",
+      "author": "912",
+      "authorName": "Yoda",
+      "authorRole": "FACULTY",
+      "content": "Excellent with TypeScript, useReducer is! Discriminated unions, use you should.",
+      "createdAt": "2025-12-04T17:00:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-04T16:30:00.000Z",
+  "updatedAt": "2025-12-04T17:00:00.000Z"
+},
+{
+  "_id": "followup-001b",
+  "post": "post-cs1234-002",
+  "author": "789",
+  "authorName": "Aragorn Elessar",
+  "authorRole": "ASSISTANT",
+  "content": "What about useReducer with Redux Toolkit's createSlice? Can they work together?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-001b-1",
       "author": "678",
       "authorName": "Frodo Baggins",
       "authorRole": "FACULTY",
-      "content": "Yes! useReducer with TypeScript is excellent. You can define action types as discriminated unions for perfect type safety.",
-      "createdAt": {
-        "$date": "2025-12-04T17:00:00.000Z"
-      },
-      "updatedAt": {
-        "$date": "2025-12-04T17:00:00.000Z"
-      }
+      "content": "They solve similar problems! createSlice is essentially useReducer on steroids for global state. Pick one approach - don't mix them.",
+      "createdAt": "2025-12-04T18:30:00.000Z"
     }
   ],
-  "createdAt": {
-    "$date": "2025-12-04T16:30:00.000Z"
-  },
-  "updatedAt": {
-    "$date": "2025-12-04T17:00:00.000Z"
-  }
+  "createdAt": "2025-12-04T17:45:00.000Z",
+  "updatedAt": "2025-12-04T18:30:00.000Z"
 },
 {
   "_id": "followup-002",
@@ -34,7 +46,7 @@
   "author": "909",
   "authorName": "R2-D2 Droid",
   "authorRole": "STUDENT",
-  "content": "Thank you for the extension! Will the late penalty still apply if we submit after the original deadline?",
+  "content": "Will the late penalty still apply after original deadline?",
   "resolved": true,
   "replies": [
     {
@@ -42,184 +54,533 @@
       "author": "678",
       "authorName": "Frodo Baggins",
       "authorRole": "FACULTY",
-      "content": "No late penalty for submissions before the new deadline (Dec 10). The extension applies to everyone equally.",
-      "createdAt": {
-        "$date": "2025-12-05T12:00:00.000Z"
-      },
-      "updatedAt": {
-        "$date": "2025-12-05T12:00:00.000Z"
-      }
+      "content": "No late penalty before new deadline. After December 10th, standard late policy applies.",
+      "createdAt": "2025-12-05T12:00:00.000Z"
     }
   ],
-  "createdAt": {
-    "$date": "2025-12-05T11:30:00.000Z"
-  },
-  "updatedAt": {
-    "$date": "2025-12-05T12:00:00.000Z"
-  }
+  "createdAt": "2025-12-05T11:30:00.000Z",
+  "updatedAt": "2025-12-05T12:00:00.000Z"
 },
 {
   "_id": "followup-003",
-  "post": "post-cs5501-002",
-  "author": "123",
-  "authorName": "Tony Stark",
+  "post": "post-cs1234-005",
+  "author": "917",
+  "authorName": "Harry Potter",
   "authorRole": "STUDENT",
-  "content": "Gradient clipping worked! But now my model is underfitting. Should I increase the learning rate again?",
-  "resolved": false,
+  "content": "What about Zustand? Simpler than Redux but more powerful than Context?",
+  "resolved": true,
   "replies": [
     {
       "_id": "reply-003-1",
-      "author": "908",
-      "authorName": "C-3PO Droid",
+      "author": "567",
+      "authorName": "Bruce Banner",
       "authorRole": "STUDENT",
-      "content": "I had the same issue. Try using a learning rate scheduler - start high and decay over time.",
-      "createdAt": {
-        "$date": "2025-12-05T08:00:00.000Z"
-      },
-      "updatedAt": {
-        "$date": "2025-12-05T08:00:00.000Z"
-      }
+      "content": "Used Zustand - highly recommend! Simple API, no boilerplate.",
+      "createdAt": "2025-12-03T19:00:00.000Z"
+    },
+    {
+      "_id": "reply-003-2",
+      "author": "678",
+      "authorName": "Frodo Baggins",
+      "authorRole": "FACULTY",
+      "content": "Zustand is excellent for the project. Document your choice in the report!",
+      "createdAt": "2025-12-03T20:00:00.000Z"
     }
   ],
-  "createdAt": {
-    "$date": "2025-12-05T07:00:00.000Z"
-  },
-  "updatedAt": {
-    "$date": "2025-12-05T08:00:00.000Z"
-  }
+  "createdAt": "2025-12-03T18:30:00.000Z",
+  "updatedAt": "2025-12-03T20:00:00.000Z"
 },
 {
   "_id": "followup-004",
-  "post": "post-cs5502-002",
-  "author": "913",
-  "authorName": "Obi-Wan Kenobi",
-  "authorRole": "STUDENT",
-  "content": "Is there a visualization tool that shows the recursion tree? Would help me understand this better.",
+  "post": "post-cs1234-006",
+  "author": "234",
+  "authorName": "Bruce Wayne",
+  "authorRole": "ADMIN",
+  "content": "I'm getting infinite redirects even with stable auth state. Using useContext for auth. Any ideas?",
   "resolved": true,
   "replies": [
     {
       "_id": "reply-004-1",
-      "author": "234",
-      "authorName": "Bruce Wayne",
-      "authorRole": "STUDENT",
-      "content": "Python Tutor has a great visualizer! Also check out Recursion Tree Visualizer on GitHub.",
-      "createdAt": {
-        "$date": "2025-12-04T15:00:00.000Z"
-      },
-      "updatedAt": {
-        "$date": "2025-12-04T15:00:00.000Z"
-      }
+      "author": "929",
+      "authorName": "Vision Synthezoid",
+      "authorRole": "ASSISTANT",
+      "content": "Check if your Navigate component is inside the auth provider. The context value might not be ready on first render.",
+      "createdAt": "2025-12-05T18:00:00.000Z"
     },
     {
       "_id": "reply-004-2",
-      "author": "678",
-      "authorName": "Frodo Baggins",
-      "authorRole": "FACULTY",
-      "content": "I'll include a link to these tools in the next lecture notes. Great suggestion!",
-      "createdAt": {
-        "$date": "2025-12-04T16:00:00.000Z"
-      },
-      "updatedAt": {
-        "$date": "2025-12-04T16:00:00.000Z"
-      }
+      "author": "234",
+      "authorName": "Bruce Wayne",
+      "authorRole": "ADMIN",
+      "content": "That was it! Added a loading state while auth initializes. Works perfectly now!",
+      "createdAt": "2025-12-05T19:00:00.000Z"
     }
   ],
-  "createdAt": {
-    "$date": "2025-12-04T14:45:00.000Z"
-  },
-  "updatedAt": {
-    "$date": "2025-12-04T16:00:00.000Z"
-  }
+  "createdAt": "2025-12-05T17:00:00.000Z",
+  "updatedAt": "2025-12-05T19:00:00.000Z"
 },
 {
   "_id": "followup-005",
-  "post": "post-cs5503-002",
-  "author": "909",
-  "authorName": "R2-D2 Droid",
-  "authorRole": "STUDENT",
-  "content": "Can we have a worked example in class? The textbook explanation is hard to follow.",
-  "resolved": false,
-  "replies": [],
-  "createdAt": {
-    "$date": "2025-12-05T16:00:00.000Z"
-  },
-  "updatedAt": {
-    "$date": "2025-12-05T16:00:00.000Z"
-  }
+  "post": "post-cs1234-007",
+  "author": "789",
+  "authorName": "Aragorn Elessar",
+  "authorRole": "ASSISTANT",
+  "content": "Should custom hooks always start with 'use'? What if I forget?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-005-1",
+      "author": "912",
+      "authorName": "Yoda",
+      "authorRole": "FACULTY",
+      "content": "Start with 'use', they must! Rules of Hooks, ESLint enforces. Without 'use', work it will not.",
+      "createdAt": "2025-12-04T17:30:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-04T17:00:00.000Z",
+  "updatedAt": "2025-12-04T17:30:00.000Z"
 },
 {
   "_id": "followup-006",
-  "post": "post-cs5505-002",
-  "author": "890",
-  "authorName": "Legolas Greenleaf",
-  "authorRole": "STUDENT",
-  "content": "What about IPv6 subnetting? Will that be on the exam?",
+  "post": "post-cs5501-002",
+  "author": "123",
+  "authorName": "Tony Stark",
+  "authorRole": "ADMIN",
+  "content": "Gradient clipping worked! But now underfitting. Increase LR again?",
   "resolved": true,
   "replies": [
     {
       "_id": "reply-006-1",
-      "author": "904",
-      "authorName": "Michael Jackson",
+      "author": "789",
+      "authorName": "Aragorn Elessar",
+      "authorRole": "ASSISTANT",
+      "content": "Try learning rate scheduler - start high and decay.",
+      "createdAt": "2025-12-04T23:00:00.000Z"
+    },
+    {
+      "_id": "reply-006-2",
+      "author": "902",
+      "authorName": "Leia Organa",
       "authorRole": "FACULTY",
-      "content": "IPv6 will only be covered conceptually. The exam focuses on IPv4 subnetting calculations.",
-      "createdAt": {
-        "$date": "2025-12-05T13:00:00.000Z"
-      },
-      "updatedAt": {
-        "$date": "2025-12-05T13:00:00.000Z"
-      }
+      "content": "Cosine annealing or ReduceLROnPlateau are good options.",
+      "createdAt": "2025-12-04T23:30:00.000Z"
     }
   ],
-  "createdAt": {
-    "$date": "2025-12-05T12:45:00.000Z"
-  },
-  "updatedAt": {
-    "$date": "2025-12-05T06:48:32.531Z"
-  }
+  "createdAt": "2025-12-04T22:30:00.000Z",
+  "updatedAt": "2025-12-04T23:30:00.000Z"
 },
 {
   "_id": "followup-007",
-  "post": "post-cs5507-002",
-  "author": "911",
-  "authorName": "Michelangelo TMNT",
-  "authorRole": "STUDENT",
-  "content": "Found it! Node.js was running in the background. Thanks!",
+  "post": "post-cs5501-003",
+  "author": "908",
+  "authorName": "C-3PO Droid",
+  "authorRole": "ASSISTANT",
+  "content": "Oh my! What about data augmentation? Should I implement it myself or use a library?",
   "resolved": true,
-  "replies": [],
-  "createdAt": {
-    "$date": "2025-12-05T18:30:00.000Z"
-  },
-  "updatedAt": {
-    "$date": "2025-12-05T18:30:00.000Z"
-  }
+  "replies": [
+    {
+      "_id": "reply-007-1",
+      "author": "902",
+      "authorName": "Leia Organa",
+      "authorRole": "FACULTY",
+      "content": "Use torchvision.transforms! It has random rotations, flips, color jitter, and more. No need to reinvent the wheel.",
+      "createdAt": "2025-12-05T12:00:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-05T11:15:00.000Z",
+  "updatedAt": "2025-12-05T12:00:00.000Z"
 },
 {
   "_id": "followup-008",
-  "post": "post-cs1234-005",
-  "author": "789",
-  "authorName": "Aragorn Elessar",
-  "authorRole": "STUDENT",
-  "content": "What about using Zustand instead of Context? Is it overkill for medium-sized apps?",
-  "resolved": false,
+  "post": "post-cs5502-002",
+  "author": "913",
+  "authorName": "Obi-Wan Kenobi",
+  "authorRole": "ASSISTANT",
+  "content": "Is there a visualization tool for recursion trees?",
+  "resolved": true,
   "replies": [
     {
       "_id": "reply-008-1",
+      "author": "234",
+      "authorName": "Bruce Wayne",
+      "authorRole": "ADMIN",
+      "content": "Python Tutor is great! Also check out Recursion Tree Visualizer on GitHub.",
+      "createdAt": "2025-12-04T14:00:00.000Z"
+    },
+    {
+      "_id": "reply-008-2",
+      "author": "678",
+      "authorName": "Frodo Baggins",
+      "authorRole": "FACULTY",
+      "content": "Will add links to lecture notes. Great suggestion!",
+      "createdAt": "2025-12-04T15:00:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-04T13:45:00.000Z",
+  "updatedAt": "2025-12-04T15:00:00.000Z"
+},
+{
+  "_id": "followup-009",
+  "post": "post-cs5502-003",
+  "author": "234",
+  "authorName": "Bruce Wayne",
+  "authorRole": "ADMIN",
+  "content": "What about bidirectional BFS? When is that better than regular BFS?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-009-1",
+      "author": "678",
+      "authorName": "Frodo Baggins",
+      "authorRole": "FACULTY",
+      "content": "Bidirectional BFS is faster when you know both start and end points! Search from both ends until they meet. Reduces search space significantly.",
+      "createdAt": "2025-12-05T15:45:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-05T15:00:00.000Z",
+  "updatedAt": "2025-12-05T15:45:00.000Z"
+},
+{
+  "_id": "followup-010",
+  "post": "post-cs5504-002",
+  "author": "914",
+  "authorName": "Donatello TMNT",
+  "authorRole": "STUDENT",
+  "content": "Dude, what about BCNF? Is that different from 3NF?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-010-1",
+      "author": "910",
+      "authorName": "Michael Jackson",
+      "authorRole": "FACULTY",
+      "content": "BCNF is stricter! 3NF handles most cases, but BCNF eliminates ALL anomalies from functional dependencies. For this course, focus on 3NF.",
+      "createdAt": "2025-12-04T19:30:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-04T19:00:00.000Z",
+  "updatedAt": "2025-12-04T19:30:00.000Z"
+},
+{
+  "_id": "followup-011",
+  "post": "post-cs5505-002",
+  "author": "890",
+  "authorName": "Legolas Greenleaf",
+  "authorRole": "STUDENT",
+  "content": "What about IPv6 subnetting? Is it on the exam?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-011-1",
+      "author": "904",
+      "authorName": "Michael Jackson",
+      "authorRole": "FACULTY",
+      "content": "IPv6 conceptually only. Exam focuses on IPv4 calculations.",
+      "createdAt": "2025-12-05T13:00:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-05T12:45:00.000Z",
+  "updatedAt": "2025-12-05T13:00:00.000Z"
+},
+{
+  "_id": "followup-012",
+  "post": "post-cs5506-002",
+  "author": "908",
+  "authorName": "C-3PO Droid",
+  "authorRole": "ASSISTANT",
+  "content": "Goodness! Does Figma have version control like Git?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-012-1",
+      "author": "911",
+      "authorName": "Michelangelo TMNT",
+      "authorRole": "STUDENT",
+      "content": "Yeah bro! Figma auto-saves versions. You can restore old versions from the file menu. It's totally radical!",
+      "createdAt": "2025-12-04T22:00:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-04T21:45:00.000Z",
+  "updatedAt": "2025-12-04T22:00:00.000Z"
+},
+{
+  "_id": "followup-013",
+  "post": "post-cs5507-002",
+  "author": "567",
+  "authorName": "Bruce Banner",
+  "authorRole": "STUDENT",
+  "content": "What if I have multiple Docker Compose files running? How do I know which one is using the port?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-013-1",
+      "author": "777",
+      "authorName": "Ada Lovelace",
+      "authorRole": "ADMIN",
+      "content": "Run: docker-compose ps in each project directory. Or use: docker ps to see all running containers with their ports.",
+      "createdAt": "2025-12-05T19:30:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-05T19:15:00.000Z",
+  "updatedAt": "2025-12-05T19:30:00.000Z"
+},
+{
+  "_id": "followup-014",
+  "post": "post-cs1234-008",
+  "author": "909",
+  "authorName": "R2-D2 Droid",
+  "authorRole": "STUDENT",
+  "content": "*Beep boop?* (How do I know when NOT to optimize?)",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-014-1",
+      "author": "678",
+      "authorName": "Frodo Baggins",
+      "authorRole": "FACULTY",
+      "content": "Premature optimization is the root of all evil! Only optimize when you have a measured performance problem. Profile first!",
+      "createdAt": "2025-12-06T13:45:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-06T13:30:00.000Z",
+  "updatedAt": "2025-12-06T13:45:00.000Z"
+},
+{
+  "_id": "followup-015",
+  "post": "post-cs1234-011",
+  "author": "789",
+  "authorName": "Aragorn Elessar",
+  "authorRole": "ASSISTANT",
+  "content": "What's the file size difference between Client and Server Components?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-015-1",
       "author": "567",
       "authorName": "Bruce Banner",
       "authorRole": "STUDENT",
-      "content": "I've used Zustand in my project - it's simpler than Redux but more powerful than Context. Worth trying!",
-      "createdAt": {
-        "$date": "2025-12-03T19:30:00.000Z"
-      },
-      "updatedAt": {
-        "$date": "2025-12-03T19:30:00.000Z"
-      }
+      "content": "Server Components don't ship ANY JavaScript to the client! My bundle went from 300KB to 120KB by moving static components to server.",
+      "createdAt": "2025-12-04T20:00:00.000Z"
     }
   ],
-  "createdAt": {
-    "$date": "2025-12-03T19:00:00.000Z"
-  },
-  "updatedAt": {
-    "$date": "2025-12-07T01:24:34.266Z"
-  }
+  "createdAt": "2025-12-04T19:45:00.000Z",
+  "updatedAt": "2025-12-04T20:00:00.000Z"
+},
+{
+  "_id": "followup-016",
+  "post": "post-cs5501-007",
+  "author": "123",
+  "authorName": "Tony Stark",
+  "authorRole": "ADMIN",
+  "content": "Is multi-head attention just multiple attention mechanisms in parallel?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-016-1",
+      "author": "902",
+      "authorName": "Leia Organa",
+      "authorRole": "FACULTY",
+      "content": "Exactly! Each head learns different relationships. Like having multiple advisors - one focuses on syntax, another on semantics, etc. Then concatenate their outputs.",
+      "createdAt": "2025-12-05T17:15:00.000Z"
+    },
+    {
+      "_id": "reply-016-2",
+      "author": "908",
+      "authorName": "C-3PO Droid",
+      "authorRole": "ASSISTANT",
+      "content": "Oh my! So it's like having multiple protocols running simultaneously! Fascinating!",
+      "createdAt": "2025-12-05T17:45:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-05T17:00:00.000Z",
+  "updatedAt": "2025-12-05T17:45:00.000Z"
+},
+{
+  "_id": "followup-017",
+  "post": "post-cs5502-006",
+  "author": "908",
+  "authorName": "C-3PO Droid",
+  "authorRole": "ASSISTANT",
+  "content": "Heavens! For the heuristic in A*, can I use Manhattan distance for a grid with obstacles?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-017-1",
+      "author": "678",
+      "authorName": "Frodo Baggins",
+      "authorRole": "FACULTY",
+      "content": "Yes! Manhattan distance is perfect for grid-based movement (up/down/left/right). It's admissible because it never overestimates the actual path cost.",
+      "createdAt": "2025-12-06T11:30:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-06T11:00:00.000Z",
+  "updatedAt": "2025-12-06T11:30:00.000Z"
+},
+{
+  "_id": "followup-018",
+  "post": "post-cs5503-002",
+  "author": "345",
+  "authorName": "Natasha Romanoff",
+  "authorRole": "ASSISTANT",
+  "content": "What's the difference between deadlock prevention and deadlock avoidance?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-018-1",
+      "author": "910",
+      "authorName": "Michael Jackson",
+      "authorRole": "FACULTY",
+      "content": "Prevention: Make deadlock impossible by breaking one of the four conditions (like requiring processes to request all resources at once). Avoidance: Allow all four conditions but intelligently decide when to grant resources (like Banker's Algorithm).",
+      "createdAt": "2025-12-05T17:00:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-05T16:30:00.000Z",
+  "updatedAt": "2025-12-05T17:00:00.000Z"
+},
+{
+  "_id": "followup-019",
+  "post": "post-cs5503-003",
+  "author": "909",
+  "authorName": "R2-D2 Droid",
+  "authorRole": "STUDENT",
+  "content": "*Beep boop beep boop!* (What if I want variable quantum per process?)",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-019-1",
+      "author": "910",
+      "authorName": "Michael Jackson",
+      "authorRole": "FACULTY",
+      "content": "That's Multi-Level Feedback Queue! Different queues with different quantum sizes. Smooth idea! More complex but better for mixed workloads.",
+      "createdAt": "2025-12-06T11:00:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-06T10:30:00.000Z",
+  "updatedAt": "2025-12-06T11:00:00.000Z"
+},
+{
+  "_id": "followup-020",
+  "post": "post-cs5505-009",
+  "author": "914",
+  "authorName": "Donatello TMNT",
+  "authorRole": "STUDENT",
+  "content": "Cowabunga! What about telnet to test if the HTTP port is open?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-020-1",
+      "author": "904",
+      "authorName": "Michael Jackson",
+      "authorRole": "FACULTY",
+      "content": "Great idea! telnet serverIP 80 will tell you if the port is open. Or use: nc -zv serverIP 80",
+      "createdAt": "2025-12-06T17:30:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-06T17:15:00.000Z",
+  "updatedAt": "2025-12-06T17:30:00.000Z"
+},
+{
+  "_id": "followup-021",
+  "post": "post-cs5506-009",
+  "author": "911",
+  "authorName": "Michelangelo TMNT",
+  "authorRole": "STUDENT",
+  "content": "Pizza time! How long should I run the A/B test? Just until significance?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-021-1",
+      "author": "902",
+      "authorName": "Leia Organa",
+      "authorRole": "FACULTY",
+      "content": "Run for at least one full week to account for day-of-week effects. And decide on sample size BEFORE starting - don't peek at results and stop early!",
+      "createdAt": "2025-12-06T15:00:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-06T14:45:00.000Z",
+  "updatedAt": "2025-12-06T15:00:00.000Z"
+},
+{
+  "_id": "followup-022",
+  "post": "post-cs5507-009",
+  "author": "911",
+  "authorName": "Michelangelo TMNT",
+  "authorRole": "STUDENT",
+  "content": "Dude, can I use Terraform modules from the community?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-022-1",
+      "author": "912",
+      "authorName": "Yoda",
+      "authorRole": "FACULTY",
+      "content": "Use them, you may! Terraform Registry, many good modules has. But understand what they do, you must. Blind trust, dangerous it is!",
+      "createdAt": "2025-12-06T19:15:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-06T19:00:00.000Z",
+  "updatedAt": "2025-12-06T19:15:00.000Z"
+},
+{
+  "_id": "followup-023",
+  "post": "post-cs1234-014",
+  "author": "567",
+  "authorName": "Bruce Banner",
+  "authorRole": "STUDENT",
+  "content": "What about Vite instead of CRA? I heard it's much faster.",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-023-1",
+      "author": "678",
+      "authorName": "Frodo Baggins",
+      "authorRole": "FACULTY",
+      "content": "Vite is excellent! Instant hot module replacement. CRA is being deprecated anyway. Vite or Next.js are both great choices for new projects.",
+      "createdAt": "2025-12-04T15:00:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-04T14:30:00.000Z",
+  "updatedAt": "2025-12-04T15:00:00.000Z"
+},
+{
+  "_id": "followup-024",
+  "post": "post-cs1234-016",
+  "author": "789",
+  "authorName": "Aragorn Elessar",
+  "authorRole": "ASSISTANT",
+  "content": "Does React Hook Form work well with TypeScript?",
+  "resolved": true,
+  "replies": [
+    {
+      "_id": "reply-024-1",
+      "author": "234",
+      "authorName": "Bruce Wayne",
+      "authorRole": "ADMIN",
+      "content": "Perfectly! Type inference works great. You get autocomplete for field names and everything is type-safe.",
+      "createdAt": "2025-12-05T20:45:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-05T20:30:00.000Z",
+  "updatedAt": "2025-12-05T20:45:00.000Z"
+},
+{
+  "_id": "followup-025",
+  "post": "post-cs5501-004",
+  "author": "789",
+  "authorName": "Aragorn Elessar",
+  "authorRole": "ASSISTANT",
+  "content": "Should I try ensemble methods to combat overfitting?",
+  "resolved": false,
+  "replies": [
+    {
+      "_id": "reply-025-1",
+      "author": "902",
+      "authorName": "Leia Organa",
+      "authorRole": "FACULTY",
+      "content": "Ensembling can help but fix the base model first! Make sure one model generalizes well before combining multiple models.",
+      "createdAt": "2025-12-05T21:45:00.000Z"
+    }
+  ],
+  "createdAt": "2025-12-05T21:30:00.000Z",
+  "updatedAt": "2025-12-05T21:45:00.000Z"
 }]

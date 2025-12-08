@@ -3,8 +3,9 @@
 
 import { useState } from "react";
 import { Button, Form, Alert } from "react-bootstrap";
-import { FaFolder, FaTimes } from "react-icons/fa";
+import { FaFolder, FaTimes, FaArrowLeft } from "react-icons/fa";
 import RichTextEditor from "./RichTextEditor";
+import { useParams } from "next/navigation";
 
 interface NewPostScreenProps {
   folders: any[];
@@ -23,6 +24,7 @@ export default function NewPostScreen({
   const [postTo, setPostTo] = useState<"Entire Class" | "Individual">(
     "Entire Class"
   );
+  const { cid } = useParams();
   const [selectedFolders, setSelectedFolders] = useState<string[]>([]);
   const [summary, setSummary] = useState("");
   const [details, setDetails] = useState("");
@@ -128,6 +130,15 @@ export default function NewPostScreen({
 
   return (
     <div className="pazza-new-post">
+      <Button
+        variant="link"
+        className="pazza-back-button p-0 mb-3 text-decoration-none"
+        onClick={onCancel}
+      >
+        <FaArrowLeft className="me-2" />
+        Back
+      </Button>
+
       <h5>Create a New Post</h5>
 
       <div className="pazza-form-group">
@@ -146,6 +157,12 @@ export default function NewPostScreen({
             label="Note"
             checked={postType === "Note"}
             onChange={() => setPostType("Note")}
+          />
+          <Form.Check
+            type="radio"
+            id="type-Poll"
+            label="Poll/In-Class Response"
+            disabled
           />
         </div>
         <small className="text-muted">
@@ -294,6 +311,12 @@ export default function NewPostScreen({
             {errors.folders}
           </Alert>
         )}
+        <a
+          href={`/Courses/${cid}/Pazza/manage`}
+          className="pazza-manage-folders-link"
+        >
+          Manage and reorder folders
+        </a>
       </div>
 
       <div className="pazza-form-group">

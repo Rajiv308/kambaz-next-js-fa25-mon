@@ -46,12 +46,11 @@ function groupPostsByDate(posts: any[]) {
   const yesterday = new Date(today);
   yesterday.setDate(yesterday.getDate() - 1);
 
-  // Last week starts 7 days ago (not including today)
   const lastWeekStart = new Date(today);
   lastWeekStart.setDate(lastWeekStart.getDate() - 7);
 
   const groups: { [key: string]: any[] } = {};
-  const weekRanges: { [key: string]: Date } = {}; // Store week start dates for sorting
+  const weekRanges: { [key: string]: Date } = {};
 
   posts.forEach((post) => {
     const postDate = new Date(post.createdAt);
@@ -70,7 +69,6 @@ function groupPostsByDate(posts: any[]) {
     } else if (postDay >= lastWeekStart && postDay < yesterday) {
       groupKey = "Last Week";
     } else {
-      // Older posts - group by week
       const weekStart = getWeekStart(postDay);
       groupKey = formatWeekRange(weekStart);
       weekRanges[groupKey] = weekStart;
@@ -82,17 +80,14 @@ function groupPostsByDate(posts: any[]) {
     groups[groupKey].push(post);
   });
 
-  // Order groups: Today, Yesterday, Last Week, then weeks in reverse chronological order
   const orderedGroups: { [key: string]: any[] } = {};
 
-  // Add fixed groups first
   ["Today", "Yesterday", "Last Week"].forEach((key) => {
     if (groups[key]) {
       orderedGroups[key] = groups[key];
     }
   });
 
-  // Sort week ranges by date (most recent first)
   const weekKeys = Object.keys(weekRanges).sort((a, b) => {
     return weekRanges[b].getTime() - weekRanges[a].getTime();
   });
@@ -221,8 +216,12 @@ export default function ListOfPostsSidebar({
                         <div className="pazza-post-header">
                           <div style={{ flex: 1, minWidth: 0 }}>
                             <div className="pazza-post-title-row">
-                              {post.authorRole === "FACULTY" && (
+                              {["FACULTY", "ASSISTANT"].includes(
+                                post.authorRole
+                              ) ? (
                                 <span className="pazza-instr-badge">Instr</span>
+                              ) : (
+                                <span className="pazza-student-badge">Stu</span>
                               )}
                               <span className="pazza-post-title">
                                 {post.summary}

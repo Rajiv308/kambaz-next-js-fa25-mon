@@ -210,15 +210,15 @@
 }
 
 .pazza-new-post-btn {
-  background-color: #f0ad4e;
-  border-color: #f0ad4e;
+  background-color: #0a5fab;
+  border-color: #0a5fab;
   color: #fff;
   font-weight: 500;
 }
 
 .pazza-new-post-btn:hover {
-  background-color: #ec971f;
-  border-color: #ec971f;
+  background-color: #084a8a;
+  border-color: #084a8a;
 }
 
 .pazza-search-input {
@@ -286,6 +286,15 @@
   flex-shrink: 0;
 }
 
+.pazza-student-badge {
+  background-color: #28a745;
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 2px 4px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
 .pazza-post-title {
   font-size: 0.9rem;
   font-weight: bold;
@@ -341,7 +350,6 @@
 
 .pazza-indicator.instructor {
   background-color: #ffc107;
-  color: #212529;
 }
 
 .pazza-post-screen {
@@ -439,7 +447,7 @@
 
 .pazza-answer-header.instructor {
   background-color: #ffc107;
-  color: #212529;
+  color: #fff;
 }
 
 .pazza-answer-icon {
@@ -1066,4 +1074,28 @@
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 8px;
+}
+
+.pazza-back-button {
+  display: inline-flex;
+  align-items: center;
+  color: #0a5fab;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.pazza-back-button:hover {
+  color: #084a8a;
+}
+
+.pazza-manage-folders-link {
+  font-size: 0.85rem;
+  color: #0a5fab;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.pazza-manage-folders-link:hover {
+  color: #084a8a;
+  text-decoration: underline;
 }

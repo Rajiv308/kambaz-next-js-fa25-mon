@@ -99,13 +99,44 @@ export default function PazzaPage() {
     }
   };
 
+  const handleSelectPost = async (post: any) => {
+    setSelectedPost(post);
+    setShowNewPost(false);
+
+    try {
+      const [updatedPost, answers] = await Promise.all([
+        client.fetchPostById(post._id),
+        client.fetchAnswersForPost(post._id),
+      ]);
+
+      const hasStudentAnswer = answers.some(
+        (a: any) => a.answerType === "student"
+      );
+      const hasInstructorAnswer = answers.some(
+        (a: any) => a.answerType === "instructor"
+      );
+
+      const updatedWithFlags = {
+        ...updatedPost,
+        hasStudentAnswer,
+        hasInstructorAnswer,
+      };
+
+      setSelectedPost(updatedWithFlags);
+
+      setPosts((prev) =>
+        prev.map((p) => (p._id === post._id ? updatedWithFlags : p))
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const handleDeletePost = async (postId: string) => {
     try {
       await client.deletePost(postId);
       setPosts(posts.filter((p) => p._id !== postId));
-      if (selectedPost?._id === postId) {
-        setSelectedPost(null);
-      }
+      setSelectedPost(null);
     } catch (error) {
       console.error(error);
     }
@@ -157,6 +188,11 @@ export default function PazzaPage() {
     }
   };
 
+  const handleBackToGlance = () => {
+    setSelectedPost(null);
+    setShowNewPost(false);
+  };
+
   const isFaculty = (currentUser as any)?.role === "FACULTY";
 
   if (loading) {
@@ -190,10 +226,7 @@ export default function PazzaPage() {
           searchText={searchText}
           showSidebar={showSidebar}
           onSearchChange={setSearchText}
-          onSelectPost={(post: any) => {
-            setSelectedPost(post);
-            setShowNewPost(false);
-          }}
+          onSelectPost={handleSelectPost}
           onNewPost={() => {
             setShowNewPost(true);
             setSelectedPost(null);
@@ -205,9 +238,9 @@ export default function PazzaPage() {
           {showNewPost ? (
             <NewPostScreen
               folders={folders}
-              onSubmit={handleCreatePost}
               users={users}
-              onCancel={() => setShowNewPost(false)}
+              onSubmit={handleCreatePost}
+              onCancel={handleBackToGlance}
             />
           ) : selectedPost ? (
             <PostScreen
@@ -217,6 +250,7 @@ export default function PazzaPage() {
               onDelete={handleDeletePost}
               onUpdate={handleUpdatePost}
               onAnswerChange={() => refreshPostAnswerFlags(selectedPost._id)}
+              onBack={handleBackToGlance}
             />
           ) : (
             <ClassAtAGlance courseId={cid as string} posts={posts} />

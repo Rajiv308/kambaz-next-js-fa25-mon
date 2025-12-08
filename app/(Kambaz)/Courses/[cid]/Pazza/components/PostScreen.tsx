@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from "react";
 import { Button, Dropdown } from "react-bootstrap";
-import { FaFolder, FaEdit } from "react-icons/fa";
+import { FaFolder, FaEdit, FaArrowLeft } from "react-icons/fa";
 import AnswersSection from "./AnswersSection";
 import FollowupSection from "./FollowupSection";
 import RichTextEditor from "./RichTextEditor";
@@ -16,6 +16,7 @@ interface PostScreenProps {
   onDelete: (postId: string) => void;
   onUpdate: (postId: string, updates: any) => void;
   onAnswerChange?: () => void;
+  onBack?: () => void;
 }
 
 export default function PostScreen({
@@ -25,6 +26,7 @@ export default function PostScreen({
   onDelete,
   onUpdate,
   onAnswerChange,
+  onBack,
 }: PostScreenProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [editSummary, setEditSummary] = useState(post.summary);
@@ -34,8 +36,9 @@ export default function PostScreen({
   const [loading, setLoading] = useState(true);
 
   const isFaculty = currentUser?.role === "FACULTY";
+  const isInstructor = ["FACULTY", "ASSISTANT"].includes(currentUser?.role);
   const isAuthor = currentUser?._id === post.author;
-  const canEdit = isFaculty || isAuthor;
+  const canEdit = isFaculty || isAuthor || isInstructor;
 
   useEffect(() => {
     const fetchPostData = async () => {
@@ -120,6 +123,17 @@ export default function PostScreen({
 
   return (
     <div className="pazza-post-screen">
+      {onBack && (
+        <Button
+          variant="link"
+          className="pazza-back-button p-0 mb-3 text-decoration-none"
+          onClick={onBack}
+        >
+          <FaArrowLeft className="me-2" />
+          Back
+        </Button>
+      )}
+
       <div className="pazza-post-meta">
         <div className="pazza-post-badges">
           <span className="pazza-type-badge">
@@ -187,7 +201,8 @@ export default function PostScreen({
           <h3>{post.summary}</h3>
           <div className="pazza-post-author">
             {post.authorName}
-            {post.authorRole === "FACULTY" && " (Instructor)"}
+            {["FACULTY", "ASSISTANT"].includes(post.authorRole) &&
+              " (Instructor)"}
             {` • ${
               post.updatedAt !== post.createdAt ? "Updated" : "Posted"
             } ${formatTimeAgo(post.updatedAt)}`}

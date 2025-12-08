@@ -75,8 +75,6 @@ export const fetchPostsWithAnswerFlags = async (
         const answers = await fetchAnswersForPost(post._id);
         const hasStudentAnswer = answers.some((a: any) => a.answerType === "student");
         const hasInstructorAnswer = answers.some((a: any) => a.answerType === "instructor");
-                
-        console.log(`Post "${post.summary}": S=${hasStudentAnswer}, I=${hasInstructorAnswer}`);
         
         return {
           ...post,

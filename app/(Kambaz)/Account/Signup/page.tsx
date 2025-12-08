@@ -25,7 +25,6 @@ export default function Signup() {
     try {
       const currentUser = await client.signup(user);
       dispatch(setCurrentUser(currentUser));
-      console.log("Redirecting to profile");
       router.push("/Account/Profile");
     } catch (e: any) {
       setError(
